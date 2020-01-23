@@ -1,0 +1,43 @@
+﻿@model IEnumerable<FotoShoutData.Models.EventTDO>
+
+@using FotoShoutData.Models;
+
+@{
+    ViewBag.Title = "Events";
+    ViewBag.AppName = "fotoShout";
+    
+    string eventType = Request.QueryString["eventType"];
+    if (string.IsNullOrEmpty(eventType)) {
+        eventType = "Open";
+    }
+}
+
+<div id="check-constrain"></div>
+@using (Html.BeginForm()) {
+    if (ViewBag.Error != null) {
+        <span class="error">@ViewBag.Error</span>
+    }
+<section id="side-panel">
+    @Html.ActionLink("Create New Event", "CheckEventOptions", new { controller = "Event" }, new { @class = "linkCheckConstrain" })
+    <div class="dropdown-frame">
+        <div>Event Type</div>
+        @Html.DropDownList("EventType", new SelectList(new[] { "All", "Open", "Completed" }, eventType))
+    </div>
+</section>
+<section id="main-panel">
+    @Html.Partial("_EventsPartial", Model)
+</section>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script type="text/javascript" src="@Url.Content("~/Scripts/inc/events.js?1.3.0.10")"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var tabCtrl = new TabControl('@Request.ApplicationPath');
+            var initializer = new Initializer(tabCtrl, "event");
+            var events = new Events('@Url.Action("PartialEvents")');
+        });
+    </script>
+}
+

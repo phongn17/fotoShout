@@ -1,0 +1,176 @@
+10
+
+dir
+134
+http://svn.vdr.com/repo/fotoShout/trunk/Code/fotoShout/packages
+http://svn.vdr.com/repo/fotoShout
+
+
+
+2013-07-27T00:48:08.993611Z
+99
+vdr\x5cphongn
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+84ee07e7-d99f-054f-a881-ecf4b2f582e9
+
+Newtonsoft.Json.5.0.2
+dir
+
+DotNetOpenAuth.OpenId.RelyingParty.4.0.3.12153
+dir
+
+RazorEngine.3.2.0
+dir
+
+DotNetOpenAuth.OAuth.Core.4.0.3.12153
+dir
+
+RazorEngine.3.3.0
+dir
+
+DotNetOpenAuth.OAuth.Consumer.4.0.3.12153
+dir
+
+Newtonsoft.Json.4.5.6
+dir
+
+Microsoft.Web.Infrastructure.1.0.0.0
+dir
+
+EntityFramework.5.0.0
+dir
+
+repositories.config
+file
+
+
+
+
+2013-08-14T00:20:53.463280Z
+7330af9cb1fad0e144ba625a72fdecb3
+2013-07-11T22:55:56.692482Z
+95
+vdr\x5cphongn
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+386
+
+Microsoft.jQuery.Unobtrusive.Ajax.2.0.20710.0
+dir
+
+Microsoft.AspNet.WebPages.2.0.20710.0
+dir
+
+Microsoft.AspNet.Razor.2.0.20710.0
+dir
+
+jQuery.UI.Combined.1.8.20.1
+dir
+
+Microsoft.AspNet.Providers.Core.1.1
+dir
+
+WebGrease.1.1.0
+dir
+
+Microsoft.AspNet.Razor.2.0.20715.0
+dir
+
+Newtonsoft.Json.4.5.11
+dir
+
+DotNetOpenAuth.AspNet.4.0.3.12153
+dir
+
+Microsoft.AspNet.WebPages.Data.2.0.20710.0
+dir
+
+Modernizr.2.5.3
+dir
+
+DotNetOpenAuth.OpenId.Core.4.0.3.12153
+dir
+
+jQuery.1.7.1.1
+dir
+
+Microsoft.AspNet.WebApi.WebHost.4.0.20710.0
+dir
+
+knockoutjs.2.1.0
+dir
+
+Microsoft.AspNet.WebApi.Client.4.0.20710.0
+dir
+
+Microsoft.AspNet.Mvc.4.0.20710.0
+dir
+
+Microsoft.SqlServer.Compact.4.0.8876.1
+dir
+
+Microsoft.AspNet.Web.Optimization.1.0.0
+dir
+
+Microsoft.AspNet.WebApi.Core.4.0.20710.0
+dir
+
+Microsoft.AspNet.Razor.2.0.30506.0
+dir
+
+DotNetOpenAuth.Core.4.0.3.12153
+dir
+
+Microsoft.AspNet.WebPages.WebData.2.0.20710.0
+dir
+
+Microsoft.jQuery.Unobtrusive.Validation.2.0.20710.0
+dir
+
+Microsoft.AspNet.Providers.LocalDB.1.1
+dir
+
+Microsoft.AspNet.WebApi.4.0.20710.0
+dir
+
+jQuery.Validation.1.9.0.1
+dir
+
+Microsoft.Net.Http.2.0.20710.0
+dir
+
+Microsoft.AspNet.WebPages.OAuth.2.0.20710.0
+dir
+

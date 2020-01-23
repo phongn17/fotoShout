@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<repositories>
+  <repository path="..\FotoShoutApi\packages.config" />
+  <repository path="..\FotoShoutPortal\packages.config" />
+  <repository path="..\FotoShoutPublishingService\packages.config" />
+  <repository path="..\FotoShoutSyncService\packages.config" />
+  <repository path="..\FotoShoutUtils\packages.config" />
+</repositories>

@@ -1,0 +1,90 @@
+﻿@model FotoShoutData.Models.EventTDO
+@{
+    var eventOption = "";
+    if (Model.EventOptions != null && Model.EventOptionId > 0) {
+        var temp = Model.EventOptions.Where(eo => eo.EventOptionId == Model.EventOptionId).SingleOrDefault();
+        if (temp != null) {
+            eventOption = temp.EventOptionName;
+        }
+    }
+    
+    var emailTemplate = "";
+    if (Model.EmailTemplates != null && Model.EventOptionId > 0) {
+        var temp = Model.EventOptions.Where(eo => eo.EventOptionId == Model.EventOptionId).SingleOrDefault();
+        if (temp != null) {
+            emailTemplate = temp.EventOptionName;
+        }
+    }
+
+    var sponsors = "";
+    if (Model.Sponsors != null && Model.SponsorIds != null) {
+        IEnumerable<FotoShoutData.Models.SponsorTDO> sponsorEnum = Model.Sponsors.Where(s => Model.SponsorIds.Contains(s.SponsorId));
+        if (sponsorEnum != null) {
+            foreach (FotoShoutData.Models.SponsorTDO sponsor in sponsorEnum) {
+                if (!string.IsNullOrEmpty(sponsors)) {
+                    sponsors += ", ";
+                }
+                sponsors += sponsor.SponsorName;
+            }
+        }
+    }
+    
+    var channelGroup = "";
+    if (Model.ChannelGroups != null && Model.ChannelGroupId != null) {
+        FotoShoutData.Models.ChannelGroupTDO temp = Model.ChannelGroups.Where(g => g.ChannelGroupId == Model.ChannelGroupId).SingleOrDefault();
+        if (channelGroup != null) {
+            channelGroup = temp.ChannelGroupName;
+        }
+    }
+}
+
+<div>
+    <span class="field-label">@Html.LabelFor(model => model.EventName)</span>
+    <span>@Html.DisplayFor(model => model.EventName)</span>
+</div>
+<div>
+    <span class="field-label">@Html.LabelFor(model => model.EventDescription)</span>
+    <span>@Html.DisplayFor(model => model.EventDescription)</span>
+</div>
+<div>
+    <span class="field-label">@Html.LabelFor(model => model.EventDate)</span>
+    <span>@Html.DisplayFor(model => model.EventDate)</span>
+</div>
+<div>
+    <span class="field-label">@Html.LabelFor(model => model.EventLocation)</span>
+    <span>@Html.DisplayFor(model => model.EventLocation)</span>
+</div>
+<div>
+    <span class="field-label">@Html.LabelFor(model => model.EventFolder)</span>
+    <span>@Html.DisplayFor(model => model.EventFolder)</span>
+</div>
+<div>
+    <span class="field-label">@Html.LabelFor(model => model.PublishAlbum)</span>
+    <span>@Html.DisplayFor(model => model.PublishAlbum)</span>
+</div>
+@if (Model != null) {
+    if (Model.EventOptions != null) {
+        <div>
+            <span class="field-label">@Html.LabelFor(model => model.EventOptionId)</span>
+            <span>@Html.DisplayFor(model => eventOption)</span>
+        </div>
+    }
+    if (Model.EmailTemplates != null) {
+        <div>
+            <span class="field-label">@Html.LabelFor(model => model.EmailTemplateId)</span>
+            <span>@Html.DisplayFor(model => emailTemplate)</span>
+        </div>
+    }
+    if (Model.Sponsors != null) {
+        <div>
+            <span class="field-label">@Html.LabelFor(model => model.SponsorIds)</span>
+            <span>@Html.DisplayFor(model => sponsors)</span>
+        </div>
+    }
+    if (Model.ChannelGroups != null) {
+        <div>
+            <span class="field-label">@Html.LabelFor(model => model.ChannelGroupId)</span>
+            <span>@Html.DisplayFor(model => channelGroup)</span>
+        </div>
+    }
+}

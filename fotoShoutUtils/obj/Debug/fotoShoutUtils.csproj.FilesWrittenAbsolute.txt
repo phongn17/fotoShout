@@ -1,0 +1,1 @@
+/Users/phongnguyen/Dev/C#/fotoShout/Code/fotoShoutUtils/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs

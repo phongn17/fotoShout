@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="FotoShoutApi.Models.FotoShoutDbContext_DatabasePublish-Web.config Connection String" description="FotoShoutApi.Models.FotoShoutDbContext_DatabasePublish Connection String used in web.config by the application to access the database." defaultValue="Data Source=.\SQLExpress;Initial Catalog=fotoShoutDb;Integrated Security=True;Pooling=False;MultipleActiveResultSets=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Dev\\vdR\\fotoShout\\Code\\FotoShoutApi\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='FotoShoutApi.Models.FotoShoutDbContext_DatabasePublish']/@connectionString" />
+  </parameter>
+  <parameter name="FotoShoutApi.Models.FotoShoutDbContext-Web.config Connection String" description="FotoShoutApi.Models.FotoShoutDbContext Connection String used in web.config by the application to access the database." defaultValue="Data Source=.\SQLExpress;Initial Catalog=fotoShoutDb;Integrated Security=True;Pooling=False;MultipleActiveResultSets=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Dev\\vdR\\fotoShout\\Code\\FotoShoutApi\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='FotoShoutApi.Models.FotoShoutDbContext']/@connectionString" />
+  </parameter>
+</parameters>

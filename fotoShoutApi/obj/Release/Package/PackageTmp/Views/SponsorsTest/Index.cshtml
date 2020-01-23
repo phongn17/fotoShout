@@ -1,0 +1,73 @@
+﻿@model FotoShoutApi.Models.Sponsor
+
+@{
+    ViewBag.Title = "Sponsors";
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script type="text/javascript" src="@Url.Content("~/Scripts/knockout-2.1.0.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/Inc/sponsor.js")"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            ko.applyBindings(new SponsorViewModel('@ViewBag.ApiUrl'));
+        });
+    </script>
+}
+
+<div class="content-wrapper">
+    <div>
+        <div data-bind="if: $root.error">
+            <span class="message-error" data-bind="text: $root.error" />
+        </div>
+        <div data-bind="if: $root.msg">
+            <span class="message-success" data-bind="text: $root.msg" />
+        </div>
+        <h2>Add New Sponsor</h2>
+        <form id="sponsor-form" data-bind="submit: create">
+            @Html.ValidationSummary(true)
+            <fieldset>
+                <legend>Sponsor</legend>
+                <div>
+                    <div class="item">Sponsor Name:</div>
+                    @Html.EditorFor(model => model.SponsorName)
+                    @Html.ValidationMessageFor(model => model.SponsorName)
+                </div>
+                <div>
+                    <div class="item">Sponsor Logo:</div>
+                    @Html.EditorFor(model => model.SponsorLogo)
+                    @Html.ValidationMessageFor(model => model.SponsorLogo)
+                </div>
+                <p>
+                    <input type="submit" value="Add" />
+                </p>
+            </fieldset>
+        </form>
+    </div>
+    <div>
+        <h2>Sponsors</h2>
+        <table>
+            <tr class="table-header">
+                <th>Sponsor Name</th>
+                <th>Sponsor Logo</th>
+                <th></th>
+            </tr>
+
+            <!-- ko foreach: sponsors -->
+            <tr class="table-row">
+                <td>
+                    <input type="text" data-bind="value: $data.SponsorName" />
+                </td>
+                <td>
+                    <input type="text" data-bind="value: $data.SponsorLogo" />
+                </td>
+                <td>
+                    <input type="button" value="Update" data-bind="click: $root.update" />
+                    <input type="button" value="Delete" data-bind="click: $root.delete" />
+                </td>
+            </tr>
+            <!-- /ko -->
+
+        </table>
+    </div>
+</div>

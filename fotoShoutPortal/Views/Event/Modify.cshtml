@@ -1,0 +1,34 @@
+﻿@model FotoShoutData.Models.EventTDO
+
+@{
+    ViewBag.IsEdit = (Model != null && Model.EventId != 0);
+
+    ViewBag.Title = ViewBag.IsEdit ? "Edit Event" : "Create New Event";
+    ViewBag.AppName = "fotoShout";
+}
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    <section id="main-panel">
+        <h2>@ViewBag.Title</h2>
+        <fieldset class="form-fields" id="event-detail">
+            <legend>Event Info</legend>
+            @Html.Partial("EventDetails", Model)
+            @Html.Partial("~/Views/Shared/_FormButtons.cshtml", "Event")
+        </fieldset>
+    </section>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script type="text/javascript" src="@Url.Content("~/Scripts/inc/event.js?1.3.0.2")"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var ev = new Event();
+            var tabCtrl = new TabControl('@Request.ApplicationPath');
+            var initializer = new Initializer(tabCtrl, "event");
+            window.App.init($('form'), 0);
+        });
+    </script>
+}

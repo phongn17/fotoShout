@@ -1,0 +1,7 @@
+﻿@model string
+
+<div><h6>Are you sure you want to log '@Model' off?</h6></div>
+@using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" })) {
+    @Html.AntiForgeryToken()
+}
+

@@ -1,0 +1,82 @@
+﻿@model FotoShoutData.Models.EmailServerAccount
+
+@{
+    ViewBag.Title = "Email Server Configuration";
+    ViewBag.AppName = "fotoShout";
+
+    var isEdit = (Model != null && Model.EmailServerAccountId != 0);
+}
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    if (ViewBag.Message != null) {
+        <span id="message">@ViewBag.Message</span>    
+    }
+
+    @Html.Partial("_PreferCommands", "EmailServerConfiguration")
+
+    <section id="main-panel">
+        <div class="div-form-detail">
+            <h2>@ViewBag.Title</h2>
+            <fieldset class="form-fields">
+                <legend>@ViewBag.Title</legend>
+            
+                @if (isEdit) {
+                    @Html.HiddenFor(model => model.EmailServerAccountId)
+                }
+
+                <div>
+                    <span class="field-label">@Html.LabelFor(model => model.Server)<span>&nbsp;*</span></span>
+                    @Html.EditorFor(model => model.Server)
+                </div>
+
+                <div>
+                    <span class="field-label">@Html.LabelFor(model => model.Port)</span>
+                    @Html.TextBoxFor(model => model.Port)
+                </div>
+
+                <div>
+                    <span class="field-label">@Html.LabelFor(model => model.EnableSSL)</span>
+                    <span class="group-radios">
+                        @Html.RadioButton("EnableSSL", "true", Model == null ? false : Model.EnableSSL)
+                        @Html.LabelFor(model => model.EnableSSL, "Yes")
+                        @Html.RadioButton("EnableSSL", "false", Model == null ? true : !Model.EnableSSL)
+                        @Html.LabelFor(model => model.EnableSSL, "No")
+                    </span>
+                </div>
+                
+                <div>
+                    <span class="field-label">@Html.LabelFor(model => model.Domain)</span>
+                    @Html.EditorFor(model => model.Domain)
+                </div>
+
+                <div>
+                    <span class="field-label">@Html.LabelFor(model => model.Username)<span>&nbsp;*</span></span>
+                    @Html.EditorFor(model => model.Username)
+                </div>
+
+                <div>
+                    <span class="field-label">@Html.LabelFor(model => model.Password)<span>&nbsp;*</span></span>
+                    @Html.PasswordFor(model => model.Password)
+                </div>
+
+                @Html.Partial("~/Views/Shared/_FormButtons.cshtml", "")
+            </fieldset>
+        </div>
+    </section>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script type="text/javascript" src="@Url.Content("~/Scripts/inc/emailserverconfig.js?1.3.0.2")"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var tabCtrl = new TabControl('@Request.ApplicationPath');
+            var initializer = new Initializer(tabCtrl, "preferences");
+            var emailServerConfig = new EmailServerConfig();
+            window.App.init($('form'), 1);
+        });
+    </script>
+}

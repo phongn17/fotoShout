@@ -1,0 +1,334 @@
+INFO  2016-12-03 21:07:06,496   665ms PublishingEngine       Info               - 1.3.0.14
+INFO  2016-12-03 21:07:06,520   689ms PublishingEngine       Info               - Initializing...
+INFO  2016-12-03 21:07:06,520   689ms PublishingEngine       Info               - Done Initalizing process.
+
+INFO  2016-12-03 21:08:01,176   662ms PublishingEngine       Info               - 1.3.0.14
+INFO  2016-12-03 21:08:01,192   678ms PublishingEngine       Info               - Initializing...
+INFO  2016-12-03 21:08:01,192   678ms PublishingEngine       Info               - Done Initalizing process.
+
+INFO  2016-12-03 21:09:04,005   666ms PublishingEngine       Info               - 1.3.0.14
+INFO  2016-12-03 21:09:04,021   682ms PublishingEngine       Info               - Initializing...
+INFO  2016-12-03 21:09:04,022   682ms PublishingEngine       Info               - Done Initalizing process.
+
+INFO  2016-12-03 21:12:04,524   663ms PublishingEngine       Info               - 1.3.0.14
+INFO  2016-12-03 21:12:04,538   677ms PublishingEngine       Info               - Initializing...
+INFO  2016-12-03 21:12:04,539   678ms PublishingEngine       Info               - Done Initalizing process.
+
+INFO  2016-12-03 21:13:55,073   470ms PublishingEngine       Info               - 1.3.0.14
+INFO  2016-12-03 21:13:55,088   485ms PublishingEngine       Info               - Initializing...
+INFO  2016-12-03 21:13:55,089   486ms PublishingEngine       Info               - Done Initalizing process.
+
+INFO  2016-12-03 21:14:24,357 29754ms PublishingEngine       Info               - Authenticating for the "phong@vdr.com" user...
+DEBUG 2016-12-03 21:14:29,564 34961ms FsApiWebService        Debug              - Getting user info...
+INFO  2016-12-03 21:14:41,891 47288ms PublishingEngine       Info               - Succeeded logged
+INFO  2016-12-03 21:14:41,891 47288ms PublishingEngine       Info               - Getting publish configuration information...
+DEBUG 2016-12-03 21:14:41,891 47288ms FsApiWebService        Debug              - Getting details of the publish config of the "" user...
+ERROR 2016-12-03 21:14:42,270 47667ms PublishingEngine       Error              - Failed to authenticate: FotoShoutUtils.Service.WebServiceException: FotoShoutUtils.Service.HttpClientServiceException: Email and password are not associated with an API key.
+   at FotoShoutUtils.Service.WebClientService.Get[T](String address, Boolean async) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutUtils\Service\WebClientService.cs:line 75
+   at FotoShoutUtils.Service.AuthenticationWebService.Get[T](String path, String msg) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutUtils\Service\AuthenticationWebService.cs:line 91
+   at FotoShoutUtils.Service.AuthenticationWebService.Get[T](String path, String msg) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutUtils\Service\AuthenticationWebService.cs:line 97
+   at FotoShoutUtils.Service.FsApiWebService.GetPublishConfiguration() in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutUtils\Service\FsApiWebService.cs:line 98
+   at FotoShoutPublishingService.PublishingEngine.Authenticate(Credentials credential) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutPublishingService\PublishingEngine.cs:line 119
+
+INFO  2016-12-03 21:15:36,717   665ms PublishingEngine       Info               - 1.3.0.14
+INFO  2016-12-03 21:15:36,732   680ms PublishingEngine       Info               - Initializing...
+INFO  2016-12-03 21:15:36,732   680ms PublishingEngine       Info               - Done Initalizing process.
+
+INFO  2016-12-03 21:15:47,370 11318ms PublishingEngine       Info               - Authenticating for the "phongnguyen17@yahoo.com" user...
+DEBUG 2016-12-03 21:15:47,372 11320ms FsApiWebService        Debug              - Getting user info...
+INFO  2016-12-03 21:15:47,373 11321ms PublishingEngine       Info               - Succeeded logged
+INFO  2016-12-03 21:15:47,373 11321ms PublishingEngine       Info               - Getting publish configuration information...
+DEBUG 2016-12-03 21:15:47,374 11322ms FsApiWebService        Debug              - Getting details of the publish config of the "" user...
+ERROR 2016-12-03 21:15:47,493 11441ms PublishingEngine       Error              - Failed to authenticate: FotoShoutUtils.Service.WebServiceException: FotoShoutUtils.Service.HttpClientServiceException: Email and password are not associated with an API key.
+   at FotoShoutUtils.Service.WebClientService.Get[T](String address, Boolean async) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutUtils\Service\WebClientService.cs:line 75
+   at FotoShoutUtils.Service.AuthenticationWebService.Get[T](String path, String msg) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutUtils\Service\AuthenticationWebService.cs:line 91
+   at FotoShoutUtils.Service.AuthenticationWebService.Get[T](String path, String msg) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutUtils\Service\AuthenticationWebService.cs:line 97
+   at FotoShoutUtils.Service.FsApiWebService.GetPublishConfiguration() in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutUtils\Service\FsApiWebService.cs:line 98
+   at FotoShoutPublishingService.PublishingEngine.Authenticate(Credentials credential) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutPublishingService\PublishingEngine.cs:line 121
+
+INFO  2016-12-03 21:16:07,559   646ms PublishingEngine       Info               - 1.3.0.14
+INFO  2016-12-03 21:16:07,574   662ms PublishingEngine       Info               - Initializing...
+INFO  2016-12-03 21:16:07,575   662ms PublishingEngine       Info               - Done Initalizing process.
+
+INFO  2016-12-03 21:16:15,873  8961ms PublishingEngine       Info               - Authenticating for the "phongnguyen17@yahoo.com" user...
+DEBUG 2016-12-03 21:16:25,912 18999ms FsApiWebService        Debug              - Getting user info...
+INFO  2016-12-03 21:16:28,832 21919ms PublishingEngine       Info               - Succeeded logged
+INFO  2016-12-03 21:16:31,453 24541ms PublishingEngine       Info               - Getting publish configuration information...
+DEBUG 2016-12-03 21:16:32,377 25465ms FsApiWebService        Debug              - Getting details of the publish config of the "" user...
+INFO  2016-12-03 21:18:22,142   670ms PublishingEngine       Info               - 1.3.0.14
+INFO  2016-12-03 21:18:22,157   685ms PublishingEngine       Info               - Initializing...
+INFO  2016-12-03 21:18:22,157   685ms PublishingEngine       Info               - Done Initalizing process.
+
+INFO  2016-12-03 21:18:26,945  5473ms PublishingEngine       Info               - Authenticating for the "phongnguyen17@yahoo.com" user...
+DEBUG 2016-12-03 21:18:26,947  5475ms FsApiWebService        Debug              - Getting user info...
+INFO  2016-12-03 21:18:26,947  5475ms PublishingEngine       Info               - Succeeded logged
+INFO  2016-12-03 21:18:26,947  5475ms PublishingEngine       Info               - Getting publish configuration information...
+DEBUG 2016-12-03 21:19:11,417 49945ms FsApiWebService        Debug              - Getting details of the publish config of the "" user...
+ERROR 2016-12-03 21:21:18,719 177247ms PublishingEngine       Error              - Failed to authenticate: FotoShoutUtils.Service.WebServiceException: FotoShoutUtils.Service.HttpClientServiceException: Email and password are not associated with an API key.
+   at FotoShoutUtils.Service.WebClientService.Get[T](String address, Boolean async) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutUtils\Service\WebClientService.cs:line 75
+   at FotoShoutUtils.Service.AuthenticationWebService.Get[T](String path, String msg) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutUtils\Service\AuthenticationWebService.cs:line 91
+   at FotoShoutUtils.Service.AuthenticationWebService.Get[T](String path, String msg) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutUtils\Service\AuthenticationWebService.cs:line 97
+   at FotoShoutUtils.Service.FsApiWebService.GetPublishConfiguration() in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutUtils\Service\FsApiWebService.cs:line 98
+   at FotoShoutPublishingService.PublishingEngine.Authenticate(Credentials credential) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutPublishingService\PublishingEngine.cs:line 121
+
+INFO  2016-12-03 21:22:07,772   479ms PublishingEngine       Info               - 1.3.0.14
+INFO  2016-12-03 21:22:07,785   493ms PublishingEngine       Info               - Initializing...
+INFO  2016-12-03 21:22:07,786   493ms PublishingEngine       Info               - Done Initalizing process.
+
+INFO  2016-12-03 21:22:09,972  2679ms PublishingEngine       Info               - Authenticating for the "phongnguyen17@yahoo.com" user...
+DEBUG 2016-12-03 21:22:17,518 10225ms FsApiWebService        Debug              - Getting user info...
+INFO  2016-12-03 21:24:43,033 155740ms PublishingEngine       Info               - Succeeded logged
+INFO  2016-12-03 21:24:44,033 156740ms PublishingEngine       Info               - Getting publish configuration information...
+DEBUG 2016-12-03 21:24:58,064 170771ms FsApiWebService        Debug              - Getting details of the publish config of the "" user...
+INFO  2016-12-03 21:28:17,650   463ms PublishingEngine       Info               - 1.3.0.14
+INFO  2016-12-03 21:28:17,668   481ms PublishingEngine       Info               - Initializing...
+INFO  2016-12-03 21:28:17,669   481ms PublishingEngine       Info               - Done Initalizing process.
+
+INFO  2016-12-03 21:28:20,330  3142ms PublishingEngine       Info               - Authenticating for the "phongnguyen17@yahoo.com" user...
+DEBUG 2016-12-03 21:28:22,808  5620ms FsApiWebService        Debug              - Getting user info...
+INFO  2016-12-03 21:28:22,809  5621ms PublishingEngine       Info               - Succeeded logged
+INFO  2016-12-03 21:28:22,810  5622ms PublishingEngine       Info               - Getting publish configuration information...
+INFO  2016-12-03 21:28:49,575   487ms PublishingEngine       Info               - 1.3.0.14
+INFO  2016-12-03 21:28:49,592   504ms PublishingEngine       Info               - Initializing...
+INFO  2016-12-03 21:28:49,592   504ms PublishingEngine       Info               - Done Initalizing process.
+
+INFO  2016-12-03 21:28:53,712  4624ms PublishingEngine       Info               - Authenticating for the "phongnguyen17@yahoo.com" user...
+DEBUG 2016-12-03 21:29:09,327 20238ms FsApiWebService        Debug              - Getting user info...
+INFO  2016-12-03 21:29:09,328 20239ms PublishingEngine       Info               - Succeeded logged
+INFO  2016-12-03 21:29:09,328 20239ms PublishingEngine       Info               - Getting publish configuration information...
+DEBUG 2016-12-03 21:29:11,883 22795ms FsApiWebService        Debug              - Getting details of the publish config of the "" user...
+DEBUG 2016-12-03 21:29:12,029 22941ms FsApiWebService        Debug              - Succeeded
+INFO  2016-12-03 21:29:33,130 44042ms PublishingEngine       Info               - Successfully authenticated.
+
+DEBUG 2016-12-03 21:29:43,065 53977ms FsApiWebService        Debug              - Getting details of the email server config of the "" user...
+DEBUG 2016-12-03 21:29:43,166 54078ms FsApiWebService        Debug              - Succeeded
+DEBUG 2016-12-03 21:29:46,853 57765ms FsApiWebService        Debug              - Getting the list of events for the "" user on http://na1.fotoshout.com/api/...
+DEBUG 2016-12-03 21:29:51,189 62101ms FsApiWebService        Debug              - Succeeded
+DEBUG 2016-12-03 21:30:01,238 72149ms FsApiWebService        Debug              - Getting details of the "446" event...
+DEBUG 2016-12-03 21:30:01,624 72535ms FsApiWebService        Debug              - Succeeded
+DEBUG 2016-12-03 21:30:10,484 81396ms FsApiWebService        Debug              - Getting details of the "67" email template...
+DEBUG 2016-12-03 21:30:10,568 81480ms FsApiWebService        Debug              - Succeeded
+INFO  2016-12-03 21:32:42,523 233435ms PublishingEngine       Info               - Getting broadcasts of the Facebook Test event...
+INFO  2016-12-03 21:33:02,979 253890ms PublishingEngine       Info               - Getting the permalinks for the broadcast 35654.
+ERROR 2016-12-03 21:33:16,551 267462ms PublishingEngine       Error              - FotoShoutUtils.Service.HttpClientServiceException: Not Found
+   at FotoShoutUtils.Service.WebClientService.Get[T](String address, Boolean async) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutUtils\Service\WebClientService.cs:line 75
+   at FotoShoutUtils.Service.PublishApiWebService.GetPermaLinks(Int32 broadcastId) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutUtils\Service\PublishApiWebService.cs:line 32
+   at FotoShoutPublishingService.PublishingEngine.PostProcessEvent(EventTDO ev) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutPublishingService\PublishingEngine.cs:line 187
+INFO  2016-12-03 21:34:00,786   668ms PublishingEngine       Info               - 1.3.0.14
+INFO  2016-12-03 21:34:00,806   688ms PublishingEngine       Info               - Initializing...
+INFO  2016-12-03 21:34:00,807   689ms PublishingEngine       Info               - Done Initalizing process.
+
+INFO  2016-12-03 21:34:03,849  3731ms PublishingEngine       Info               - Authenticating for the "phongnguyen17@yahoo.com" user...
+DEBUG 2016-12-03 21:34:07,217  7099ms FsApiWebService        Debug              - Getting user info...
+INFO  2016-12-03 21:34:07,218  7100ms PublishingEngine       Info               - Succeeded logged
+INFO  2016-12-03 21:34:07,218  7100ms PublishingEngine       Info               - Getting publish configuration information...
+DEBUG 2016-12-03 21:34:10,342 10224ms FsApiWebService        Debug              - Getting details of the publish config of the "" user...
+DEBUG 2016-12-03 21:34:10,497 10379ms FsApiWebService        Debug              - Succeeded
+INFO  2016-12-03 21:34:12,656 12538ms PublishingEngine       Info               - Successfully authenticated.
+
+DEBUG 2016-12-03 21:34:12,658 12540ms FsApiWebService        Debug              - Getting details of the email server config of the "" user...
+DEBUG 2016-12-03 21:34:12,805 12687ms FsApiWebService        Debug              - Succeeded
+DEBUG 2016-12-03 21:34:12,807 12689ms FsApiWebService        Debug              - Getting the list of events for the "" user on http://na1.fotoshout.com/api/...
+DEBUG 2016-12-03 21:34:17,844 17726ms FsApiWebService        Debug              - Succeeded
+DEBUG 2016-12-03 21:34:17,845 17727ms FsApiWebService        Debug              - Getting details of the "446" event...
+DEBUG 2016-12-03 21:34:17,939 17821ms FsApiWebService        Debug              - Succeeded
+DEBUG 2016-12-03 21:34:17,941 17823ms FsApiWebService        Debug              - Getting details of the "67" email template...
+DEBUG 2016-12-03 21:34:18,011 17893ms FsApiWebService        Debug              - Succeeded
+INFO  2016-12-03 21:34:18,012 17894ms PublishingEngine       Info               - Getting broadcasts of the Facebook Test event...
+INFO  2016-12-03 21:34:18,256 18138ms PublishingEngine       Info               - Getting the permalinks for the broadcast 35654.
+INFO  2016-12-03 21:35:23,889   656ms PublishingEngine       Info               - 1.3.0.14
+INFO  2016-12-03 21:35:23,904   671ms PublishingEngine       Info               - Initializing...
+INFO  2016-12-03 21:35:23,904   671ms PublishingEngine       Info               - Done Initalizing process.
+
+INFO  2016-12-03 21:35:26,193  2960ms PublishingEngine       Info               - Authenticating for the "phongnguyen17@yahoo.com" user...
+DEBUG 2016-12-03 21:35:28,915  5682ms FsApiWebService        Debug              - Getting user info...
+INFO  2016-12-03 21:35:28,915  5682ms PublishingEngine       Info               - Succeeded logged
+INFO  2016-12-03 21:35:28,916  5683ms PublishingEngine       Info               - Getting publish configuration information...
+DEBUG 2016-12-03 21:35:30,278  7045ms FsApiWebService        Debug              - Getting details of the publish config of the "" user...
+DEBUG 2016-12-03 21:35:30,436  7203ms FsApiWebService        Debug              - Succeeded
+INFO  2016-12-03 21:35:31,842  8609ms PublishingEngine       Info               - Successfully authenticated.
+
+DEBUG 2016-12-03 21:35:31,844  8611ms FsApiWebService        Debug              - Getting details of the email server config of the "" user...
+DEBUG 2016-12-03 21:35:31,930  8697ms FsApiWebService        Debug              - Succeeded
+DEBUG 2016-12-03 21:35:31,931  8698ms FsApiWebService        Debug              - Getting the list of events for the "" user on http://na1.fotoshout.com/api/...
+DEBUG 2016-12-03 21:35:37,580 14347ms FsApiWebService        Debug              - Succeeded
+DEBUG 2016-12-03 21:35:37,581 14348ms FsApiWebService        Debug              - Getting details of the "446" event...
+DEBUG 2016-12-03 21:35:37,694 14461ms FsApiWebService        Debug              - Succeeded
+DEBUG 2016-12-03 21:35:37,696 14463ms FsApiWebService        Debug              - Getting details of the "67" email template...
+DEBUG 2016-12-03 21:35:37,811 14578ms FsApiWebService        Debug              - Succeeded
+INFO  2016-12-03 21:35:37,811 14578ms PublishingEngine       Info               - Getting broadcasts of the Facebook Test event...
+INFO  2016-12-03 21:35:38,055 14822ms PublishingEngine       Info               - Getting the permalinks for the broadcast 35654.
+ERROR 2016-12-03 21:37:54,851 151618ms PublishingEngine       Error              - FotoShoutUtils.Service.HttpClientServiceException: Not Found
+   at FotoShoutUtils.Service.WebClientService.Get[T](String address, Boolean async) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutUtils\Service\WebClientService.cs:line 75
+   at FotoShoutUtils.Service.PublishApiWebService.GetPermaLinks(Int32 broadcastId) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutUtils\Service\PublishApiWebService.cs:line 32
+   at FotoShoutPublishingService.PublishingEngine.PostProcessEvent(EventTDO ev) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutPublishingService\PublishingEngine.cs:line 187
+INFO  2016-12-03 21:39:12,325   678ms PublishingEngine       Info               - 1.3.0.14
+INFO  2016-12-03 21:39:12,340   693ms PublishingEngine       Info               - Initializing...
+INFO  2016-12-03 21:39:12,340   693ms PublishingEngine       Info               - Done Initalizing process.
+
+INFO  2016-12-03 21:39:17,576  5929ms PublishingEngine       Info               - Authenticating for the "phongnguyen17@yahoo.com" user...
+DEBUG 2016-12-03 21:39:24,537 12890ms FsApiWebService        Debug              - Getting user info...
+INFO  2016-12-03 21:39:24,538 12891ms PublishingEngine       Info               - Succeeded logged
+INFO  2016-12-03 21:39:24,538 12891ms PublishingEngine       Info               - Getting publish configuration information...
+DEBUG 2016-12-03 21:39:24,539 12892ms FsApiWebService        Debug              - Getting details of the publish config of the "" user...
+DEBUG 2016-12-03 21:39:24,711 13064ms FsApiWebService        Debug              - Succeeded
+INFO  2016-12-03 21:39:24,827 13179ms PublishingEngine       Info               - Successfully authenticated.
+
+DEBUG 2016-12-03 21:39:24,829 13181ms FsApiWebService        Debug              - Getting details of the email server config of the "" user...
+DEBUG 2016-12-03 21:39:24,907 13260ms FsApiWebService        Debug              - Succeeded
+DEBUG 2016-12-03 21:39:24,909 13262ms FsApiWebService        Debug              - Getting the list of events for the "" user on http://na1.fotoshout.com/api/...
+DEBUG 2016-12-03 21:39:28,151 16503ms FsApiWebService        Debug              - Succeeded
+DEBUG 2016-12-03 21:39:28,151 16503ms FsApiWebService        Debug              - Getting details of the "446" event...
+DEBUG 2016-12-03 21:39:28,246 16598ms FsApiWebService        Debug              - Succeeded
+DEBUG 2016-12-03 21:39:28,248 16600ms FsApiWebService        Debug              - Getting details of the "67" email template...
+DEBUG 2016-12-03 21:39:28,316 16668ms FsApiWebService        Debug              - Succeeded
+INFO  2016-12-03 21:39:28,316 16668ms PublishingEngine       Info               - Getting broadcasts of the Facebook Test event...
+INFO  2016-12-03 21:39:28,552 16905ms PublishingEngine       Info               - Getting the permalinks for the broadcast 35654.
+ERROR 2016-12-03 21:39:34,638 22990ms PublishingEngine       Error              - FotoShoutUtils.Service.HttpClientServiceException: Not Found
+   at FotoShoutUtils.Service.WebClientService.Get[T](String address, Boolean async) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutUtils\Service\WebClientService.cs:line 75
+   at FotoShoutUtils.Service.PublishApiWebService.GetPermaLinks(Int32 broadcastId) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutUtils\Service\PublishApiWebService.cs:line 32
+   at FotoShoutPublishingService.PublishingEngine.PostProcessEvent(EventTDO ev) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutPublishingService\PublishingEngine.cs:line 188
+INFO  2016-12-03 21:39:40,242 28595ms PublishingEngine       Info               - Getting the permalinks for the broadcast 35655.
+ERROR 2016-12-03 21:39:49,906 38258ms PublishingEngine       Error              - FotoShoutUtils.Service.HttpClientServiceException: Not Found
+   at FotoShoutUtils.Service.WebClientService.Get[T](String address, Boolean async) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutUtils\Service\WebClientService.cs:line 75
+   at FotoShoutUtils.Service.PublishApiWebService.GetPermaLinks(Int32 broadcastId) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutUtils\Service\PublishApiWebService.cs:line 32
+   at FotoShoutPublishingService.PublishingEngine.PostProcessEvent(EventTDO ev) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutPublishingService\PublishingEngine.cs:line 188
+INFO  2016-12-03 21:39:50,067 38419ms PublishingEngine       Info               - Getting the permalinks for the broadcast 35656.
+ERROR 2016-12-03 21:39:50,240 38592ms PublishingEngine       Error              - FotoShoutUtils.Service.HttpClientServiceException: Not Found
+   at FotoShoutUtils.Service.WebClientService.Get[T](String address, Boolean async) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutUtils\Service\WebClientService.cs:line 75
+   at FotoShoutUtils.Service.PublishApiWebService.GetPermaLinks(Int32 broadcastId) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutUtils\Service\PublishApiWebService.cs:line 32
+   at FotoShoutPublishingService.PublishingEngine.PostProcessEvent(EventTDO ev) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutPublishingService\PublishingEngine.cs:line 188
+INFO  2016-12-03 21:39:50,403 38756ms PublishingEngine       Info               - Getting the permalinks for the broadcast 35658.
+ERROR 2016-12-03 21:39:50,498 38850ms PublishingEngine       Error              - FotoShoutUtils.Service.HttpClientServiceException: Not Found
+   at FotoShoutUtils.Service.WebClientService.Get[T](String address, Boolean async) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutUtils\Service\WebClientService.cs:line 75
+   at FotoShoutUtils.Service.PublishApiWebService.GetPermaLinks(Int32 broadcastId) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutUtils\Service\PublishApiWebService.cs:line 32
+   at FotoShoutPublishingService.PublishingEngine.PostProcessEvent(EventTDO ev) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutPublishingService\PublishingEngine.cs:line 188
+INFO  2016-12-03 21:39:50,622 38975ms PublishingEngine       Info               - Getting the permalinks for the broadcast 35659.
+ERROR 2016-12-03 21:39:50,818 39170ms PublishingEngine       Error              - FotoShoutUtils.Service.HttpClientServiceException: Not Found
+   at FotoShoutUtils.Service.WebClientService.Get[T](String address, Boolean async) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutUtils\Service\WebClientService.cs:line 75
+   at FotoShoutUtils.Service.PublishApiWebService.GetPermaLinks(Int32 broadcastId) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutUtils\Service\PublishApiWebService.cs:line 32
+   at FotoShoutPublishingService.PublishingEngine.PostProcessEvent(EventTDO ev) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutPublishingService\PublishingEngine.cs:line 188
+INFO  2016-12-03 21:39:50,979 39331ms PublishingEngine       Info               - Getting the permalinks for the broadcast 35660.
+ERROR 2016-12-03 21:39:51,071 39424ms PublishingEngine       Error              - FotoShoutUtils.Service.HttpClientServiceException: Not Found
+   at FotoShoutUtils.Service.WebClientService.Get[T](String address, Boolean async) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutUtils\Service\WebClientService.cs:line 75
+   at FotoShoutUtils.Service.PublishApiWebService.GetPermaLinks(Int32 broadcastId) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutUtils\Service\PublishApiWebService.cs:line 32
+   at FotoShoutPublishingService.PublishingEngine.PostProcessEvent(EventTDO ev) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutPublishingService\PublishingEngine.cs:line 188
+INFO  2016-12-03 21:39:51,233 39585ms PublishingEngine       Info               - Getting the permalinks for the broadcast 35662.
+ERROR 2016-12-03 21:39:51,330 39683ms PublishingEngine       Error              - FotoShoutUtils.Service.HttpClientServiceException: Not Found
+   at FotoShoutUtils.Service.WebClientService.Get[T](String address, Boolean async) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutUtils\Service\WebClientService.cs:line 75
+   at FotoShoutUtils.Service.PublishApiWebService.GetPermaLinks(Int32 broadcastId) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutUtils\Service\PublishApiWebService.cs:line 32
+   at FotoShoutPublishingService.PublishingEngine.PostProcessEvent(EventTDO ev) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutPublishingService\PublishingEngine.cs:line 188
+INFO  2016-12-03 21:39:51,458 39810ms PublishingEngine       Info               - Getting the permalinks for the broadcast 35663.
+ERROR 2016-12-03 21:39:51,553 39905ms PublishingEngine       Error              - FotoShoutUtils.Service.HttpClientServiceException: Not Found
+   at FotoShoutUtils.Service.WebClientService.Get[T](String address, Boolean async) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutUtils\Service\WebClientService.cs:line 75
+   at FotoShoutUtils.Service.PublishApiWebService.GetPermaLinks(Int32 broadcastId) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutUtils\Service\PublishApiWebService.cs:line 32
+   at FotoShoutPublishingService.PublishingEngine.PostProcessEvent(EventTDO ev) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutPublishingService\PublishingEngine.cs:line 188
+INFO  2016-12-03 21:39:51,697 40050ms PublishingEngine       Info               - Getting the permalinks for the broadcast 35664.
+ERROR 2016-12-03 21:39:51,792 40145ms PublishingEngine       Error              - FotoShoutUtils.Service.HttpClientServiceException: Not Found
+   at FotoShoutUtils.Service.WebClientService.Get[T](String address, Boolean async) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutUtils\Service\WebClientService.cs:line 75
+   at FotoShoutUtils.Service.PublishApiWebService.GetPermaLinks(Int32 broadcastId) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutUtils\Service\PublishApiWebService.cs:line 32
+   at FotoShoutPublishingService.PublishingEngine.PostProcessEvent(EventTDO ev) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutPublishingService\PublishingEngine.cs:line 188
+INFO  2016-12-03 21:39:51,931 40283ms PublishingEngine       Info               - Getting the permalinks for the broadcast 35665.
+ERROR 2016-12-03 21:39:52,045 40397ms PublishingEngine       Error              - FotoShoutUtils.Service.HttpClientServiceException: Not Found
+   at FotoShoutUtils.Service.WebClientService.Get[T](String address, Boolean async) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutUtils\Service\WebClientService.cs:line 75
+   at FotoShoutUtils.Service.PublishApiWebService.GetPermaLinks(Int32 broadcastId) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutUtils\Service\PublishApiWebService.cs:line 32
+   at FotoShoutPublishingService.PublishingEngine.PostProcessEvent(EventTDO ev) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutPublishingService\PublishingEngine.cs:line 188
+INFO  2016-12-03 21:39:52,177 40529ms PublishingEngine       Info               - Getting the permalinks for the broadcast 35666.
+ERROR 2016-12-03 21:39:52,276 40629ms PublishingEngine       Error              - FotoShoutUtils.Service.HttpClientServiceException: Not Found
+   at FotoShoutUtils.Service.WebClientService.Get[T](String address, Boolean async) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutUtils\Service\WebClientService.cs:line 75
+   at FotoShoutUtils.Service.PublishApiWebService.GetPermaLinks(Int32 broadcastId) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutUtils\Service\PublishApiWebService.cs:line 32
+   at FotoShoutPublishingService.PublishingEngine.PostProcessEvent(EventTDO ev) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutPublishingService\PublishingEngine.cs:line 188
+INFO  2016-12-03 21:39:52,401 40753ms PublishingEngine       Info               - Getting the permalinks for the broadcast 35667.
+ERROR 2016-12-03 21:39:52,515 40868ms PublishingEngine       Error              - FotoShoutUtils.Service.HttpClientServiceException: Not Found
+   at FotoShoutUtils.Service.WebClientService.Get[T](String address, Boolean async) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutUtils\Service\WebClientService.cs:line 75
+   at FotoShoutUtils.Service.PublishApiWebService.GetPermaLinks(Int32 broadcastId) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutUtils\Service\PublishApiWebService.cs:line 32
+   at FotoShoutPublishingService.PublishingEngine.PostProcessEvent(EventTDO ev) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutPublishingService\PublishingEngine.cs:line 188
+INFO  2016-12-03 21:39:52,672 41024ms PublishingEngine       Info               - Getting the permalinks for the broadcast 35668.
+ERROR 2016-12-03 21:39:52,765 41117ms PublishingEngine       Error              - FotoShoutUtils.Service.HttpClientServiceException: Not Found
+   at FotoShoutUtils.Service.WebClientService.Get[T](String address, Boolean async) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutUtils\Service\WebClientService.cs:line 75
+   at FotoShoutUtils.Service.PublishApiWebService.GetPermaLinks(Int32 broadcastId) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutUtils\Service\PublishApiWebService.cs:line 32
+   at FotoShoutPublishingService.PublishingEngine.PostProcessEvent(EventTDO ev) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutPublishingService\PublishingEngine.cs:line 188
+INFO  2016-12-03 21:39:52,913 41266ms PublishingEngine       Info               - Getting the permalinks for the broadcast 35669.
+INFO  2016-12-03 21:40:32,095 80448ms PublishingEngine       Info               - Getting the permalinks for the broadcast 35670.
+INFO  2016-12-03 21:41:21,762 130114ms PublishingEngine       Info               - Getting the permalinks for the broadcast 35671.
+INFO  2016-12-03 21:41:26,196 134548ms PublishingEngine       Info               - Getting the permalinks for the broadcast 35672.
+INFO  2016-12-03 21:41:26,900 135252ms PublishingEngine       Info               - Getting the permalinks for the broadcast 35673.
+ERROR 2016-12-03 21:41:27,071 135423ms PublishingEngine       Error              - FotoShoutUtils.Service.HttpClientServiceException: Not Found
+   at FotoShoutUtils.Service.WebClientService.Get[T](String address, Boolean async) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutUtils\Service\WebClientService.cs:line 75
+   at FotoShoutUtils.Service.PublishApiWebService.GetPermaLinks(Int32 broadcastId) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutUtils\Service\PublishApiWebService.cs:line 32
+   at FotoShoutPublishingService.PublishingEngine.PostProcessEvent(EventTDO ev) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutPublishingService\PublishingEngine.cs:line 188
+INFO  2016-12-03 21:41:27,226 135579ms PublishingEngine       Info               - Getting the permalinks for the broadcast 35674.
+INFO  2016-12-03 21:41:27,945 136297ms PublishingEngine       Info               - Getting the permalinks for the broadcast 35679.
+ERROR 2016-12-03 21:41:28,129 136482ms PublishingEngine       Error              - FotoShoutUtils.Service.HttpClientServiceException: Not Found
+   at FotoShoutUtils.Service.WebClientService.Get[T](String address, Boolean async) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutUtils\Service\WebClientService.cs:line 75
+   at FotoShoutUtils.Service.PublishApiWebService.GetPermaLinks(Int32 broadcastId) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutUtils\Service\PublishApiWebService.cs:line 32
+   at FotoShoutPublishingService.PublishingEngine.PostProcessEvent(EventTDO ev) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutPublishingService\PublishingEngine.cs:line 188
+INFO  2016-12-03 21:41:28,271 136623ms PublishingEngine       Info               - Getting the permalinks for the broadcast 35720.
+INFO  2016-12-03 21:41:28,918 137270ms PublishingEngine       Info               - Getting the permalinks for the broadcast 35721.
+INFO  2016-12-03 21:41:29,518 137870ms PublishingEngine       Info               - Updated the permalinks for the broadcast 35721.
+INFO  2016-12-03 21:41:29,520 137872ms EmailService           Info               - Sending the "https://www.facebook.com/album.php?fbid=10209553009014276&id=1598862616&aid=1073742020" link to "Phong Nguyen"...
+INFO  2016-12-03 21:41:30,177 138529ms EmailService           Info               - Enabled SSL
+INFO  2016-12-03 21:41:30,177 138529ms EmailService           Info               - Mail Server: smtp.mail.yahoo.com, From: phongnguyen17@yahoo.com - 
+ERROR 2016-12-03 21:42:33,342 201695ms EmailService           Error              - Failed to send the "https://www.facebook.com/album.php?fbid=10209553009014276&id=1598862616&aid=1073742020" link to "Phong Nguyen"...
+ERROR 2016-12-03 21:42:33,344 201697ms EmailService           Error              - System.Net.Mail.SmtpException: Failure sending mail. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 98.138.105.21:587
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.ServicePoint.GetConnection(PooledStream PooledStream, Object owner, Boolean async, IPAddress& address, Socket& abortSocket, Socket& abortSocket6)
+   at System.Net.PooledStream.Activate(Object owningObject, Boolean async, GeneralAsyncDelegate asyncCallback)
+   at System.Net.PooledStream.Activate(Object owningObject, GeneralAsyncDelegate asyncCallback)
+   at System.Net.ConnectionPool.GetConnection(Object owningObject, GeneralAsyncDelegate asyncCallback, Int32 creationTimeout)
+   at System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   at System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   at System.Net.Mail.SmtpClient.GetConnection()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   --- End of inner exception stack trace ---
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at FotoShoutPublishingService.Services.Email.EmailService.SendEmailTo(UserTDO user, EventTDO ev, GuestTDO guest, String permalink) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutPublishingService\Services\Email\EmailService.cs:line 95
+INFO  2016-12-03 21:42:33,774 202127ms PublishingEngine       Info               - Getting the permalinks for the broadcast 35739.
+INFO  2016-12-03 21:42:34,334 202686ms PublishingEngine       Info               - Updated the permalinks for the broadcast 35739.
+INFO  2016-12-03 21:42:34,334 202686ms EmailService           Info               - Sending the "https://www.facebook.com/album.php?fbid=10210021577368192&id=1598862616&aid=1073742024" link to "Phong nguyen"...
+INFO  2016-12-03 21:42:34,762 203114ms EmailService           Info               - Enabled SSL
+INFO  2016-12-03 21:42:34,762 203114ms EmailService           Info               - Mail Server: smtp.mail.yahoo.com, From: phongnguyen17@yahoo.com - 
+ERROR 2016-12-03 21:43:37,872 266224ms EmailService           Error              - Failed to send the "https://www.facebook.com/album.php?fbid=10210021577368192&id=1598862616&aid=1073742024" link to "Phong nguyen"...
+ERROR 2016-12-03 21:43:37,872 266225ms EmailService           Error              - System.Net.Mail.SmtpException: Failure sending mail. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 98.138.105.21:587
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.ServicePoint.GetConnection(PooledStream PooledStream, Object owner, Boolean async, IPAddress& address, Socket& abortSocket, Socket& abortSocket6)
+   at System.Net.PooledStream.Activate(Object owningObject, Boolean async, GeneralAsyncDelegate asyncCallback)
+   at System.Net.PooledStream.Activate(Object owningObject, GeneralAsyncDelegate asyncCallback)
+   at System.Net.ConnectionPool.GetConnection(Object owningObject, GeneralAsyncDelegate asyncCallback, Int32 creationTimeout)
+   at System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   at System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   at System.Net.Mail.SmtpClient.GetConnection()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   --- End of inner exception stack trace ---
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at FotoShoutPublishingService.Services.Email.EmailService.SendEmailTo(UserTDO user, EventTDO ev, GuestTDO guest, String permalink) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutPublishingService\Services\Email\EmailService.cs:line 95
+INFO  2016-12-03 21:43:38,237 266589ms PublishingEngine       Info               - Getting the permalinks for the broadcast 35740.
+INFO  2016-12-03 21:43:38,800 267153ms PublishingEngine       Info               - Updated the permalinks for the broadcast 35740.
+INFO  2016-12-03 21:43:38,800 267153ms EmailService           Info               - Sending the "https://www.facebook.com/album.php?fbid=10210021577368192&id=1598862616&aid=1073742024" link to "Phong Nguyen"...
+INFO  2016-12-03 21:43:39,205 267557ms EmailService           Info               - Enabled SSL
+INFO  2016-12-03 21:43:39,205 267557ms EmailService           Info               - Mail Server: smtp.mail.yahoo.com, From: phongnguyen17@yahoo.com - 
+ERROR 2016-12-03 21:44:42,372 330725ms EmailService           Error              - Failed to send the "https://www.facebook.com/album.php?fbid=10210021577368192&id=1598862616&aid=1073742024" link to "Phong Nguyen"...
+ERROR 2016-12-03 21:44:42,373 330726ms EmailService           Error              - System.Net.Mail.SmtpException: Failure sending mail. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 63.250.193.228:587
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.ServicePoint.GetConnection(PooledStream PooledStream, Object owner, Boolean async, IPAddress& address, Socket& abortSocket, Socket& abortSocket6)
+   at System.Net.PooledStream.Activate(Object owningObject, Boolean async, GeneralAsyncDelegate asyncCallback)
+   at System.Net.PooledStream.Activate(Object owningObject, GeneralAsyncDelegate asyncCallback)
+   at System.Net.ConnectionPool.GetConnection(Object owningObject, GeneralAsyncDelegate asyncCallback, Int32 creationTimeout)
+   at System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   at System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   at System.Net.Mail.SmtpClient.GetConnection()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   --- End of inner exception stack trace ---
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at FotoShoutPublishingService.Services.Email.EmailService.SendEmailTo(UserTDO user, EventTDO ev, GuestTDO guest, String permalink) in c:\Dev\NET\vdR\fotoShout\Code\fotoShoutPublishingService\Services\Email\EmailService.cs:line 95
+INFO  2016-12-03 21:44:42,477 330830ms PublishingEngine       Info               - Getting details of the channel group 30542...
+DEBUG 2016-12-03 21:44:43,285 331637ms FsApiWebService        Debug              - Getting the list of publish-authorized photos of the "446" event...
+DEBUG 2016-12-03 21:44:43,367 331720ms FsApiWebService        Debug              - Succeeded
+INFO  2016-12-03 21:44:43,367 331720ms PublishingEngine       Info               - There is no publish-authorized photo for this event.
+INFO  2016-12-03 21:44:43,367 331720ms PublishingEngine       Info               - Published all events of the "phongnguyen17@yahoo.com" user.

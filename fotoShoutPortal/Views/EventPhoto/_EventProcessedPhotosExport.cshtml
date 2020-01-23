@@ -1,0 +1,75 @@
+﻿@model FotoShoutData.Models.EventDetailsTDO
+@{
+    FotoShoutData.Models.EventOption evo = Model.EventOption;
+    IEnumerable<dynamic> photosDetails = Model.PhotosDetails;
+}
+@Html.Raw("File Name")@if (evo.EmailOption) {
+    @Html.Raw(",Email")
+}
+@if (evo.SalutationOption) {
+    @Html.Raw(",Salutation")
+}
+@if (evo.LastNameOption) {
+    @Html.Raw(",Last Name")
+}
+@if (evo.FirstNameOption) {
+    @Html.Raw(",First Name")
+}
+@if (evo.PhoneOption) {
+    @Html.Raw(",Phone")
+    @Html.Raw(",Other Phone")
+}
+@if (evo.FaxOption) {
+    @Html.Raw(",Fax")
+}
+@if (evo.AddressOption) {
+    @Html.Raw(",Address")
+}
+@Html.Raw(",Authorization")
+@for (var idx = 0; idx < photosDetails.Count(); idx++) {
+    var photo = photosDetails.ElementAt(idx);
+    var guests = photo.Guests;
+    for (var idx2 = 0; idx2 < guests.Count; idx2++ ) {
+        var guest = guests[idx2];
+        if (idx2 == 0) {
+            @Html.Raw("\"")@photo.Filename@Html.Raw("\"")
+        }
+        if (evo.EmailOption) {
+            @Html.Raw(",\"") @guest.Email@Html.Raw("\"")
+        }
+        if (evo.SalutationOption) {
+            @Html.Raw(",\"") @guest.Salutation@Html.Raw("\"")
+        }
+        if (evo.LastNameOption) {
+            @Html.Raw(",\"") @guest.LastName@Html.Raw("\"")
+        }
+        if (evo.FirstNameOption) {
+            @Html.Raw(",\"") @guest.FirstName@Html.Raw("\"")
+        }
+        if (evo.PhoneOption) {
+            @Html.Raw(",\"") @guest.PrimaryPhone@Html.Raw("\"")
+            @Html.Raw(",\"") @guest.OtherPhone@Html.Raw("\"")
+        }
+        if (evo.FaxOption) {
+            @Html.Raw(",\"") @guest.Fax@Html.Raw("\"")
+        }
+        if (evo.AddressOption) {
+            @Html.Raw("\"") 
+            if (!string.IsNullOrEmpty((string)guest.Address1)) {
+                @guest.Address1
+                if (!string.IsNullOrEmpty((string)guest.Address2)) {
+                    @Html.Raw(" ") @guest.Address2 @Html.Raw(", ") 
+                }
+                @guest.City@Html.Raw(", ") @guest.Region@Html.Raw(" ")@guest.PostalCode
+                if (!string.IsNullOrEmpty((string)guest.Country)) {
+                    @Html.Raw(", ")@guest.Country;
+                }
+            }
+            @Html.Raw("\"") 
+        }
+        if ((bool)guest.AuthorizePublish) {
+            @Html.Raw(", x")
+        }
+        @Html.Raw("\r\n")
+    }
+}

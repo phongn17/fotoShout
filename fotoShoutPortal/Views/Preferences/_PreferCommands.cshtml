@@ -1,0 +1,13 @@
+﻿@model string
+
+@{
+    var cmd = Model ?? "PublishConfiguration";
+}
+
+<section id="side-panel">
+    @Html.ActionLink("Publish Configuration", "PublishConfiguration", new { controller = "Preferences" }, cmd == "PublishConfiguration" ? new { @class = "command-activated" } : new { @class = "command" })
+    @Html.ActionLink("Event Options", "Index", new { controller = "EventOption" }, cmd == "EventOptions" ? new { @class = "command-activated" } : new { @class = "command" })
+    @Html.ActionLink("Event Clients", "Index", new { controller = "EventSponsor" }, cmd == "EventSponsors" ? new { @class = "command-activated" } : new { @class = "command" })
+    @Html.ActionLink("Email Server Configuration", "EmailServerConfiguration", new { controller = "Preferences" }, cmd == "EmailServerConfiguration" ? new { @class = "command-activated" } : new { @class = "command" })
+    @Html.ActionLink("Email Templates", "Index", new { controller = "EmailTemplate" }, cmd == "EmailTemplates" ? new { @class = "command-activated" } : new { @class = "command" })
+</section>

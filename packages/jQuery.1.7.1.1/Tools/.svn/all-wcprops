@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repo/fotoShout/!svn/ver/110/trunk/Code/fotoShout/packages/jQuery.1.7.1.1/Tools
+END
+install.ps1
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repo/fotoShout/!svn/ver/110/trunk/Code/fotoShout/packages/jQuery.1.7.1.1/Tools/install.ps1
+END
+jquery-1.7.1.intellisense.js
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repo/fotoShout/!svn/ver/110/trunk/Code/fotoShout/packages/jQuery.1.7.1.1/Tools/jquery-1.7.1.intellisense.js
+END
+common.ps1
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repo/fotoShout/!svn/ver/110/trunk/Code/fotoShout/packages/jQuery.1.7.1.1/Tools/common.ps1
+END
+uninstall.ps1
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repo/fotoShout/!svn/ver/110/trunk/Code/fotoShout/packages/jQuery.1.7.1.1/Tools/uninstall.ps1
+END

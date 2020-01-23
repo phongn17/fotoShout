@@ -1,0 +1,9 @@
+﻿@{
+    string eventCmd = Request.QueryString["eventCmd"];
+    if (string.IsNullOrEmpty(eventCmd)) {
+        eventCmd = "Events";
+    }
+
+    Response.Redirect("~/Event/" + eventCmd, true);
+}
+

@@ -1,0 +1,35 @@
+﻿@model IEnumerable<object>
+
+@{
+    string id = Request.QueryString["id"];
+    if (string.IsNullOrEmpty(id)) {
+        var idx = Request.Path.LastIndexOf("/");
+        if (idx != -1) {
+            id = Request.Path.Substring(idx + 1);
+        }
+    }
+    
+    string viewType = Request.QueryString["viewType"];
+    if (string.IsNullOrEmpty(viewType)) {
+        viewType = "Photos";
+    }
+    var eventName = (ViewBag.EventName.Length <= 25) ? ViewBag.EventName : (ViewBag.EventName.Substring(0, 22) + "...");
+}
+
+<section id="side-panel">
+    @if (Model != null) {
+    <div class="label-frame">
+        <div class="side-label">@eventName</div>
+        <div class="side-text">@ViewBag.EventDate</div>
+    </div>
+    }
+    <div class="dropdown-frame">
+        <div>Photo Type</div>
+        @Html.DropDownList("ViewType", new SelectList(new[] { "Photos", "History" }, viewType))
+    </div>
+    @if (viewType.Equals("History", StringComparison.InvariantCultureIgnoreCase) && Model != null && Model.Count() > 0) {
+        <div id="event-report"></div>
+        @Html.ActionLink("Generate Report", "Report", new { id = id}, new { @class="event-report" })
+    }
+    @Html.ActionLink("Back", "Index", new { controller = "Event" }, new { @class = "command-back" })
+</section>

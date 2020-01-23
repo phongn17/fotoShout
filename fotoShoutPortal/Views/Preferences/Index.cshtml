@@ -1,0 +1,9 @@
+﻿@{
+    string preferCmd = Request.QueryString["preferCmd"];
+    if (string.IsNullOrEmpty(preferCmd)) {
+        preferCmd = "PublishConfiguration";
+    }
+
+    Response.Redirect("~/Preferences/" + preferCmd, true);
+}
+

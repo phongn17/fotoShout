@@ -1,0 +1,113 @@
+﻿@model FotoShoutData.Models.SponsorTDO
+
+@{
+    var isEdit = (Model != null && Model.SponsorId != 0);
+    var sponsorHeaderImage = (isEdit && Model.SponsorHeaderImage != null) ? Model.SponsorHeaderImage.LastIndexOf('/') != -1 ? Model.SponsorHeaderImage.Substring(Model.SponsorHeaderImage.LastIndexOf('/') + 1) : Model.SponsorHeaderImage : "";
+    var sponsorTopInfoBlockImage = (isEdit && Model.SponsorTopInfoBlockImage != null) ? Model.SponsorTopInfoBlockImage.LastIndexOf('/') != -1 ? Model.SponsorTopInfoBlockImage.Substring(Model.SponsorTopInfoBlockImage.LastIndexOf('/') + 1) : Model.SponsorTopInfoBlockImage : "";
+    var sponsorBottomInfoBlockImage = (isEdit && Model.SponsorBottomInfoBlockImage != null) ? Model.SponsorBottomInfoBlockImage.LastIndexOf('/') != -1 ? Model.SponsorBottomInfoBlockImage.Substring(Model.SponsorBottomInfoBlockImage.LastIndexOf('/') + 1) : Model.SponsorBottomInfoBlockImage : "";
+    var sponsorFooterImage = (isEdit && Model.SponsorFooterImage != null) ? Model.SponsorFooterImage.LastIndexOf('/') != -1 ? Model.SponsorFooterImage.Substring(Model.SponsorFooterImage.LastIndexOf('/') + 1) : Model.SponsorFooterImage : "";
+
+    ViewBag.Title = isEdit ? "Update Event Client" : "Create Event Client";
+    ViewBag.AppName = "fotoShout";
+}
+
+@using (Html.BeginForm(isEdit ? "Edit" : "Create", "EventSponsor", FormMethod.Post, new { enctype = "multipart/form-data" })) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    
+    @Html.Partial("~/Views/Preferences/_PreferCommands.cshtml", "EventSponsors")
+
+    <section id="main-panel">
+        <div class="div-form-detail">
+            <h2>@ViewBag.Title</h2>
+            <fieldset class="form-fields">
+                <legend>Event Client Info</legend>
+
+                @if (isEdit)
+                {
+                    @Html.HiddenFor(model => model.SponsorId);
+                }
+
+                <div>
+                    <span class="field-label">@Html.LabelFor(model => model.SponsorName)<span>&nbsp;*</span></span>
+                    @Html.EditorFor(model => model.SponsorName)
+                </div>
+                <div>
+                    <span class="field-label">@Html.LabelFor(model => model.SponsorLogo)</span>
+                    @Html.EditorFor(model => model.SponsorLogo)
+                </div>
+                <div>
+                    <span class="field-label">@Html.LabelFor(model => model.SponsorHeaderFile)</span>
+                    @Html.TextBoxFor(model => model.SponsorHeaderFile, new { type = "file" })
+                    @if (sponsorHeaderImage.Length != 0)
+                    {
+                        @Html.HiddenFor(model => model.SponsorHeaderImage);
+                        <span class="field-label"></span>
+                        <span class="field-current-value">Current Value: @sponsorHeaderImage</span>
+                    }
+                </div>
+                <div>
+                    <span class="field-label">@Html.LabelFor(model => model.SponsorHeaderUrl)</span>
+                    @Html.EditorFor(model => model.SponsorHeaderUrl)
+                </div>
+                <div>
+                    <span class="field-label">@Html.LabelFor(model => model.SponsorTopInfoBlockFile)</span>
+                    @Html.TextBoxFor(model => model.SponsorTopInfoBlockFile, new { type = "file" })
+                    @if (sponsorTopInfoBlockImage.Length != 0)
+                    {
+                        @Html.HiddenFor(model => model.SponsorTopInfoBlockImage);
+                        <span class="field-label"></span>
+                        <span class="field-current-value">Current Value: @sponsorTopInfoBlockImage</span>
+                    }
+                </div>
+                <div>
+                    <span class="field-label">@Html.LabelFor(model => model.SponsorTopInfoBlockUrl)</span>
+                    @Html.EditorFor(model => model.SponsorTopInfoBlockUrl)
+                </div>
+                <div>
+                    <span class="field-label">@Html.LabelFor(model => model.SponsorBottomInfoBlockFile)</span>
+                    @Html.TextBoxFor(model => model.SponsorBottomInfoBlockFile, new { type = "file" })
+                    @if (sponsorBottomInfoBlockImage.Length != 0)
+                    {
+                        @Html.HiddenFor(model => model.SponsorBottomInfoBlockImage);
+                        <span class="field-label"></span>
+                        <span class="field-current-value">Current Value: @sponsorBottomInfoBlockImage</span>
+                    }
+                </div>
+                <div>
+                    <span class="field-label">@Html.LabelFor(model => model.SponsorBottomInfoBlockUrl)</span>
+                    @Html.EditorFor(model => model.SponsorBottomInfoBlockUrl)
+                </div>
+                <div>
+                    <span class="field-label">@Html.LabelFor(model => model.SponsorFooterFile)</span>
+                    @Html.TextBoxFor(model => model.SponsorFooterFile, new { type = "file" })
+                    @if (sponsorFooterImage.Length != 0)
+                    {
+                        @Html.HiddenFor(model => model.SponsorFooterImage);
+                        <span class="field-label"></span>
+                        <span class="field-current-value">Current Value: @sponsorFooterImage</span>
+                    }
+                </div>
+                <div>
+                    <span class="field-label">@Html.LabelFor(model => model.SponsorFooterUrl)</span>
+                    @Html.EditorFor(model => model.SponsorFooterUrl)
+                </div>
+
+                @Html.Partial("~/Views/Shared/_FormButtons.cshtml", "EventSponsor")
+            </fieldset>
+        </div>
+    </section>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script type="text/javascript" src="@Url.Content("~/Scripts/inc/eventsponsors.js?1.3.0.10")"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var tabCtrl = new TabControl('@Request.ApplicationPath');
+            var initializer = new Initializer(tabCtrl, "preferences");
+            var evSponsors = new EventSponsors();
+            window.App.init($('form'), 1);
+        });
+    </script>
+}

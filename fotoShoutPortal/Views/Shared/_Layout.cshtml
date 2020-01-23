@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.AppName - @ViewBag.Title</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />
+        @Styles.Render("~/Content/css")
+        @Styles.Render("~/Content/themes/base/css")
+        @Styles.Render("~/Content/style")
+        <link rel="stylesheet" type="text/css" href="@Url.Content("~/Scripts/ad-gallery/jquery.ad-gallery.css")" />
+        @Scripts.Render("~/bundles/modernizr")
+    </head>
+    <body>
+        <header>
+            @Html.Partial("_HeaderPartial")
+        </header>
+        <div id="body" class="content-wrapper content-padding">
+            @RenderSection("featured", required: false)
+            <section>
+                <div id="tabs-mainmenu">
+                    <ul>
+                        <li><a href="#tab-event" id="tabLink-event">Events</a></li>
+                        <li><a href="#tab-preferences" id="tabLink-preferences">Preferences & Setup</a></li>
+                    </ul>
+                    <div id="tab-event"></div>
+                    <div id="tab-preferences"></div>
+                </div>
+            </section>
+            <section class="clear-fix" id="content">
+                @RenderBody()
+            </section>
+        </div>
+        <footer>
+            @Html.Partial("_FooterPartial")
+        </footer>
+        <div id="confirmation"></div>
+        <div id="error-pane"></div>
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/jqueryui")
+        @Scripts.Render("~/bundles/inc")
+        @RenderSection("styles", required: false)
+        @RenderSection("scripts", required: false)
+    </body>
+</html>

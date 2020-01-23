@@ -1,0 +1,49 @@
+﻿@model FotoShoutData.Models.Authenticate.LoginModel
+
+@{
+    ViewBag.Title = "Log in";
+    ViewBag.AppName = "fotoShout";
+    ViewBag.Welcome = "Welcome to ";
+    Layout = "~/Views/Shared/_LayoutAccount.cshtml";
+}
+
+<section id="loginForm">
+@using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl })) {
+    @Html.AntiForgeryToken()
+
+    <fieldset>
+        <legend>@ViewBag.Welcome<span class="emphasize">@ViewBag.AppName</span></legend>
+        <div>
+            @Html.ValidationSummary(true)
+            <div>
+                @Html.TextBoxFor(m => m.UserName, new { placeholder = "Enter your email" })
+            </div>
+            <div>
+                @Html.PasswordFor(m => m.Password, new { placeholder = "Enter your password" })
+            </div>
+            <div>
+                @Html.CheckBoxFor(m => m.RememberMe)
+                @Html.LabelFor(m => m.RememberMe, new { @class = "checkbox" })
+            </div>
+            <input type="submit" value="Login" />
+        </div>
+    </fieldset>
+    <!-- <p>
+        @Html.ActionLink("Register", "Register") if you don't have an account.
+    </p> -->
+}
+</section>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script type="text/javascript" src="@Url.Content("~/Scripts/inc/placeholder/Placeholders.min.js")"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var validateSumErr = $(".validation-summary-errors");
+            if (validateSumErr == undefined || validateSumErr.length == 0)
+                $("#loginForm").css("height", 275);
+            else
+                $("#loginForm").css("height", 345);
+        });
+    </script>
+}

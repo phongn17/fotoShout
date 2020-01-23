@@ -1,0 +1,7 @@
+﻿@model FotoShoutData.Models.EventOption
+
+<div><h6>Are you sure you want to delete the '@Model.EventOptionName' event option?</h6></div>
+@using (Html.BeginForm("Delete", "EventOption", FormMethod.Post, new { id = "deleteForm" })) {
+    @Html.AntiForgeryToken()
+}
+

@@ -1,0 +1,22 @@
+﻿@{
+    IDictionary<string, string> docs = new Dictionary<string, string> {
+        {"What do I do first?", "Guide 01 - What do I do first 12-13.pdf"},
+        {"How to Install fotoShout software into Windows 7?", "Guide 02-W7 - How to Install fotoShout software Windows 7 (03-14).pdf"},
+        {"How to Install fotoShout software into Windows 8.x?", "Guide 02- W8 - How to Install fotoShout software Win 8 & 8_1 (4-14).pdf"},
+        {"Step By Step Detailed Guide To Setting Up fotoShout", "Guide 03 - Step By Step Detailed Guide To Setting Up fotoShout 02-14.pdf"}, 
+        {"How To Setup Social Media Channels?", "Guide 04 - How To Setup Social Media Channels 12-13.pdf"},
+        {"E-Mail Template - Users Quick Guide 12-13.pdf", "Guide 05 E-Mail Template - Users Quick Guide 12-13.pdf"},
+        {"fotoShout Metrics Tracking Reports & E-mail Quick Guide", "Guide 06 fotoShout Metrics Tracking Reports &amp; E-mail Quick Guide 12-13.pdf"},
+        {"fotoShout Web Portal Event Setup Quick Guide", "Guide 07 fotoShout Web Portal Event Setup Quick Guide.pdf"},
+        {"How to Reserve your Routers IP Address Apple Airport?", "Guide 08 How to Reserve your Routers IP Address Apple Airport 12-13.pdf"},
+        {"How to Give Your Wirless LAN Priority?", "Guide 09 How to Give Your Wirless LAN Priority 12-13.pdf"},
+        {"How to import images into fotoShout?", "Guide 10 How to import images into fotoShout 02-14.pdf"}
+    };
+}
+<ul class="help-list">
+    @foreach (string key in docs.Keys) {
+        <li>        
+            @Html.ActionLink(key, "Pdf", new { controller = "Content", filename = docs[key] }, new { target = "_blank" })
+        </li> 
+    }
+</ul>

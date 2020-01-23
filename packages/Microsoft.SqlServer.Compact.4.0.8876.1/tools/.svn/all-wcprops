@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repo/fotoShout/!svn/ver/110/trunk/Code/fotoShout/packages/Microsoft.SqlServer.Compact.4.0.8876.1/tools
+END
+VS.psm1
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repo/fotoShout/!svn/ver/110/trunk/Code/fotoShout/packages/Microsoft.SqlServer.Compact.4.0.8876.1/tools/VS.psm1
+END
+Install.ps1
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/repo/fotoShout/!svn/ver/110/trunk/Code/fotoShout/packages/Microsoft.SqlServer.Compact.4.0.8876.1/tools/Install.ps1
+END
+Uninstall.ps1
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repo/fotoShout/!svn/ver/110/trunk/Code/fotoShout/packages/Microsoft.SqlServer.Compact.4.0.8876.1/tools/Uninstall.ps1
+END
+VS.psd1
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repo/fotoShout/!svn/ver/110/trunk/Code/fotoShout/packages/Microsoft.SqlServer.Compact.4.0.8876.1/tools/VS.psd1
+END

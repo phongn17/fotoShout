@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Home";
+    ViewBag.AppName = "fotoShout";
+    
+    string tabName = Request.QueryString["tabName"];
+    if (string.IsNullOrEmpty(tabName)) {
+        tabName = "event";
+    }
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var tabCtrl = new TabControl('@Request.ApplicationPath');
+            var initializer = new Initializer(tabCtrl, '@tabName');
+            tabCtrl.getContent('@tabName');
+        });
+    </script>
+}

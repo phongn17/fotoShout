@@ -1,0 +1,111 @@
+﻿@model FotoShoutData.Models.EventDetailsTDO
+
+@{
+    string id = Request.QueryString["id"];
+    if (string.IsNullOrEmpty(id)) {
+        var idx = Request.Path.LastIndexOf("/");
+        if (idx != -1) {
+            id = Request.Path.Substring(idx + 1);
+        }
+    }
+    FotoShoutData.Models.EventOption evo = Model.EventOption;
+    IEnumerable<dynamic> photosDetails = Model.PhotosDetails;
+}
+
+@if (photosDetails == null || !photosDetails.Any()) {
+    if (ViewBag.Error != null) {
+        <div class="error">ViewBag.Error</div>
+    }
+    else {
+        <div>No photo</div>
+    }
+}
+else {
+    <div class="div-event-report">
+        <table cellpadding="0" cellspacing="0" class="tbl-report">
+            <tr>
+                <th class="hleft">File Name</th>
+                @if (evo.EmailOption) {
+                    <th class="hleft">Email</th>
+                }
+                @if (evo.SalutationOption) {
+                    <th class="hleft">Salutation</th>
+                }
+                @if (evo.LastNameOption) {
+                    <th class="hleft">Last Name</th>
+                }
+                @if (evo.FirstNameOption) {
+                    <th class="hleft">First Name</th>
+                }
+                @if (evo.PhoneOption) {
+                    <th class="hleft">Phone</th>
+                    <th class="hleft">Other Phone</th>
+                }
+                @if (evo.FaxOption) {
+                    <th class="hleft">Fax</th>
+                }
+                @if (evo.AddressOption) {
+                    <th class="hleft">Address</th>
+                }
+
+                <th class="alignhv">
+                    Authorization<br /><br />
+                    <span class="note">@photosDetails.Count()&nbsp;photo(s)</span>
+                    @Html.ActionLink(" ", "ExportToExcel", new { id = id }, new { @class="vmiddle export-to-excel" })
+                </th>
+            </tr>
+        @for (var idx = 0; idx < photosDetails.Count(); idx++) {
+            var photo = photosDetails.ElementAt(idx);
+            var guests = photo.Guests;
+            for (var idx2 = 0; idx2 < guests.Count; idx2++ ) {
+                var guest = guests[idx2];
+                <tr>
+                    <td class="hleft">
+                        @if (idx2 == 0) {
+                            @photo.Filename
+                        }
+                    </td>
+                    @if (evo.EmailOption) {
+                        <td class="hleft">@guest.Email</td>
+                    }
+                    @if (evo.SalutationOption) {
+                        <td class="hleft">@guest.Salutation</td>
+                    }
+                    @if (evo.LastNameOption) {
+                        <td class="hleft">@guest.LastName</td>
+                    }
+                    @if (evo.FirstNameOption) {
+                        <td class="hleft">@guest.FirstName</td>
+                    }
+                    @if (evo.PhoneOption) {
+                        <td class="hleft">@guest.PrimaryPhone</td>
+                        <td class="hleft">@guest.OtherPhone</td>
+                    }
+                    @if (evo.FaxOption) {
+                        <td class="hleft">@guest.Fax</td>
+                    }
+                    @if (evo.AddressOption) {
+                        <td class="hleft">
+                            @if (!string.IsNullOrEmpty((string)guest.Address1)) {
+                                @guest.Address1<br />
+                                if (!string.IsNullOrEmpty((string)guest.Address2)) {
+                                    @guest.Address2<br />
+                                }
+                                @guest.City<span>,&nbsp;</span>@guest.Region<span>&nbsp;</span>@guest.PostalCode
+                                if (!string.IsNullOrEmpty((string)guest.Country)) {
+                                    <br />@guest.Country;
+                                }
+                            }
+                        </td>
+                    }
+                    <td class="alignhv">
+                        @if ((bool)guest.AuthorizePublish) {
+                            <img src="~/Images/icons/checked01.png" alt="Authorizing indication" />
+                        }
+                    </td>
+                </tr>
+            }
+        }
+    </table>
+    </div>
+}

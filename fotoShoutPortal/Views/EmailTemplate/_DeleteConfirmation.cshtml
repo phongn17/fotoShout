@@ -1,0 +1,7 @@
+﻿@model FotoShoutData.Models.EmailTemplate
+
+<div><h6>Are you sure you want to delete the '@Model.EmailTemplateName' email template?</h6></div>
+@using (Html.BeginForm("Delete", "EmailTemplate", FormMethod.Post, new { id = "deleteForm" })) {
+    @Html.AntiForgeryToken()
+}
+

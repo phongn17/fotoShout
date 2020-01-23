@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{95C5B374-8111-4EA3-8CEE-A5E92C0FAF11}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FotoShoutData</RootNamespace>
+    <AssemblyName>fotoShoutData</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release.SQL|AnyCPU'">
+    <OutputPath>bin\Release.SQL\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release.Ce|AnyCPU'">
+    <OutputPath>bin\Release.Ce\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release.SQLExpressLocal|AnyCPU'">
+    <OutputPath>bin\Release.SQLExpressLocal\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\Account.cs" />
+    <Compile Include="Models\Authenticate\LoginModel.cs" />
+    <Compile Include="Models\ChannelGroupTDO.cs" />
+    <Compile Include="Models\EventEmail.cs" />
+    <Compile Include="Models\EventEmailStatus.cs" />
+    <Compile Include="Models\EventStatus.cs" />
+    <Compile Include="Models\Credentials.cs" />
+    <Compile Include="Models\EmailServerAccount.cs" />
+    <Compile Include="Models\EmailTemplate.cs" />
+    <Compile Include="Models\EmailTemplateTDO.cs" />
+    <Compile Include="Models\Event.cs" />
+    <Compile Include="Models\EventBroadcast.cs" />
+    <Compile Include="Models\EventBroadcastStatus.cs" />
+    <Compile Include="Models\EventInfo.cs" />
+    <Compile Include="Models\EventOption.cs" />
+    <Compile Include="Models\EventOptionInfo.cs" />
+    <Compile Include="Models\EventOptionTDO.cs" />
+    <Compile Include="Models\EventDetailsTDO.cs" />
+    <Compile Include="Models\EventTDO.cs" />
+    <Compile Include="Models\Guest.cs" />
+    <Compile Include="Models\GuestInfo.cs" />
+    <Compile Include="Models\GuestPhoto.cs" />
+    <Compile Include="Models\GuestTDO.cs" />
+    <Compile Include="Models\PagingInfo.cs" />
+    <Compile Include="Models\Photo.cs" />
+    <Compile Include="Models\PhotoAnnotation.cs" />
+    <Compile Include="Models\PhotoEmail.cs" />
+    <Compile Include="Models\PhotoGroupTDO.cs" />
+    <Compile Include="Models\PhotoAuthorizationTDO.cs" />
+    <Compile Include="Models\PhotoInfo.cs" />
+    <Compile Include="Models\PhotoStatus.cs" />
+    <Compile Include="Models\PhotoTDO.cs" />
+    <Compile Include="Models\PhotoDetailsTDO.cs" />
+    <Compile Include="Models\PublishAccount.cs" />
+    <Compile Include="Models\Publish\BroadcastDetail.cs" />
+    <Compile Include="Models\Publish\BroadcastField.cs" />
+    <Compile Include="Models\Publish\BroadcastFieldValue.cs" />
+    <Compile Include="Models\Publish\Channel.cs" />
+    <Compile Include="Models\Publish\ChannelAction.cs" />
+    <Compile Include="Models\Publish\Credentials.cs" />
+    <Compile Include="Models\Publish\PostBroadcast.cs" />
+    <Compile Include="Models\Publish\ChannelGroup.cs" />
+    <Compile Include="Models\Publish\ChannelGroupAction.cs" />
+    <Compile Include="Models\Sponsor.cs" />
+    <Compile Include="Models\SponsorTDO.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserAuthorization.cs" />
+    <Compile Include="Models\UserRole.cs" />
+    <Compile Include="Models\UserTDO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,29 @@
+﻿@model FotoShoutData.Models.EventTDO
+
+@{
+    var image = !string.IsNullOrEmpty(Model.Thumbnail) ? Model.Thumbnail : @Url.Content("~/Images/nophoto.png");
+    DateTime date = (DateTime)Model.EventDate;
+    var dateStr = date.ToString("dddd MM/dd/yyyy");
+    var eventName = (Model.EventName.Length <= 25) ? Model.EventName : (Model.EventName.Substring(0, 22) + "...");
+}
+
+<div class="thumb">
+    <span class="thumb-label">@eventName</span>
+    <div class="thumb-frame">
+        <a href="@Url.Action("Details", new { controller = "EventPhoto", id = @Model.EventId })"><img src="@image" alt="Event Thumbnail" /></a>
+    </div>
+    <div class="thumb-date">
+        <div class="date"><span class="visible">@dateStr</span></div>
+        <div class="links">
+            <span class="hidden">
+                @Html.ActionLink(" ", "ReviewEvent", new { id = Model.EventId }, new { @class = "linkReview", title = "Review" })
+                @if (Model.EventStatus == (byte)FotoShoutData.Models.EventStatus.Open) {
+                    @Html.ActionLink(" ", "EditEvent", new { id = Model.EventId }, new { @class = "linkEdit", title = "Edit" })
+                    @Html.ActionLink(" ", "CompleteEvent", new { id = Model.EventId }, new { @class = "linkComplete", title = "Mark as complete" })
+                    @Html.ActionLink(" ", "DeleteEvent", new { id = Model.EventId }, new { @class = "linkDelete", title = "Delete" })
+                }
+            </span>
+        </div>
+    </div>
+</div>
+

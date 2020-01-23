@@ -1,0 +1,12 @@
+﻿<div class="content-wrapper">
+    <div class="float-left">
+        <p class="site-title">@Html.ActionLink(" ", "Index", new { controller = "Home" }, new { @class = "homeLink" })</p>
+    </div>
+    <div class="float-right">
+        @if (!Request.Url.AbsolutePath.EndsWith("/Login")) {
+            <section id="login">
+                @Html.Partial("_LoginPartial")
+            </section>
+        }
+    </div>
+</div>

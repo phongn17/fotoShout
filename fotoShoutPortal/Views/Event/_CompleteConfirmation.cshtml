@@ -1,0 +1,7 @@
+﻿@model FotoShoutData.Models.EventTDO
+
+<div><h6>Once an event marked as complete, you are no longer able to annotate its photos. Are you sure you want to do this?</h6></div>
+@using (Html.BeginForm("CompleteEvent", "Event", FormMethod.Post, new { id = "completeForm" })) {
+    @Html.AntiForgeryToken()
+}
+

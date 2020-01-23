@@ -1,0 +1,5 @@
+/Users/phongnguyen/Dev/C#/fotoShout/Code/fotoShoutData/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/phongnguyen/Dev/C#/fotoShout/Code/fotoShoutData/bin/Debug/fotoShoutData.dll.mdb
+/Users/phongnguyen/Dev/C#/fotoShout/Code/fotoShoutData/bin/Debug/fotoShoutData.dll
+/Users/phongnguyen/Dev/C#/fotoShout/Code/fotoShoutData/obj/Debug/fotoShoutData.dll
+/Users/phongnguyen/Dev/C#/fotoShout/Code/fotoShoutData/obj/Debug/fotoShoutData.dll.mdb

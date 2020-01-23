@@ -1,0 +1,43 @@
+﻿@model string
+
+@{
+    var filename = Model;
+}
+
+<div class="div-tos-content">
+<p class="caption center">fotoShout Terms of Service</p>
+<p class="caption">Welcome to fotoShout.</p>
+<p>Thank you for product and services. The Services are provided by fotoShout, located at 1592 N. Batavia St., Building 1, Orange, CA., 92867.</p>
+<p>By using our services you agree to our terms.</p>
+<p class="dim">Our Services are very diverse, so sometimes additional terms or product requirements (including age requirements) may apply. Additional terms will be available with the relevant Services, and those additional terms become part of your agreement with us if you use those Services.  You must follow any polices made available to you with our services.</p>
+<p class="dim">Don’t misuse our Services. Using our Services does not give you ownership of any intellectual property rights in our Services or the content you access. You may not use content from our Services unless you obtain permission from its owner or are otherwise permitted by law. These terms do not grant you the right to use any branding or logos used in our Services. Don’t remove, obscure, or alter any legal notices displayed in or along with our Services.  These terms remain in effect upon the transitions from beta to full fotoShout services.</p>
+<p class="caption">GENERAL TERMS AND CONDITIONS</p>
+<ul class="list-upper-alpha">
+    <li>fotoShout has developed Peer-to-browser photo sharing services, namely, providing a website featuring technology enabling users to upload, view, and download digital photos including modifications, enhancements, improvements, updates, additions, derivative works, documentation and related material ("Software").</li>
+    <li>fotoShout desires that the Software be tested prior to general release.</li>
+    <li>Licensee wishes to serve as a Beta test site for fotoShout software;</li>
+</ul>
+
+<p>NOW, THEREFORE, in consideration of the mutual covenants and premises herein contained, the parties hereto agree as follows:</p>
+<ul class="list-decimal">
+    <li>fotoShout grants to Licensee a non-exclusive, non-transferable license to use the fotoShout software on a single computer at Licensee's business location solely for Beta testing and Beta use from effective date of agreement to 15 days after official release date of the products(s), subject to the term and conditions below.</li>
+    <li>In consideration for receiving a copy of fotoShout software for testing, Licensee agrees to serve as a "Beta Site" for the Software and will notify fotoShout representative of all problems and ideas for enhancements which come to Licensee's attention during the period of this Agreement, and hereby assigns to fotoShout all right, title and interest to such enhancements and all property rights therein including without limitation all patent, copyright, trade secret, mask work, trademark, moral right or other intellectual property rights.</li>
+    <li>Licensee agrees that fotoShout Software is the sole property of fotoShout including valuable trade secrets of OurCompany. Licensee agrees to treat fotoShout software as confidential and will not without the express written authorization of fotoShout:
+        <ul class="list-decimal">
+            <li>Copy, sell or market fotoShout to any third party; or</li>
+            <li>Publish or otherwise disclose information relating to performance or quality of the Software to any competitor or possible competitor</li>
+            <li>Modify, reuse, disassemble, decompile, reverse engineer or otherwise translate Software or any portion thereof.</li>
+        </ul>
+    </li>
+    <li>fotoShout is prerelease code and is not at the level of performance or compatibility of a final, generally available product offering. fotoShout software may not operate correctly and may be substantially modified prior to first commercial shipment, or withdrawn. fotoShout Software is provided "AS IS" without warranty of any kind. The entire risk arising out of the use or performance of fotoShout software remains with Licensee. In no event shall fotoShout be liable for any damage whatsoever arising out of the use of or inability to use Software, even if fotoShout has been advised of the possibility of such damages.</li>
+    <li>The Licensee upon completion of the Beta test agrees to provide material, statistics, or information that is not deemed confidential to Licensee’s business for use in press releases, customer testimonials, and as a reference in marketing and sales initiatives by fotoShout. Licensee will provide a quote to fotoShout that may be used in a press release.</li>
+    <li>This License Agreement shall be governed, construed and enforced in accordance with the laws of the United States of America and of the State of California.  Any notice required by this Agreement shall be given by prepaid, first class, certified mail, return receipt requested to above address or such other address as may be given from time to time under the terms of this notice provision.</li>
+    <li>This Agreement constitutes the entire and only agreement between the parties for Software and all other prior negotiations, representations, agreements, and understandings are superseded hereby. No agreements altering or supplementing the terms hereof may be made except by means of a written document signed by the duly authorized representatives of the parties.</li>
+    <li>Licensee shall comply with all applicable federal, state and local laws, regulations, and ordinances in connection with its activities pursuant to this Agreement.</li>
+    <li>Failure of fotoShout to enforce a right under this Agreement shall not act as a waiver of that right or the ability to later assert that right relative to the particular situation involved.</li>
+    <li>If any provision of this Agreement shall be found by a court to be void, invalid or unenforceable, the same shall be reformed to comply with applicable law or stricken if not so conformable, so as not to affect the validity or enforceability of this Agreement.</li>
+</ul>
+</div>
+@using (Html.BeginForm("Download", "Content", new { filename = Model }, FormMethod.Post, new { id = "acceptForm" })) {
+    @Html.AntiForgeryToken()
+}

@@ -1,0 +1,24 @@
+﻿@model IEnumerable<FotoShoutData.Models.PhotoTDO>
+
+@Html.Partial("_SidePanelByDate")
+<section id="main-panel">
+@if (Model == null || Model.Count() == 0) {
+    if (ViewBag.Error != null) {
+        <div class="error">ViewBag.Error</div>
+    }
+    else {
+        <div id="message">No photo</div>
+    }
+}
+else {
+    <table cellpadding="0" cellspacing="0" class="tbl-photos">
+        @for (var idx = 0; idx < Model.Count(); idx ++) {
+            <tr>
+                <td>
+                    @Html.Partial("_PhotoDetail", Model.ElementAt(idx))
+                </td>
+            </tr>
+        }
+    </table>
+}
+</section>

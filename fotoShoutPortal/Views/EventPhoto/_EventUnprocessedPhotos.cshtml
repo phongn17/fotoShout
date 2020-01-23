@@ -1,0 +1,31 @@
+﻿@model IEnumerable<FotoShoutData.Models.PhotoTDO>
+
+@Html.Partial("_SidePanel", Model)
+<section id="main-panel">
+    @if (Model == null || Model.Count() == 0) {
+        if (ViewBag.Error != null) {
+            <div class="error">ViewBag.Error</div>
+        }
+        else {
+            <div id="message">No photo</div>
+        }
+    }
+    else {
+    <div class="ad-gallery" id="event-photosGallary">
+        <div class="ad-image-wrapper"></div>
+        <div class="ad-controls"></div>
+        <div class="ad-nav">
+            <div class="ad-thumbs">
+                <ul class="ad-thumb-list">
+                    @for (var idx = 0; idx < Model.Count(); idx++) {
+                        FotoShoutData.Models.PhotoTDO photo = @Model.ElementAt(idx);
+                        <li>
+                            <a href="@photo.Image"><img src="@photo.Thumbnail" title="@photo.Filename" alt="@photo.Created" class="ad-thumb" /></a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+    }
+</section>

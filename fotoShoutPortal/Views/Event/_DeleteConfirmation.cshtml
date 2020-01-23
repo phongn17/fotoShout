@@ -1,0 +1,7 @@
+﻿@model FotoShoutData.Models.EventTDO
+
+<div><h6>Are you sure you want to delete the '@Model.EventName' event?</h6></div>
+@using (Html.BeginForm("DeleteEvent", "Event", FormMethod.Post, new { id = "deleteForm" })) {
+    @Html.AntiForgeryToken()
+}
+

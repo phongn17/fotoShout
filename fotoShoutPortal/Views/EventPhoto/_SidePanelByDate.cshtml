@@ -1,0 +1,23 @@
+﻿@{
+    string id = Request.QueryString["id"];
+    if (string.IsNullOrEmpty(id)) {
+        var idx = Request.Path.LastIndexOf("/");
+        if (idx != -1) {
+            id = Request.Path.Substring(idx + 1);
+        }
+    }
+    
+    string created = Request.QueryString["created"];
+    var eventName = (ViewBag.EventName.Length <= 25) ? ViewBag.EventName : (ViewBag.EventName.Substring(0, 22) + "...");
+}
+
+<section id="side-panel">
+    @if (Model != null) {
+    <div class="label-frame-2">
+        <div class="side-label">@eventName</div>
+        <div class="side-text">@ViewBag.EventDate</div>
+        <div class="side-text">Photo(s) taken on @created</div>
+    </div>
+    }
+    @Html.ActionLink("Back", "Details", new { id = id, viewType = "History" }, new { @class = "command-back" })
+</section>

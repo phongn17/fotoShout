@@ -1,0 +1,68 @@
+﻿@model FotoShoutData.Models.PublishAccount
+
+@{
+    ViewBag.Title = "Publish Configuration";
+    ViewBag.AppName = "fotoShout";
+    
+    var isEdit = (Model != null && Model.Id != 0);
+}
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    if (ViewBag.Message != null) {
+        <span id="message">@ViewBag.Message</span>    
+    }
+
+    @Html.Partial("_PreferCommands", "PublishConfiguration")
+
+    <section id="main-panel">
+        <div class="div-form-detail">
+        <h2>@ViewBag.Title</h2>
+            <fieldset class="form-fields">
+                <legend>@ViewBag.Title</legend>
+                
+                @if (isEdit) {
+                    @Html.HiddenFor(model => model.Id)
+                }
+                @Html.HiddenFor(model => model.ApiKey)
+
+                <div>
+                    <span class="field-label">@Html.LabelFor(model => model.Url)<span>&nbsp;*</span></span>
+                    @Html.EditorFor(model => model.Url)
+                </div>
+
+                <div>
+                    <span class="field-label">@Html.LabelFor(model => model.Email)<span>&nbsp;*</span></span>
+                    @Html.EditorFor(model => model.Email)
+                </div>
+
+                <div>
+                    <span class="field-label">@Html.LabelFor(model => model.Password)<span>&nbsp;*</span></span>
+                    @Html.PasswordFor(model => model.Password)
+                </div>
+                
+@*                <div>
+                    <span class="field-label">@Html.LabelFor(model => model.ApiKey)<span>&nbsp;*</span></span>
+                    @Html.EditorFor(model => model.ApiKey)
+                </div>*@
+
+                @Html.Partial("~/Views/Shared/_FormButtons.cshtml", "")
+            </fieldset>
+        </div>
+    </section>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script type="text/javascript" src="@Url.Content("~/Scripts/inc/publishconfig.js?1.3.0.2")"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var tabCtrl = new TabControl('@Request.ApplicationPath');
+            var initializer = new Initializer(tabCtrl, "preferences");
+            var publishConfig = new PublishConfig();
+            window.App.init($('form'), 1);
+        });
+    </script>
+}

@@ -1,0 +1,52 @@
+10
+
+dir
+134
+http://svn.vdr.com/repo/fotoShout/trunk/Code/fotoShout/packages/Newtonsoft.Json.4.5.11/lib
+http://svn.vdr.com/repo/fotoShout
+
+
+
+2013-03-16T01:04:40.814329Z
+36
+vdr\x5cphongn
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+84ee07e7-d99f-054f-a881-ecf4b2f582e9
+
+sl4
+dir
+
+sl3-wp
+dir
+
+net20
+dir
+
+portable-net40+sl4+wp7+win8
+dir
+
+net40
+dir
+
+sl4-windowsphone71
+dir
+
+winrt45
+dir
+
+net35
+dir
+

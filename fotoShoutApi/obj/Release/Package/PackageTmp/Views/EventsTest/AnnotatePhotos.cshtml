@@ -1,0 +1,92 @@
+﻿@{
+    ViewBag.Title = "Annotate Photos";
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script type="text/javascript" src="~/Scripts/knockout-2.1.0.js"></script>
+    <script type="text/javascript" src="~/Scripts/Inc/event.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            ko.applyBindings(new EventPhotosViewModel('@ViewBag.EventId', '@ViewBag.Reannotate'));
+        });
+    </script>
+}
+
+<div class="content" id="photo-details">
+    <div>
+        <input type="button" value="Unselect all photos" data-bind="click: $root.unselectAll" />
+    </div>
+    <div class="float-left">
+        <h4 data-bind="if: $root.photoGuests">Guests of the photo</h4>
+        
+        <ul id="photo-guests" data-bind="foreach: $root.photoGuests">
+            <li>
+                <div><span data-bind="text: ($data.LastName ? $data.LastName + ', ' : '') + ($data.FirstName ? $data.FirstName : '')" /></div>
+                <div><span data-bind="text: ($data.Email ? $data.Email : '')" /></div>
+                <div><img height="50" data-bind="attr: { src: 'data:image/png;base64,' + $data.Signature }, visible: $data.Signature" alt="Signature" /></div>
+                <p><input type="button" value="Delete" data-bind="click: $root.deleteGuest"/></p>
+            </li>
+        </ul>
+        <div data-bind="visible: $root.selected">
+            <div class="item-left">Rating:</div><input type="text" id="rating" data-bind="value: $root.rating" />
+        </div>
+        <input type="button" value="Submit Guests" data-bind="click: $root.submitGuests, visible: $root.photoGuests" />
+    </div>
+    <div id="photo-annotation" class="float-right" data-bind="visible: $root.selected">
+        <form data-bind="submit: $root.createGuest" method="post" enctype="multipart/form-data">
+            <h4>Add Guest to Photo</h4>
+            <fieldset>
+                <input type="hidden" id="id" />
+                <div>
+                    <div class="item">First Name:</div>
+                    <input type="text" id="firstname" />
+                </div>
+                <div>
+                    <div class="item">Last Name:</div>
+                    <input type="text" id="lastname" />
+                </div>
+                <div>
+                    <div class="item">Email:</div>
+                    <input type="text" id="email" />
+                </div>
+                <div>
+                    <div class="item-left"><input type="checkbox" id="authorize-publish" /></div>
+                    <label class="checkbox-label" for="authorize-publish">Authorize Publish</label>
+                </div>
+                <div>
+                    <div class="item">Signature</div>
+                    <input type="file" id="signature" name="signature" />
+                </div>
+                <p>
+                    <input type="submit" value="Add Guest" />
+                </p>
+            </fieldset>
+        </form>
+    </div>
+</div>
+<div class="content">
+    <div data-bind="if: $root.error">
+        <span class="message-error" data-bind="html: $root.error" />
+    </div>
+    <div data-bind="if: $root.msg">
+        <span class="message-success" data-bind="html: $root.msg" />
+    </div>
+    <input type="button" value="Unselect the photo" data-bind="click: $root.unselect, visible: $root.selected" />
+    <div>
+        <h2>Available Photos</h2>
+        <table data-bind="foreach: photos">
+            <tr class="table-row">
+                <td><img data-bind="attr: { src: $data.Thumbnail }" /></td>
+                <td><span data-bind="text: $data.Filename" /></td>
+                <td>
+                    <input type="button" value="Select" data-bind="click: $root.select" />
+                    <input type="button" value="Unclaim" data-bind="click: $root.unclaim" />
+                    <input type="button" value="Reclaim" data-bind="click: $root.reclaim" />
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div>@Html.ActionLink("Back to Event", "Index")</div>
+</div>
+

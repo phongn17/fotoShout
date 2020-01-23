@@ -1,0 +1,25 @@
+﻿@model FotoShoutData.Models.EventTDO
+
+@{
+    ViewBag.Title = "Event Info";
+    ViewBag.AppName = "fotoShout";
+}
+
+<section id="main-panel">
+    <h2>@ViewBag.Title</h2>
+    <fieldset class="form-fields" id="event-detail">
+        <legend>Event Info</legend>
+        @Html.Partial("ReviewEventDetails", Model)
+        @Html.Partial("~/Views/Shared/_FormButtons.cshtml", (Model.EventStatus == (byte)FotoShoutData.Models.EventStatus.Open) ? Model.EventId.ToString() : "ReviewEvent")
+    </fieldset>
+</section>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var tabCtrl = new TabControl('@Request.ApplicationPath');
+            var initializer = new Initializer(tabCtrl, "event");
+        });
+    </script>
+}

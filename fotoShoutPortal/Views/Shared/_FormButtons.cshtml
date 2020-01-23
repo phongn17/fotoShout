@@ -1,0 +1,45 @@
+﻿@model string
+
+@{
+    var submitValue = "Create";
+    var cancelAction = "Events";
+    if (!string.IsNullOrEmpty(Model)) {
+        var pathParts = Request.Path.Split(new char[] { '/' });
+        var count = pathParts.Count();
+        if (count > 1) {
+            if (pathParts[count - 1].Equals("Create", StringComparison.InvariantCultureIgnoreCase)) {
+                cancelAction = "Index";
+            }
+            else if (pathParts[count - 2].StartsWith("Edit", StringComparison.InvariantCultureIgnoreCase)) {
+                submitValue = "Update";
+                if (pathParts[count - 2].Equals("Edit", StringComparison.InvariantCultureIgnoreCase)) {
+                    cancelAction = "Index";
+                }
+            }
+            else if (pathParts[count - 2].StartsWith("Review", StringComparison.InvariantCultureIgnoreCase)) {
+                submitValue = "Edit";
+            }
+        }
+    }    
+}
+
+<p class="buttons">
+    @if (!string.IsNullOrEmpty(Model)) {
+        if (submitValue.Equals("Edit")) {
+            if (Model == "ReviewEvent") {
+                @Html.ActionLink("Close", @cancelAction, new { eventType="Completed" }, new { id = "close", @class = "button" })
+            }
+            else {
+                @Html.ActionLink("Edit", "EditEvent", new { id = @Model }, new { @class = "button" })
+                @Html.ActionLink("Cancel", @cancelAction, null, new { id = "cancel", @class = "button" })
+            }
+        }
+        else {
+            <input type="submit" value="@submitValue" />
+            @Html.ActionLink("Cancel", @cancelAction, new { controller = @Model }, new { id = "cancel", @class = "button" })
+        }
+    }
+    else {
+        <input type="submit" value="Save" />
+    }
+</p>

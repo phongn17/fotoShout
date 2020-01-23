@@ -1,0 +1,31 @@
+﻿@model FotoShoutData.Models.PhotoGroupTDO
+
+@{
+    string id = Request.QueryString["id"];
+    if (string.IsNullOrEmpty(id)) {
+        var idx = Request.Path.LastIndexOf("/");
+        if (idx != -1) {
+            id = Request.Path.Substring(idx + 1);
+        }
+    }
+
+    var image = !string.IsNullOrEmpty(Model.Thumbnail) ? Model.Thumbnail : null;
+    DateTime date = (DateTime)Model.Created;
+    var dateStr = date.ToString("dddd MM/dd/yyyy");
+}
+
+<div class="thumb">
+    <span class="thumb-label">@dateStr</span>
+    <div class="thumb-frame">
+        @if (image != null) {
+        <a href="@Url.Action("PartialProcessedPhotos/" + id, new { created = dateStr.Substring(dateStr.LastIndexOf(" ") + 1) })" class="linkPGDetails"><img src="@image" alt="Photos-group Thumbnail" /></a>
+        }
+        else {
+            <img src="@Url.Content("~/Images/nophoto.png")" alt="Photos-group Thumbnail" />
+        }
+    </div>
+    <div class="thumb-footer">
+        <div class="num-items"><span class="visible">@Model.NumPhotos photo(s)</span></div>
+    </div>
+</div>
+
