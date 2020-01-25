@@ -1,39 +1,59 @@
 ﻿@model FotoShoutData.Models.EventTDO
 @{
     var eventOption = "";
-    if (Model.EventOptions != null && Model.EventOptionId > 0) {
+    if (Model.EventOptions != null && Model.EventOptionId > 0)
+    {
         var temp = Model.EventOptions.Where(eo => eo.EventOptionId == Model.EventOptionId).SingleOrDefault();
-        if (temp != null) {
+        if (temp != null)
+        {
             eventOption = temp.EventOptionName;
         }
     }
-    
+
     var emailTemplate = "";
-    if (Model.EmailTemplates != null && Model.EventOptionId > 0) {
+    if (Model.EmailTemplates != null && Model.EventOptionId > 0)
+    {
         var temp = Model.EventOptions.Where(eo => eo.EventOptionId == Model.EventOptionId).SingleOrDefault();
-        if (temp != null) {
+        if (temp != null)
+        {
             emailTemplate = temp.EventOptionName;
         }
     }
 
     var sponsors = "";
-    if (Model.Sponsors != null && Model.SponsorIds != null) {
+    if (Model.Sponsors != null && Model.SponsorIds != null)
+    {
         IEnumerable<FotoShoutData.Models.SponsorTDO> sponsorEnum = Model.Sponsors.Where(s => Model.SponsorIds.Contains(s.SponsorId));
-        if (sponsorEnum != null) {
-            foreach (FotoShoutData.Models.SponsorTDO sponsor in sponsorEnum) {
-                if (!string.IsNullOrEmpty(sponsors)) {
+        if (sponsorEnum != null)
+        {
+            foreach (FotoShoutData.Models.SponsorTDO sponsor in sponsorEnum)
+            {
+                if (!string.IsNullOrEmpty(sponsors))
+                {
                     sponsors += ", ";
                 }
                 sponsors += sponsor.SponsorName;
             }
         }
     }
-    
+
     var channelGroup = "";
-    if (Model.ChannelGroups != null && Model.ChannelGroupId != null) {
+    if (Model.ChannelGroups != null && Model.ChannelGroupId != null)
+    {
         FotoShoutData.Models.ChannelGroupTDO temp = Model.ChannelGroups.Where(g => g.ChannelGroupId == Model.ChannelGroupId).SingleOrDefault();
-        if (channelGroup != null) {
+        if (channelGroup != null)
+        {
             channelGroup = temp.ChannelGroupName;
+        }
+    }
+
+    var website = "";
+    if (Model.Websites != null && Model.WebsiteId != null)
+    {
+        FotoShoutData.Models.Website temp = Model.Websites.Where(w => w.WebsiteId == Model.WebsiteId).SingleOrDefault();
+        if (website != null)
+        {
+            website = temp.WebsiteName;
         }
     }
 }
@@ -62,29 +82,41 @@
     <span class="field-label">@Html.LabelFor(model => model.PublishAlbum)</span>
     <span>@Html.DisplayFor(model => model.PublishAlbum)</span>
 </div>
-@if (Model != null) {
-    if (Model.EventOptions != null) {
+@if (Model != null)
+{
+    if (Model.EventOptions != null)
+    {
         <div>
             <span class="field-label">@Html.LabelFor(model => model.EventOptionId)</span>
             <span>@Html.DisplayFor(model => eventOption)</span>
         </div>
     }
-    if (Model.EmailTemplates != null) {
+    if (Model.EmailTemplates != null)
+    {
         <div>
             <span class="field-label">@Html.LabelFor(model => model.EmailTemplateId)</span>
             <span>@Html.DisplayFor(model => emailTemplate)</span>
         </div>
     }
-    if (Model.Sponsors != null) {
+    if (Model.Sponsors != null)
+    {
         <div>
             <span class="field-label">@Html.LabelFor(model => model.SponsorIds)</span>
             <span>@Html.DisplayFor(model => sponsors)</span>
         </div>
     }
-    if (Model.ChannelGroups != null) {
+    if (Model.ChannelGroups != null)
+    {
         <div>
             <span class="field-label">@Html.LabelFor(model => model.ChannelGroupId)</span>
             <span>@Html.DisplayFor(model => channelGroup)</span>
+        </div>
+    }
+    if (Model.Websites != null)
+    {
+        <div>
+            <span class="field-label">@Html.LabelFor(model => model.WebsiteId)</span>
+            <span>@Html.DisplayFor(model => website)</span>
         </div>
     }
 }

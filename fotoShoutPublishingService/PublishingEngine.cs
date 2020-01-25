@@ -5,7 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
-using System.Threading.Tasks;
+using System.Net;
 
 using FotoShoutUtils.Utils;
 using System.Net.Http.Formatting;
@@ -21,6 +21,7 @@ using FotoShoutPublishingService.Db;
 using FotoShoutData.Models.Publish;
 using System.Reflection;
 using System.Threading;
+using System.Text.RegularExpressions;
 
 namespace FotoShoutPublishingService {
     class PublishingEngine: Executor {
@@ -225,19 +226,20 @@ namespace FotoShoutPublishingService {
             }
         }
 
-        private void SendEmails(UserTDO user, EventTDO ev, PhotoTDO photo, PhotoAnnotation photoAnnotation, string photoUrl)
-        {
+        private void SendEmails(UserTDO user, EventTDO ev, PhotoTDO photo, PhotoAnnotation photoAnnotation, string photoUrl) {
+            if (ev.WebsiteId != null) {
+                Website website = _fsWebService.Get<Website>("Websites/" + ev.WebsiteId, true);
+                photoUrl = GeneratePhotoWebsiteUrl(photoUrl, website); // string.Format("{0}PhotoWebsite/{1}?website={2}", Regex.Replace(AppSettings.FsApiBaseAddress, @"api/", ""), photo.PhotoId, ev.WebsiteId);
+            }
+
             ICollection<GuestTDO> guests = photoAnnotation.Guests;
             IEnumerable<PhotoEmail> list = this._fsWebService.GetList<PhotoEmail>("PhotoEmails/" + (object)photo.PhotoId, true);
-            foreach (GuestTDO guestTdo in (IEnumerable<GuestTDO>)guests)
-            {
+            foreach (GuestTDO guestTdo in (IEnumerable<GuestTDO>)guests) {
                 GuestTDO guest = guestTdo;
                 bool flag = true;
-                PhotoEmail postObject = list.Where<PhotoEmail>((Func<PhotoEmail, bool>)(ee => ee.PhotoId == photo.PhotoId && ee.GuestId == guest.GuestId)).FirstOrDefault<PhotoEmail>();
-                if (postObject == null)
-                {
-                    postObject = new PhotoEmail()
-                    {
+                PhotoEmail postObject = list.Where(ee => ee.PhotoId == photo.PhotoId && ee.GuestId == guest.GuestId).FirstOrDefault();
+                if (postObject == null) {
+                    postObject = new PhotoEmail {
                         EventId = ev.EventId,
                         PhotoId = photo.PhotoId,
                         GuestId = guest.GuestId
@@ -248,20 +250,18 @@ namespace FotoShoutPublishingService {
                     continue;
                 this._emailService.Error = "";
                 this._emailService.SendEmailTo(user, ev, guest, photoUrl);
-                if (string.IsNullOrEmpty(this._emailService.Error))
-                {
+                if (string.IsNullOrEmpty(this._emailService.Error)) {
                     postObject.Status = (byte)1;
-                    postObject.Error = (string)null;
+                    postObject.Error = null;
                 }
-                else
-                {
+                else {
                     postObject.Status = byte.MaxValue;
                     postObject.Error = this._emailService.Error;
                 }
                 if (flag)
                     this._fsWebService.UploadString("PhotoEmails?photoEmailId=" + (object)postObject.PhotoEmailId, this.GeneratePostContent<PhotoEmail>(postObject), "PUT");
                 else
-                    this._fsWebService.UploadString("PhotoEmails", this.GeneratePostContent<PhotoEmail>(postObject), (string)null);
+                    this._fsWebService.UploadString("PhotoEmails", this.GeneratePostContent<PhotoEmail>(postObject), null);
             }
         }
 
@@ -465,6 +465,37 @@ namespace FotoShoutPublishingService {
                 throw new PublishingException(string.Format("Unsuccessully publishing the \"{0}\" photo using the \"{1}\" channel group.", photo.Filename, channelGroup.Name));
             
             FotoShoutUtils.Log.LogManager.Info(_logger, string.Format("Published the {0} photo.", photo.Filename));
+        }
+
+        private string GeneratePhotoWebsiteUrl(string photoUrl, Website website) {
+            StringBuilder sb = new StringBuilder();
+            sb.Append(string.Format("photo={0}", WebUtility.UrlEncode(photoUrl)));
+            if (website.HeaderImage != null) {
+                sb.Append(string.Format("&hi={0}", WebUtility.UrlEncode(website.HeaderImage)));
+            }
+            if (website.HeaderUrl != null) {
+                sb.Append(string.Format("&hu={0}", WebUtility.UrlEncode(website.HeaderUrl)));
+            }
+            if (website.TopInfoBlockImage != null) {
+                sb.Append(string.Format("&ti={0}", WebUtility.UrlEncode(website.TopInfoBlockImage)));
+            }
+            if (website.TopInfoBlockUrl != null) {
+                sb.Append(string.Format("&tu={0}", WebUtility.UrlEncode(website.TopInfoBlockUrl)));
+            }
+            if (website.BottomInfoBlockImage != null) {
+                sb.Append(string.Format("&bi={0}", WebUtility.UrlEncode(website.BottomInfoBlockImage)));
+            }
+            if (website.BottomInfoBlockUrl != null) {
+                sb.Append(string.Format("&bu={0}", WebUtility.UrlEncode(website.BottomInfoBlockUrl)));
+            }
+            if (website.FooterImage != null) {
+                sb.Append(string.Format("&fi={0}", WebUtility.UrlEncode(website.FooterImage)));
+            }
+            if (website.FooterUrl != null) {
+                sb.Append(string.Format("&fu={0}", WebUtility.UrlEncode(website.FooterUrl)));
+            }
+
+            return string.Format("{0}PhotoWebsite?{1}", Regex.Replace(AppSettings.FsApiBaseAddress, @"api/", ""), sb.ToString());
         }
 
         private string GeneratePostContent<T>(T postObject) {

@@ -104,3 +104,5 @@ C:\Dev\vdR\fotoShout\Code\FotoShoutApi\bin\Microsoft.Synchronization.Data.SqlSer
 C:\Dev\vdR\fotoShout\Code\FotoShoutApi\bin\Microsoft.Synchronization.Data.xml
 C:\Dev\vdR\fotoShout\Code\FotoShoutApi\bin\Microsoft.Synchronization.Data.SqlServer.xml
 C:\Dev\vdR\fotoShout\Code\FotoShoutApi\obj\Debug\FotoShoutApi.Migrations.AddedSponsorWebsiteImages.resources
+C:\Dev\vdR\fotoShout\Code\FotoShoutApi\obj\Debug\FotoShoutApi.Migrations.PhotoEmail.resources
+C:\Dev\vdR\fotoShout\Code\FotoShoutApi\obj\Debug\FotoShoutApi.Migrations.Website.resources

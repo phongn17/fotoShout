@@ -38,7 +38,7 @@ namespace FotoShoutUtils {
         public const string INFO_AUTH_INFO = "Getting auhentication info...";
         
         public const string INFO_EVENT_LIST = "Getting the list of events for the \"{0}\" user on {1}...";
-        public const string INFO_EVENT_EVENTOPTIONS = "Getting event options and sponsors for events for the \"{0}\" user...";
+        public const string INFO_EVENT_EVENTOPTIONS = "Getting event options, sponsors, and website for events for the \"{0}\" user...";
         public const string INFO_EVENT_DETAIL = "Getting details of the \"{0}\" event...";
         public const string INFO_EVENT_CREATE = "Creating the \"{0}\" event...";
         public const string INFO_EVENT_UPDATE = "Updating the \"{0}\" event...";
@@ -80,6 +80,12 @@ namespace FotoShoutUtils {
         public const string INFO_EMAILTEMPLATE_UPDATE = "Updating the \"{0}\" email template...";
         public const string INFO_EMAILTEMPLATE_DELETE = "Deleting the \"{0}\" email template...";
 
+        public const string INFO_EVENTWEBSITE_LIST = "Getting the list of event websites for the \"{0}\" user...";
+        public const string INFO_EVENTWEBSITE_DETAIL = "Getting details of the \"{0}\" event website...";
+        public const string INFO_EVENTWEBSITE_CREATE = "Creating the \"{0}\" event website...";
+        public const string INFO_EVENTWEBSITE_UPDATE = "Updating the \"{0}\" event website...";
+        public const string INFO_EVENTWEBSITE_DELETE = "Deleting the \"{0}\" event website...";
+
         // Publishing
         public const string INFO_CHANNELGROUP_LIST = "Getting the list of channel groups...";
 
@@ -90,6 +96,7 @@ namespace FotoShoutUtils {
 
         // TABLES
         public const string TABLE_SPONSORS = "Sponsors";
+        public const string TABLE_WEBSITES = "Websites";
         public const string TABLE_EMAILTEMPLATES = "EmailTemplates";
         public const string TABLE_GUESTS = "Guests";
         public const string TABLE_PHOTOS = "Photos";

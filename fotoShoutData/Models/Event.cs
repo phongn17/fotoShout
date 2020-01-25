@@ -19,6 +19,7 @@ namespace FotoShoutData.Models
         public ICollection<Sponsor> Sponsors { get; set; }
         public ICollection<Guest> Guests { get; set; }
         public int? ChannelGroupId { get; set; }
+        public int? WebsiteId { get; set; }
         [Required]
         public EventOption EventOption { get; set; }
         public EmailTemplate EmailTemplate { get; set; }

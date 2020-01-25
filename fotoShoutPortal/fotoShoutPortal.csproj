@@ -195,6 +195,8 @@
     <Compile Include="Controllers\EventController.cs" />
     <Compile Include="Controllers\EventOptionController.cs" />
     <Compile Include="Controllers\EventPhotoController.cs" />
+    <Compile Include="Controllers\PhotoWebsiteController.cs" />
+    <Compile Include="Controllers\EventWebsiteController.cs" />
     <Compile Include="Controllers\EventSponsorController.cs" />
     <Compile Include="Controllers\FakeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -399,6 +401,7 @@
     <Content Include="Scripts\inc\events.js" />
     <Content Include="Scripts\inc\emailtemplates.js" />
     <Content Include="Scripts\inc\emailserverconfig.js" />
+    <Content Include="Scripts\inc\eventwebsites.js" />
     <Content Include="Scripts\inc\eventsponsors.js" />
     <Content Include="Scripts\inc\eventoptions.js" />
     <Content Include="Scripts\inc\publishconfig.js" />
@@ -515,6 +518,11 @@
     </Content>
     <Content Include="Views\Event\_CompleteConfirmation.cshtml" />
     <Content Include="Views\Confirm\_ServiceTerm.cshtml" />
+    <Content Include="Views\EventWebsite\_DeleteConfirmation.cshtml" />
+    <Content Include="Views\EventWebsite\Index.cshtml" />
+    <Content Include="Views\EventWebsite\Modify.cshtml" />
+    <Content Include="Views\PhotoWebsite\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutWebsite.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

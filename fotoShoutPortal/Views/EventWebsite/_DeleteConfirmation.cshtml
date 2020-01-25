@@ -1,0 +1,7 @@
+﻿@model FotoShoutData.Models.Website
+
+<div><h6>Are you sure you want to delete the '@Model.WebsiteName' event client?</h6></div>
+@using (Html.BeginForm("Delete", "EventWebsite", FormMethod.Post, new { id = "deleteForm" })) {
+    @Html.AntiForgeryToken()
+}
+

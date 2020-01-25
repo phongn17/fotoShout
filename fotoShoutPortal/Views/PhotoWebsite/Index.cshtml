@@ -1,0 +1,66 @@
+﻿@model FotoShoutData.Models.PhotoWebsiteTDO
+
+@{
+    ViewBag.Title = "Website";
+    ViewBag.AppName = "fotoShout";
+    Layout = "~/Views/Shared/_LayoutWebsite.cshtml";
+}
+
+@if (Model.HeaderImage != null)
+{
+    <div>
+        @if (Model.HeaderUrl != null)
+        {
+        <a href="@Model.HeaderUrl" target="_blank"><img src="@Model.HeaderImage" style="max-width: 960px" /></a>
+        }
+        else
+        {
+        <img src="@Model.HeaderImage" style="max-width: 960px" />
+        }
+    </div>
+}
+@if (Model.TopInfoBlockImage != null)
+{
+    <div>
+        @if (Model.TopInfoBlockUrl != null)
+        {
+        <a href="@Model.TopInfoBlockUrl" target="_blank"><img src="@Model.TopInfoBlockImage" style="max-width: 960px" /></a>
+        }
+        else
+        {
+        <img src="@Model.TopInfoBlockImage" style="max-width: 960px" />
+        }
+    </div>
+}
+
+<div>
+    <img src="@Model.PhotoUrl" style="display: block; max-width: 960px; margin-left: auto; margin-right: auto;" />
+</div>
+
+@if (Model.BottomInfoBlockImage != null)
+{
+    <div>
+        @if (Model.BottomInfoBlockUrl != null)
+        {
+        <a href="@Model.BottomInfoBlockUrl" target="_blank"><img src="@Model.BottomInfoBlockImage" style="max-width: 960px" /></a>
+        }
+        else
+        {
+        <img src="@Model.BottomInfoBlockImage" style="max-width: 960px" />
+        }
+    </div>
+}
+
+@if (Model.FooterImage != null)
+{
+    <div>
+        @if (Model.FooterUrl != null)
+        {
+        <a href="@Model.FooterUrl" target="_blank"><img src="@Model.FooterImage" style="max-width: 960px" /></a>
+        }
+        else
+        {
+        <img src="@Model.FooterImage" style="max-width: 960px" />
+        }
+    </div>
+}

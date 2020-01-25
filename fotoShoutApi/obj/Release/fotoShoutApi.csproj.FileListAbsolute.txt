@@ -61,3 +61,5 @@ C:\Dev\vdR\fotoShout\Code\FotoShoutApi\obj\Release\fotoShoutApi.csproj.CopyCompl
 C:\Dev\vdR\fotoShout\Code\FotoShoutApi\obj\Release\fotoShoutApi.dll
 C:\Dev\vdR\fotoShout\Code\FotoShoutApi\obj\Release\fotoShoutApi.pdb
 C:\Dev\vdR\fotoShout\Code\FotoShoutApi\obj\Release\FotoShoutApi.Migrations.AddedSponsorWebsiteImages.resources
+C:\Dev\vdR\fotoShout\Code\FotoShoutApi\obj\Release\FotoShoutApi.Migrations.PhotoEmail.resources
+C:\Dev\vdR\fotoShout\Code\FotoShoutApi\obj\Release\FotoShoutApi.Migrations.Website.resources

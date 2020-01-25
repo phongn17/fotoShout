@@ -1,16 +1,19 @@
 ﻿@model FotoShoutData.Models.EventTDO
 
-@if (ViewBag.IsEdit) {
+@if (ViewBag.IsEdit)
+{
     @Html.HiddenFor(model => model.EventId);
     @Html.HiddenFor(model => model.EventStatus);
 }
 
 <div>
     <span class="field-label">@Html.LabelFor(model => model.EventName)<span>&nbsp;*</span></span>
-    @if (ViewBag.StartedSubmitting != null && ViewBag.StartedSubmitting) {
-        @Html.TextBoxFor(model => model.EventName, new { @readonly="readonly" })
+    @if (ViewBag.StartedSubmitting != null && ViewBag.StartedSubmitting)
+    {
+        @Html.TextBoxFor(model => model.EventName, new { @readonly = "readonly" })
     }
-    else {
+    else
+    {
         @Html.EditorFor(model => model.EventName)
     }
 </div>
@@ -28,10 +31,12 @@
 </div>
 <div>
     <span class="field-label">@Html.LabelFor(model => model.EventFolder)<span>&nbsp;*</span></span>
-    @if (ViewBag.StartedSubmitting != null && ViewBag.StartedSubmitting) {
-        @Html.TextBoxFor(model => model.EventFolder, new { @readonly="readonly" })
+    @if (ViewBag.StartedSubmitting != null && ViewBag.StartedSubmitting)
+    {
+        @Html.TextBoxFor(model => model.EventFolder, new { @readonly = "readonly" })
     }
-    else {
+    else
+    {
         @Html.EditorFor(model => model.EventFolder)
     }
 </div>
@@ -39,27 +44,38 @@
     <span class="field-label">@Html.LabelFor(model => model.PublishAlbum)</span>
     @Html.EditorFor(model => model.PublishAlbum)
 </div>
-@if (Model != null) {
+@if (Model != null)
+{
     <div>
         <span class="field-label">@Html.LabelFor(model => model.EventOptionId)<span>&nbsp;*</span></span>
-        <span>@Html.DropDownListFor(model => model.EventOptionId, new SelectList(Model.EventOptions, "EventOptionId", "EventOptionName"), "---Select an option---", new { @class="selection" })</span>
+        <span>@Html.DropDownListFor(model => model.EventOptionId, new SelectList(Model.EventOptions, "EventOptionId", "EventOptionName"), "---Select an option---", new { @class = "selection" })</span>
     </div>
-    if (Model.EmailTemplates != null) {
+    if (Model.EmailTemplates != null)
+    {
         <div>
             <span class="field-label">@Html.LabelFor(model => model.EmailTemplateId)</span>
-            <span>@Html.DropDownListFor(model => model.EmailTemplateId, new SelectList(Model.EmailTemplates, "EmailTemplateId", "EmailTemplateName"), "---Select a template---", new { @class="selection" })</span>
+            <span>@Html.DropDownListFor(model => model.EmailTemplateId, new SelectList(Model.EmailTemplates, "EmailTemplateId", "EmailTemplateName"), "---Select a template---", new { @class = "selection" })</span>
         </div>
     }
-    if (Model.Sponsors != null) {
+    if (Model.Sponsors != null)
+    {
         <div style="vertical-align: top;">
             <span class="field-label">@Html.LabelFor(model => model.SponsorIds)</span>
-            <span>@Html.ListBoxFor(model => model.SponsorIds, new SelectList(Model.Sponsors, "SponsorId", "SponsorName"), new { @class="selection" })</span>
+            <span>@Html.ListBoxFor(model => model.SponsorIds, new SelectList(Model.Sponsors, "SponsorId", "SponsorName"), new { @class = "selection" })</span>
         </div>
     }
-    if (Model.ChannelGroups != null) {
+    if (Model.ChannelGroups != null)
+    {
         <div style="vertical-align: top;">
             <span class="field-label">@Html.LabelFor(model => model.ChannelGroupId)</span>
-            <span>@Html.DropDownListFor(model => model.ChannelGroupId, new SelectList(Model.ChannelGroups, "ChannelGroupId", "ChannelGroupName"), "---Select a channel group---", new { @class="selection" })</span>
+            <span>@Html.DropDownListFor(model => model.ChannelGroupId, new SelectList(Model.ChannelGroups, "ChannelGroupId", "ChannelGroupName"), "---Select a channel group---", new { @class = "selection" })</span>
+        </div>
+    }
+    if (Model.Websites != null)
+    {
+        <div style="vertical-align: top;">
+            <span class="field-label">@Html.LabelFor(model => model.WebsiteId)</span>
+            <span>@Html.DropDownListFor(model => model.WebsiteId, new SelectList(Model.Websites, "WebsiteId", "WebsiteName"), "---Select a website---", new { @class = "selection" })</span>
         </div>
     }
 }

@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.AppName - @ViewBag.Title</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />
+        @Styles.Render("~/Content/css")
+        @Styles.Render("~/Content/themes/base/css")
+        @Styles.Render("~/Content/style")
+        <link rel="stylesheet" type="text/css" href="@Url.Content("~/Scripts/ad-gallery/jquery.ad-gallery.css")" />
+        @Scripts.Render("~/bundles/modernizr")
+    </head>
+    <body>
+        <div id="body" class="content-wrapper content-padding website" style="border: none !important">
+            @RenderBody()
+        </div>
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/jqueryui")
+        @Scripts.Render("~/bundles/inc")
+        @RenderSection("scripts", required: false)
+    </body>
+</html>

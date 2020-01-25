@@ -1,0 +1,109 @@
+﻿@model FotoShoutData.Models.WebsiteTDO
+
+@{
+    var isEdit = (Model != null && Model.WebsiteId != 0);
+    var websiteHeaderImage = (isEdit && Model.HeaderImage != null) ? Model.HeaderImage.LastIndexOf('/') != -1 ? Model.HeaderImage.Substring(Model.HeaderImage.LastIndexOf('/') + 1) : Model.HeaderImage : "";
+    var websiteTopInfoBlockImage = (isEdit && Model.TopInfoBlockImage != null) ? Model.TopInfoBlockImage.LastIndexOf('/') != -1 ? Model.TopInfoBlockImage.Substring(Model.TopInfoBlockImage.LastIndexOf('/') + 1) : Model.TopInfoBlockImage : "";
+    var websiteBottomInfoBlockImage = (isEdit && Model.BottomInfoBlockImage != null) ? Model.BottomInfoBlockImage.LastIndexOf('/') != -1 ? Model.BottomInfoBlockImage.Substring(Model.BottomInfoBlockImage.LastIndexOf('/') + 1) : Model.BottomInfoBlockImage : "";
+    var websiteFooterImage = (isEdit && Model.FooterImage != null) ? Model.FooterImage.LastIndexOf('/') != -1 ? Model.FooterImage.Substring(Model.FooterImage.LastIndexOf('/') + 1) : Model.FooterImage : "";
+
+    ViewBag.Title = isEdit ? "Update Event Client" : "Create Event Client";
+    ViewBag.AppName = "fotoShout";
+}
+
+@using (Html.BeginForm(isEdit ? "Edit" : "Create", "EventWebsite", FormMethod.Post, new { enctype = "multipart/form-data" })) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    
+    @Html.Partial("~/Views/Preferences/_PreferCommands.cshtml", "EventWebsites")
+
+    <section id="main-panel">
+        <div class="div-form-detail">
+            <h2>@ViewBag.Title</h2>
+            <fieldset class="form-fields">
+                <legend>Event Client Info</legend>
+
+                @if (isEdit)
+                {
+                    @Html.HiddenFor(model => model.WebsiteId);
+                }
+
+                <div>
+                    <span class="field-label">@Html.LabelFor(model => model.WebsiteName)<span>&nbsp;*</span></span>
+                    @Html.EditorFor(model => model.WebsiteName)
+                </div>
+                <div>
+                    <span class="field-label">@Html.LabelFor(model => model.HeaderFile)</span>
+                    @Html.TextBoxFor(model => model.HeaderFile, new { type = "file" })
+                    @if (websiteHeaderImage.Length != 0)
+                    {
+                        @Html.HiddenFor(model => model.HeaderImage);
+                        <span class="field-label"></span>
+                        <span class="field-current-value">Current Value: @websiteHeaderImage</span>
+                    }
+                </div>
+                <div>
+                    <span class="field-label">@Html.LabelFor(model => model.HeaderUrl)</span>
+                    @Html.EditorFor(model => model.HeaderUrl)
+                </div>
+                <div>
+                    <span class="field-label">@Html.LabelFor(model => model.TopInfoBlockFile)</span>
+                    @Html.TextBoxFor(model => model.TopInfoBlockFile, new { type = "file" })
+                    @if (websiteTopInfoBlockImage.Length != 0)
+                    {
+                        @Html.HiddenFor(model => model.TopInfoBlockImage);
+                        <span class="field-label"></span>
+                        <span class="field-current-value">Current Value: @websiteTopInfoBlockImage</span>
+                    }
+                </div>
+                <div>
+                    <span class="field-label">@Html.LabelFor(model => model.TopInfoBlockUrl)</span>
+                    @Html.EditorFor(model => model.TopInfoBlockUrl)
+                </div>
+                <div>
+                    <span class="field-label">@Html.LabelFor(model => model.BottomInfoBlockFile)</span>
+                    @Html.TextBoxFor(model => model.BottomInfoBlockFile, new { type = "file" })
+                    @if (websiteBottomInfoBlockImage.Length != 0)
+                    {
+                        @Html.HiddenFor(model => model.BottomInfoBlockImage);
+                        <span class="field-label"></span>
+                        <span class="field-current-value">Current Value: @websiteBottomInfoBlockImage</span>
+                    }
+                </div>
+                <div>
+                    <span class="field-label">@Html.LabelFor(model => model.BottomInfoBlockUrl)</span>
+                    @Html.EditorFor(model => model.BottomInfoBlockUrl)
+                </div>
+                <div>
+                    <span class="field-label">@Html.LabelFor(model => model.FooterFile)</span>
+                    @Html.TextBoxFor(model => model.FooterFile, new { type = "file" })
+                    @if (websiteFooterImage.Length != 0)
+                    {
+                        @Html.HiddenFor(model => model.FooterImage);
+                        <span class="field-label"></span>
+                        <span class="field-current-value">Current Value: @websiteFooterImage</span>
+                    }
+                </div>
+                <div>
+                    <span class="field-label">@Html.LabelFor(model => model.FooterUrl)</span>
+                    @Html.EditorFor(model => model.FooterUrl)
+                </div>
+
+                @Html.Partial("~/Views/Shared/_FormButtons.cshtml", "EventWebsite")
+            </fieldset>
+        </div>
+    </section>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script type="text/javascript" src="@Url.Content("~/Scripts/inc/eventwebsites.js?1.3.0.10")"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var tabCtrl = new TabControl('@Request.ApplicationPath');
+            var initializer = new Initializer(tabCtrl, "preferences");
+            var evWebsites = new EventWebsites();
+            window.App.init($('form'), 1);
+        });
+    </script>
+}

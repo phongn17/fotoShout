@@ -186,6 +186,7 @@ namespace FotoShoutPortal.Controllers {
                 EventTDO ev = fsWebService.GetEvent(id);
                 if (ev != null) {
                     ev.ChannelGroups = GetChannelGroups();
+                    ev.Websites = fsWebService.GetEventWebsites();
                     return View(viewName, ev);
                 }
 

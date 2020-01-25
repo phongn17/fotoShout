@@ -332,3 +332,884 @@ DEBUG 2016-12-03 21:44:43,285 331637ms FsApiWebService        Debug             
 DEBUG 2016-12-03 21:44:43,367 331720ms FsApiWebService        Debug              - Succeeded
 INFO  2016-12-03 21:44:43,367 331720ms PublishingEngine       Info               - There is no publish-authorized photo for this event.
 INFO  2016-12-03 21:44:43,367 331720ms PublishingEngine       Info               - Published all events of the "phongnguyen17@yahoo.com" user.
+INFO  2020-01-23 11:35:56,178   140ms PublishingEngine       Info               - 1.3.0.14
+INFO  2020-01-23 11:35:56,207   170ms PublishingEngine       Info               - Initializing...
+INFO  2020-01-23 11:35:56,207   170ms PublishingEngine       Info               - Done Initalizing process.
+
+ERROR 2020-01-23 11:36:24,782 28744ms PublishingEngine       Error              - System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): The network path was not found
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.Linq.SqlClient.SqlConnectionManager.UseConnection(IConnectionUser user)
+   at System.Data.Linq.SqlClient.SqlProvider.get_IsSqlCe()
+   at System.Data.Linq.SqlClient.SqlProvider.InitializeProviderMode()
+   at System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   at System.Data.Linq.DataQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at FotoShoutPublishingService.Db.UsersRepo.get_Credentials() in C:\Dev\vdR\fotoShout\Code\FotoShoutPublishingService\Db\UsersRepo.cs:line 31
+   at FotoShoutPublishingService.PublishingEngine.Execute() in C:\Dev\vdR\fotoShout\Code\FotoShoutPublishingService\PublishingEngine.cs:line 60
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+
+INFO  2020-01-23 11:44:00,195   139ms PublishingEngine       Info               - 1.3.0.14
+INFO  2020-01-23 11:44:00,220   165ms PublishingEngine       Info               - Initializing...
+INFO  2020-01-23 11:44:00,220   165ms PublishingEngine       Info               - Done Initalizing process.
+
+ERROR 2020-01-23 11:44:28,773 28718ms PublishingEngine       Error              - System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): The network path was not found
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.Linq.SqlClient.SqlConnectionManager.UseConnection(IConnectionUser user)
+   at System.Data.Linq.SqlClient.SqlProvider.get_IsSqlCe()
+   at System.Data.Linq.SqlClient.SqlProvider.InitializeProviderMode()
+   at System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   at System.Data.Linq.DataQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at FotoShoutPublishingService.Db.UsersRepo.get_Credentials() in C:\Dev\vdR\fotoShout\Code\FotoShoutPublishingService\Db\UsersRepo.cs:line 31
+   at FotoShoutPublishingService.PublishingEngine.Execute() in C:\Dev\vdR\fotoShout\Code\FotoShoutPublishingService\PublishingEngine.cs:line 60
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+
+INFO  2020-01-23 11:44:49,749  7641ms PublishingEngine       Info               - 1.3.0.14
+INFO  2020-01-23 11:44:50,390  8283ms PublishingEngine       Info               - Initializing...
+INFO  2020-01-23 11:45:05,694 23587ms PublishingEngine       Info               - Done Initalizing process.
+
+ERROR 2020-01-23 11:51:31,376 409269ms PublishingEngine       Error              - System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): The network path was not found
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.Linq.SqlClient.SqlConnectionManager.UseConnection(IConnectionUser user)
+   at System.Data.Linq.SqlClient.SqlProvider.get_IsSqlCe()
+   at System.Data.Linq.SqlClient.SqlProvider.InitializeProviderMode()
+   at System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   at System.Data.Linq.DataQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at FotoShoutPublishingService.Db.UsersRepo.get_Credentials() in C:\Dev\vdR\fotoShout\Code\FotoShoutPublishingService\Db\UsersRepo.cs:line 31
+   at FotoShoutPublishingService.PublishingEngine.Execute() in C:\Dev\vdR\fotoShout\Code\FotoShoutPublishingService\PublishingEngine.cs:line 60
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+
+INFO  2020-01-23 12:02:32,832 629810ms PublishingEngine       Info               - 1.3.0.14
+INFO  2020-01-23 12:02:32,862 629840ms PublishingEngine       Info               - Initializing...
+INFO  2020-01-23 12:02:32,863 629841ms PublishingEngine       Info               - Done Initalizing process.
+
+ERROR 2020-01-23 12:04:11,185 728162ms PublishingEngine       Error              - System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): The network path was not found
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.Linq.SqlClient.SqlConnectionManager.UseConnection(IConnectionUser user)
+   at System.Data.Linq.SqlClient.SqlProvider.get_IsSqlCe()
+   at System.Data.Linq.SqlClient.SqlProvider.InitializeProviderMode()
+   at System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   at System.Data.Linq.DataQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at FotoShoutPublishingService.Db.UsersRepo.get_Credentials() in C:\Dev\vdR\fotoShout\Code\FotoShoutPublishingService\Db\UsersRepo.cs:line 31
+   at FotoShoutPublishingService.PublishingEngine.Execute() in C:\Dev\vdR\fotoShout\Code\FotoShoutPublishingService\PublishingEngine.cs:line 60
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+
+INFO  2020-01-23 12:04:14,674   154ms PublishingEngine       Info               - 1.3.0.14
+INFO  2020-01-23 12:04:14,694   174ms PublishingEngine       Info               - Initializing...
+INFO  2020-01-23 12:04:14,694   174ms PublishingEngine       Info               - Done Initalizing process.
+
+INFO  2020-01-23 12:19:35,042   129ms PublishingEngine       Info               - 1.3.0.14
+INFO  2020-01-23 12:19:35,062   150ms PublishingEngine       Info               - Initializing...
+INFO  2020-01-23 12:19:35,062   150ms PublishingEngine       Info               - Done Initalizing process.
+
+ERROR 2020-01-23 12:20:32,423 57510ms PublishingEngine       Error              - System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): The network path was not found
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.Linq.SqlClient.SqlConnectionManager.UseConnection(IConnectionUser user)
+   at System.Data.Linq.SqlClient.SqlProvider.get_IsSqlCe()
+   at System.Data.Linq.SqlClient.SqlProvider.InitializeProviderMode()
+   at System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   at System.Data.Linq.DataQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at FotoShoutPublishingService.Db.UsersRepo.get_Credentials() in C:\Dev\vdR\fotoShout\Code\FotoShoutPublishingService\Db\UsersRepo.cs:line 31
+   at FotoShoutPublishingService.PublishingEngine.Execute() in C:\Dev\vdR\fotoShout\Code\FotoShoutPublishingService\PublishingEngine.cs:line 60
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+
+INFO  2020-01-23 12:22:20,482   130ms PublishingEngine       Info               - 1.3.0.14
+INFO  2020-01-23 12:22:20,502   149ms PublishingEngine       Info               - Initializing...
+INFO  2020-01-23 12:22:20,502   149ms PublishingEngine       Info               - Done Initalizing process.
+
+ERROR 2020-01-23 12:23:12,959 52607ms PublishingEngine       Error              - System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): The network path was not found
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.Linq.SqlClient.SqlConnectionManager.UseConnection(IConnectionUser user)
+   at System.Data.Linq.SqlClient.SqlProvider.get_IsSqlCe()
+   at System.Data.Linq.SqlClient.SqlProvider.InitializeProviderMode()
+   at System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   at System.Data.Linq.DataQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at FotoShoutPublishingService.Db.UsersRepo.get_Credentials() in C:\Dev\vdR\fotoShout\Code\FotoShoutPublishingService\Db\UsersRepo.cs:line 31
+   at FotoShoutPublishingService.PublishingEngine.Execute() in C:\Dev\vdR\fotoShout\Code\FotoShoutPublishingService\PublishingEngine.cs:line 60
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+
+INFO  2020-01-23 12:26:20,280   129ms PublishingEngine       Info               - 1.3.0.14
+INFO  2020-01-23 12:26:20,300   149ms PublishingEngine       Info               - Initializing...
+INFO  2020-01-23 12:26:20,300   149ms PublishingEngine       Info               - Done Initalizing process.
+
+INFO  2020-01-23 12:28:48,232   149ms PublishingEngine       Info               - 1.3.0.14
+INFO  2020-01-23 12:28:48,262   180ms PublishingEngine       Info               - Initializing...
+INFO  2020-01-23 12:28:48,262   180ms PublishingEngine       Info               - Done Initalizing process.
+
+INFO  2020-01-23 12:31:40,901   149ms PublishingEngine       Info               - 1.3.0.14
+INFO  2020-01-23 12:31:40,921   170ms PublishingEngine       Info               - Initializing...
+INFO  2020-01-23 12:31:40,921   170ms PublishingEngine       Info               - Done Initalizing process.
+
+INFO  2020-01-23 12:32:38,973 58221ms PublishingEngine       Info               - Authenticating for the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-23 12:32:41,679 60928ms FsApiWebService        Debug              - Getting user info...
+INFO  2020-01-23 12:32:41,864 61113ms PublishingEngine       Info               - Succeeded logged
+INFO  2020-01-23 12:32:41,864 61113ms PublishingEngine       Info               - Getting publish configuration information...
+DEBUG 2020-01-23 12:32:41,864 61113ms FsApiWebService        Debug              - Getting details of the publish config of the "phongnguyen17@yahoo.com" user...
+ERROR 2020-01-23 12:32:41,917 61166ms PublishingEngine       Error              - Failed to authenticate: FotoShoutUtils.Service.WebServiceException: FotoShoutUtils.Service.HttpClientServiceException: Publish Account has not been configured yet.
+   at FotoShoutUtils.Service.WebClientService.Get[T](String address, Boolean async) in C:\Dev\vdR\fotoShout\Code\FotoShoutUtils\Service\WebClientService.cs:line 75
+   at FotoShoutUtils.Service.AuthenticationWebService.Get[T](String path, String msg) in C:\Dev\vdR\fotoShout\Code\FotoShoutUtils\Service\AuthenticationWebService.cs:line 91
+   at FotoShoutUtils.Service.AuthenticationWebService.Get[T](String path, String msg) in C:\Dev\vdR\fotoShout\Code\FotoShoutUtils\Service\AuthenticationWebService.cs:line 97
+   at FotoShoutUtils.Service.FsApiWebService.GetPublishConfiguration() in C:\Dev\vdR\fotoShout\Code\FotoShoutUtils\Service\FsApiWebService.cs:line 102
+   at FotoShoutPublishingService.PublishingEngine.Authenticate(Credentials credential) in C:\Dev\vdR\fotoShout\Code\FotoShoutPublishingService\PublishingEngine.cs:line 121
+
+INFO  2020-01-23 12:34:19,913   147ms PublishingEngine       Info               - 1.3.0.14
+INFO  2020-01-23 12:34:19,933   167ms PublishingEngine       Info               - Initializing...
+INFO  2020-01-23 12:34:19,933   167ms PublishingEngine       Info               - Done Initalizing process.
+
+INFO  2020-01-23 12:34:35,941 16175ms PublishingEngine       Info               - Authenticating for the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-23 12:35:29,221 69455ms FsApiWebService        Debug              - Getting user info...
+INFO  2020-01-23 12:36:35,755 135989ms PublishingEngine       Info               - Succeeded logged
+INFO  2020-01-23 12:36:37,954 138188ms PublishingEngine       Info               - Getting publish configuration information...
+INFO  2020-01-23 13:04:22,180   150ms PublishingEngine       Info               - 1.3.0.14
+INFO  2020-01-23 13:04:22,189   159ms PublishingEngine       Info               - Initializing...
+INFO  2020-01-23 13:04:22,189   159ms PublishingEngine       Info               - Done Initalizing process.
+
+INFO  2020-01-23 13:07:42,661 200631ms PublishingEngine       Info               - Authenticating for the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-23 13:07:44,129 202099ms FsApiWebService        Debug              - Getting user info...
+INFO  2020-01-23 13:07:44,276 202246ms PublishingEngine       Info               - Succeeded logged
+INFO  2020-01-23 13:07:44,276 202246ms PublishingEngine       Info               - Getting publish configuration information...
+DEBUG 2020-01-23 13:07:45,539 203509ms FsApiWebService        Debug              - Getting details of the publish config of the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-23 13:07:45,589 203558ms FsApiWebService        Debug              - Succeeded
+INFO  2020-01-23 13:08:04,222 222192ms PublishingEngine       Info               - Successfully authenticated.
+
+DEBUG 2020-01-23 13:08:15,574 233544ms FsApiWebService        Debug              - Getting details of the email server config of the "phongnguyen17@yahoo.com" user...
+INFO  2020-01-23 13:25:12,032   149ms PublishingEngine       Info               - 1.3.0.14
+INFO  2020-01-23 13:25:12,052   169ms PublishingEngine       Info               - Initializing...
+INFO  2020-01-23 13:25:12,052   169ms PublishingEngine       Info               - Done Initalizing process.
+
+INFO  2020-01-23 13:25:12,174   291ms PublishingEngine       Info               - Authenticating for the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-23 13:25:12,353   470ms FsApiWebService        Debug              - Getting user info...
+INFO  2020-01-23 13:25:12,513   630ms PublishingEngine       Info               - Succeeded logged
+INFO  2020-01-23 13:25:12,513   630ms PublishingEngine       Info               - Getting publish configuration information...
+DEBUG 2020-01-23 13:25:16,992  5109ms FsApiWebService        Debug              - Getting details of the publish config of the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-23 13:25:17,027  5144ms FsApiWebService        Debug              - Succeeded
+INFO  2020-01-23 13:25:17,136  5253ms PublishingEngine       Info               - Successfully authenticated.
+
+DEBUG 2020-01-23 13:25:19,515  7632ms FsApiWebService        Debug              - Getting details of the email server config of the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-23 13:25:19,580  7697ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-23 13:25:27,650 15767ms FsApiWebService        Debug              - Getting the list of events for the "phongnguyen17@yahoo.com" user on http://localhost/api/...
+DEBUG 2020-01-23 13:25:29,174 17291ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-23 13:26:13,795 61912ms FsApiWebService        Debug              - Getting details of the "446" event...
+DEBUG 2020-01-23 13:26:14,002 62119ms FsApiWebService        Debug              - Succeeded
+ERROR 2020-01-23 13:27:16,433 124550ms PublishingEngine       Error              - There is no email template assigned to the event, so there will be no email sent out to guests for this event.
+INFO  2020-01-23 13:27:23,070 131187ms PublishingEngine       Info               - There is no publish channel group being configured for the "Facebook Test" event, so no photos will be published for this event.
+INFO  2020-01-23 13:27:23,071 131188ms PublishingEngine       Info               - Published all events of the "phongnguyen17@yahoo.com" user.
+INFO  2020-01-23 13:29:31,949   140ms PublishingEngine       Info               - 1.3.0.14
+INFO  2020-01-23 13:29:31,969   159ms PublishingEngine       Info               - Initializing...
+INFO  2020-01-23 13:29:31,969   159ms PublishingEngine       Info               - Done Initalizing process.
+
+INFO  2020-01-23 13:29:32,070   260ms PublishingEngine       Info               - Authenticating for the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-23 13:29:32,239   430ms FsApiWebService        Debug              - Getting user info...
+INFO  2020-01-23 13:29:32,409   599ms PublishingEngine       Info               - Succeeded logged
+INFO  2020-01-23 13:29:32,409   599ms PublishingEngine       Info               - Getting publish configuration information...
+DEBUG 2020-01-23 13:29:38,008  6198ms FsApiWebService        Debug              - Getting details of the publish config of the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-23 13:29:38,025  6216ms FsApiWebService        Debug              - Succeeded
+INFO  2020-01-23 13:29:38,150  6340ms PublishingEngine       Info               - Successfully authenticated.
+
+DEBUG 2020-01-23 13:29:39,255  7445ms FsApiWebService        Debug              - Getting details of the email server config of the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-23 13:29:39,302  7492ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-23 13:29:39,302  7492ms FsApiWebService        Debug              - Getting the list of events for the "phongnguyen17@yahoo.com" user on http://localhost/api/...
+DEBUG 2020-01-23 13:29:40,627  8817ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-23 13:29:54,018 22208ms FsApiWebService        Debug              - Getting details of the "446" event...
+DEBUG 2020-01-23 13:29:54,081 22271ms FsApiWebService        Debug              - Succeeded
+INFO  2020-01-23 13:36:59,213   130ms PublishingEngine       Info               - 1.3.0.14
+INFO  2020-01-23 13:36:59,232   149ms PublishingEngine       Info               - Initializing...
+INFO  2020-01-23 13:36:59,233   150ms PublishingEngine       Info               - Done Initalizing process.
+
+INFO  2020-01-23 13:36:59,364   281ms PublishingEngine       Info               - Authenticating for the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-23 13:37:03,830  4747ms FsApiWebService        Debug              - Getting user info...
+INFO  2020-01-23 13:37:04,013  4930ms PublishingEngine       Info               - Succeeded logged
+INFO  2020-01-23 13:37:04,013  4930ms PublishingEngine       Info               - Getting publish configuration information...
+DEBUG 2020-01-23 13:37:11,504 12421ms FsApiWebService        Debug              - Getting details of the publish config of the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-23 13:37:11,564 12481ms FsApiWebService        Debug              - Succeeded
+INFO  2020-01-23 13:37:11,746 12663ms PublishingEngine       Info               - Successfully authenticated.
+
+DEBUG 2020-01-23 13:37:11,748 12665ms FsApiWebService        Debug              - Getting details of the email server config of the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-23 13:37:11,836 12754ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-23 13:37:11,837 12755ms FsApiWebService        Debug              - Getting the list of events for the "phongnguyen17@yahoo.com" user on http://localhost/api/...
+DEBUG 2020-01-23 13:37:13,409 14326ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-23 13:37:15,584 16501ms FsApiWebService        Debug              - Getting details of the "446" event...
+DEBUG 2020-01-23 13:37:15,761 16679ms FsApiWebService        Debug              - Succeeded
+INFO  2020-01-23 13:39:48,059   149ms PublishingEngine       Info               - 1.3.0.14
+INFO  2020-01-23 13:39:48,075   165ms PublishingEngine       Info               - Initializing...
+INFO  2020-01-23 13:39:48,076   166ms PublishingEngine       Info               - Done Initalizing process.
+
+INFO  2020-01-23 13:39:48,191   281ms PublishingEngine       Info               - Authenticating for the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-23 13:39:48,384   474ms FsApiWebService        Debug              - Getting user info...
+INFO  2020-01-23 13:39:48,603   692ms PublishingEngine       Info               - Succeeded logged
+INFO  2020-01-23 13:39:48,604   693ms PublishingEngine       Info               - Getting publish configuration information...
+DEBUG 2020-01-23 13:39:48,605   694ms FsApiWebService        Debug              - Getting details of the publish config of the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-23 13:39:48,652   741ms FsApiWebService        Debug              - Succeeded
+INFO  2020-01-23 13:39:48,828   918ms PublishingEngine       Info               - Successfully authenticated.
+
+DEBUG 2020-01-23 13:39:48,830   920ms FsApiWebService        Debug              - Getting details of the email server config of the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-23 13:39:48,907   996ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-23 13:39:48,909   998ms FsApiWebService        Debug              - Getting the list of events for the "phongnguyen17@yahoo.com" user on http://localhost/api/...
+DEBUG 2020-01-23 13:39:50,951  3041ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-23 13:40:06,008 18097ms FsApiWebService        Debug              - Getting details of the "446" event...
+DEBUG 2020-01-23 13:40:51,260 63349ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-23 13:41:01,240 73329ms FsApiWebService        Debug              - Getting details of the "67" email template...
+DEBUG 2020-01-23 13:41:01,316 73405ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-23 13:41:05,072 77161ms FsApiWebService        Debug              - Getting the list of non-publish-authorized photos of the "446" event...
+DEBUG 2020-01-23 13:41:05,144 77234ms FsApiWebService        Debug              - Succeeded
+ERROR 2020-01-23 13:42:35,957 168047ms PublishingEngine       Error              - FotoShoutUtils.Service.HttpClientServiceException: Not Found
+   at FotoShoutUtils.Service.WebClientService.Get[T](String address, Boolean async) in C:\Dev\vdR\fotoShout\Code\FotoShoutUtils\Service\WebClientService.cs:line 75
+   at FotoShoutPublishingService.PublishingEngine.PostProcessEvent(EventTDO ev) in C:\Dev\vdR\fotoShout\Code\FotoShoutPublishingService\PublishingEngine.cs:line 178
+INFO  2020-01-23 13:42:35,959 168049ms PublishingEngine       Info               - There is no publish channel group being configured for the "Facebook Test" event, so no photos will be published for this event.
+INFO  2020-01-23 13:42:35,960 168050ms PublishingEngine       Info               - Published all events of the "phongnguyen17@yahoo.com" user.
+INFO  2020-01-23 13:42:42,418   167ms PublishingEngine       Info               - 1.3.0.14
+INFO  2020-01-23 13:42:42,446   195ms PublishingEngine       Info               - Initializing...
+INFO  2020-01-23 13:42:42,446   195ms PublishingEngine       Info               - Done Initalizing process.
+
+INFO  2020-01-23 13:42:42,577   325ms PublishingEngine       Info               - Authenticating for the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-23 13:42:42,764   513ms FsApiWebService        Debug              - Getting user info...
+INFO  2020-01-23 13:42:42,930   678ms PublishingEngine       Info               - Succeeded logged
+INFO  2020-01-23 13:42:42,930   678ms PublishingEngine       Info               - Getting publish configuration information...
+DEBUG 2020-01-23 13:42:42,931   679ms FsApiWebService        Debug              - Getting details of the publish config of the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-23 13:42:42,967   715ms FsApiWebService        Debug              - Succeeded
+INFO  2020-01-23 13:42:43,095   844ms PublishingEngine       Info               - Successfully authenticated.
+
+DEBUG 2020-01-23 13:42:43,096   845ms FsApiWebService        Debug              - Getting details of the email server config of the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-23 13:42:43,153   902ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-23 13:42:43,154   903ms FsApiWebService        Debug              - Getting the list of events for the "phongnguyen17@yahoo.com" user on http://localhost/api/...
+DEBUG 2020-01-23 13:42:44,841  2589ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-23 13:45:20,799 158547ms FsApiWebService        Debug              - Getting details of the "446" event...
+DEBUG 2020-01-23 13:45:20,889 158637ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-23 13:45:27,985 165734ms FsApiWebService        Debug              - Getting details of the "67" email template...
+DEBUG 2020-01-23 13:45:28,036 165784ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-23 13:45:28,767 166515ms FsApiWebService        Debug              - Getting the list of non-publish-authorized photos of the "446" event...
+DEBUG 2020-01-23 13:45:28,802 166551ms FsApiWebService        Debug              - Succeeded
+INFO  2020-01-23 15:06:59,914   139ms PublishingEngine       Info               - 1.3.0.14
+INFO  2020-01-23 15:06:59,930   155ms PublishingEngine       Info               - Initializing...
+INFO  2020-01-23 15:06:59,930   155ms PublishingEngine       Info               - Done Initalizing process.
+
+INFO  2020-01-23 15:07:00,053   278ms PublishingEngine       Info               - Authenticating for the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-23 15:07:03,621  3847ms FsApiWebService        Debug              - Getting user info...
+INFO  2020-01-23 15:07:03,838  4063ms PublishingEngine       Info               - Succeeded logged
+INFO  2020-01-23 15:07:03,838  4063ms PublishingEngine       Info               - Getting publish configuration information...
+DEBUG 2020-01-23 15:07:03,838  4063ms FsApiWebService        Debug              - Getting details of the publish config of the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-23 15:07:03,895  4121ms FsApiWebService        Debug              - Succeeded
+ERROR 2020-01-23 15:07:14,947 15172ms PublishingEngine       Error              - Failed to authenticate : The remote name could not be resolved: 'api.cadence9.com' (Status Code: 500)
+
+INFO  2020-01-23 15:07:43,434   146ms PublishingEngine       Info               - 1.3.0.14
+INFO  2020-01-23 15:07:43,460   172ms PublishingEngine       Info               - Initializing...
+INFO  2020-01-23 15:07:43,460   172ms PublishingEngine       Info               - Done Initalizing process.
+
+INFO  2020-01-23 15:07:43,593   305ms PublishingEngine       Info               - Authenticating for the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-23 15:07:43,739   452ms FsApiWebService        Debug              - Getting user info...
+INFO  2020-01-23 15:07:43,922   634ms PublishingEngine       Info               - Succeeded logged
+INFO  2020-01-23 15:07:43,922   634ms PublishingEngine       Info               - Getting publish configuration information...
+DEBUG 2020-01-23 15:07:43,923   635ms FsApiWebService        Debug              - Getting details of the publish config of the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-23 15:07:43,955   667ms FsApiWebService        Debug              - Succeeded
+ERROR 2020-01-23 15:08:06,053 22765ms PublishingEngine       Error              - Failed to authenticate : Unable to connect to the remote server (Status Code: 500)
+
+INFO  2020-01-23 15:08:24,093   137ms PublishingEngine       Info               - 1.3.0.14
+INFO  2020-01-23 15:08:24,115   159ms PublishingEngine       Info               - Initializing...
+INFO  2020-01-23 15:08:24,116   160ms PublishingEngine       Info               - Done Initalizing process.
+
+INFO  2020-01-23 15:08:27,781  3824ms PublishingEngine       Info               - Authenticating for the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-23 15:08:28,536  4580ms FsApiWebService        Debug              - Getting user info...
+INFO  2020-01-23 15:08:30,252  6296ms PublishingEngine       Info               - Succeeded logged
+INFO  2020-01-23 15:08:30,755  6798ms PublishingEngine       Info               - Getting publish configuration information...
+DEBUG 2020-01-23 15:08:31,272  7315ms FsApiWebService        Debug              - Getting details of the publish config of the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-23 15:08:31,306  7349ms FsApiWebService        Debug              - Succeeded
+INFO  2020-01-23 15:08:58,458 34502ms PublishingEngine       Info               - Successfully authenticated.
+
+DEBUG 2020-01-23 15:09:10,888 46932ms FsApiWebService        Debug              - Getting details of the email server config of the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-23 15:09:10,991 47034ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-23 15:09:10,991 47034ms FsApiWebService        Debug              - Getting the list of events for the "phongnguyen17@yahoo.com" user on http://localhost/api/...
+DEBUG 2020-01-23 15:09:12,468 48512ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-23 15:09:15,393 51436ms FsApiWebService        Debug              - Getting details of the "446" event...
+DEBUG 2020-01-23 15:09:15,577 51621ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-23 15:09:21,295 57339ms FsApiWebService        Debug              - Getting details of the "67" email template...
+DEBUG 2020-01-23 15:09:21,363 57407ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-23 15:09:21,363 57407ms FsApiWebService        Debug              - Getting the list of non-publish-authorized photos of the "446" event...
+DEBUG 2020-01-23 15:09:21,422 57465ms FsApiWebService        Debug              - Succeeded
+INFO  2020-01-23 17:34:52,880   188ms PublishingEngine       Info               - 1.3.0.14
+INFO  2020-01-23 17:34:52,908   217ms PublishingEngine       Info               - Initializing...
+INFO  2020-01-23 17:34:52,908   217ms PublishingEngine       Info               - Done Initalizing process.
+
+INFO  2020-01-23 17:34:56,281  3589ms PublishingEngine       Info               - Authenticating for the "phongnguyen17@yahoo.com" user...
+ERROR 2020-01-23 17:34:59,327  6635ms PublishingEngine       Error              - Failed to authenticate : The remote server returned an error: (500) Internal Server Error. (Status Code: 500)
+
+INFO  2020-01-23 17:36:57,450   134ms PublishingEngine       Info               - 1.3.0.14
+INFO  2020-01-23 17:36:57,471   156ms PublishingEngine       Info               - Initializing...
+INFO  2020-01-23 17:36:57,471   156ms PublishingEngine       Info               - Done Initalizing process.
+
+INFO  2020-01-23 17:37:01,336  4020ms PublishingEngine       Info               - Authenticating for the "phongnguyen17@yahoo.com" user...
+ERROR 2020-01-23 17:37:12,943 15628ms PublishingEngine       Error              - Failed to authenticate : The remote server returned an error: (500) Internal Server Error. (Status Code: 500)
+
+INFO  2020-01-23 17:37:38,584   150ms PublishingEngine       Info               - 1.3.0.14
+INFO  2020-01-23 17:37:38,603   169ms PublishingEngine       Info               - Initializing...
+INFO  2020-01-23 17:37:38,604   170ms PublishingEngine       Info               - Done Initalizing process.
+
+INFO  2020-01-23 17:37:40,974  2540ms PublishingEngine       Info               - Authenticating for the "phongnguyen17@yahoo.com" user...
+ERROR 2020-01-23 17:37:52,360 13926ms PublishingEngine       Error              - Failed to authenticate : The remote server returned an error: (500) Internal Server Error. (Status Code: 500)
+
+INFO  2020-01-23 17:38:14,810   133ms PublishingEngine       Info               - 1.3.0.14
+INFO  2020-01-23 17:38:14,828   151ms PublishingEngine       Info               - Initializing...
+INFO  2020-01-23 17:38:14,828   151ms PublishingEngine       Info               - Done Initalizing process.
+
+INFO  2020-01-23 17:38:17,708  3031ms PublishingEngine       Info               - Authenticating for the "phongnguyen17@yahoo.com" user...
+ERROR 2020-01-23 17:38:41,347 26671ms PublishingEngine       Error              - Failed to authenticate : The remote server returned an error: (500) Internal Server Error. (Status Code: 500)
+
+INFO  2020-01-23 17:39:40,096   151ms PublishingEngine       Info               - 1.3.0.14
+INFO  2020-01-23 17:39:40,120   175ms PublishingEngine       Info               - Initializing...
+INFO  2020-01-23 17:39:40,120   175ms PublishingEngine       Info               - Done Initalizing process.
+
+INFO  2020-01-23 17:39:43,825  3880ms PublishingEngine       Info               - Authenticating for the "phongnguyen17@yahoo.com" user...
+ERROR 2020-01-23 17:40:00,538 20593ms PublishingEngine       Error              - Failed to authenticate : The remote server returned an error: (500) Internal Server Error. (Status Code: 500)
+
+INFO  2020-01-23 17:45:14,351   144ms PublishingEngine       Info               - 1.3.0.14
+INFO  2020-01-23 17:45:14,368   161ms PublishingEngine       Info               - Initializing...
+INFO  2020-01-23 17:45:14,369   162ms PublishingEngine       Info               - Done Initalizing process.
+
+INFO  2020-01-23 17:45:18,261  4054ms PublishingEngine       Info               - Authenticating for the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-23 17:45:21,893  7686ms FsApiWebService        Debug              - Getting user info...
+INFO  2020-01-23 17:45:24,766 10559ms PublishingEngine       Info               - Succeeded logged
+INFO  2020-01-23 17:45:24,767 10560ms PublishingEngine       Info               - Getting publish configuration information...
+DEBUG 2020-01-23 17:45:24,767 10560ms FsApiWebService        Debug              - Getting details of the publish config of the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-23 17:45:24,840 10633ms FsApiWebService        Debug              - Succeeded
+INFO  2020-01-23 17:45:25,006 10799ms PublishingEngine       Info               - Successfully authenticated.
+
+DEBUG 2020-01-23 17:45:25,006 10800ms FsApiWebService        Debug              - Getting details of the email server config of the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-23 17:45:25,100 10893ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-23 17:45:25,101 10894ms FsApiWebService        Debug              - Getting the list of events for the "phongnguyen17@yahoo.com" user on http://localhost/api/...
+DEBUG 2020-01-23 17:45:26,895 12688ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-23 17:45:40,108 25901ms FsApiWebService        Debug              - Getting details of the "446" event...
+DEBUG 2020-01-23 17:45:42,544 28337ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-23 17:45:45,207 31000ms FsApiWebService        Debug              - Getting details of the "67" email template...
+DEBUG 2020-01-23 17:45:45,288 31081ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-23 17:45:45,288 31081ms FsApiWebService        Debug              - Getting the list of non-publish-authorized photos of the "446" event...
+DEBUG 2020-01-23 17:45:45,355 31148ms FsApiWebService        Debug              - Succeeded
+INFO  2020-01-23 17:58:45,041   175ms PublishingEngine       Info               - 1.3.0.14
+INFO  2020-01-23 17:58:45,064   198ms PublishingEngine       Info               - Initializing...
+INFO  2020-01-23 17:58:45,064   198ms PublishingEngine       Info               - Done Initalizing process.
+
+INFO  2020-01-23 17:58:49,658  4792ms PublishingEngine       Info               - Authenticating for the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-23 17:58:49,804  4938ms FsApiWebService        Debug              - Getting user info...
+INFO  2020-01-23 17:58:49,944  5079ms PublishingEngine       Info               - Succeeded logged
+INFO  2020-01-23 17:58:49,945  5080ms PublishingEngine       Info               - Getting publish configuration information...
+DEBUG 2020-01-23 17:58:49,945  5080ms FsApiWebService        Debug              - Getting details of the publish config of the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-23 17:58:49,977  5111ms FsApiWebService        Debug              - Succeeded
+INFO  2020-01-23 17:58:50,082  5216ms PublishingEngine       Info               - Successfully authenticated.
+
+DEBUG 2020-01-23 17:58:50,085  5219ms FsApiWebService        Debug              - Getting details of the email server config of the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-23 17:58:50,143  5277ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-23 17:58:50,143  5278ms FsApiWebService        Debug              - Getting the list of events for the "phongnguyen17@yahoo.com" user on http://localhost/api/...
+DEBUG 2020-01-23 17:58:51,751  6885ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-23 17:58:54,129  9263ms FsApiWebService        Debug              - Getting details of the "446" event...
+DEBUG 2020-01-23 17:58:54,210  9344ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-23 17:58:55,677 10811ms FsApiWebService        Debug              - Getting details of the "67" email template...
+DEBUG 2020-01-23 17:58:55,722 10856ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-23 17:58:55,722 10856ms FsApiWebService        Debug              - Getting the list of non-publish-authorized photos of the "446" event...
+DEBUG 2020-01-23 17:58:55,760 10894ms FsApiWebService        Debug              - Succeeded
+INFO  2020-01-23 18:09:44,629 659763ms EmailService           Info               - Sending the "http://localhost/7B9A2EAE549FC3FD1926237D85B3D32C/Processed/77344445_10218539840079436_2891449142754672640_o.jpg" link to "Phong Nguyen"...
+INFO  2020-01-23 18:09:45,318 660452ms EmailService           Info               - Enabled SSL
+INFO  2020-01-23 18:09:45,319 660453ms EmailService           Info               - Mail Server: smtp.mail.yahoo.com, From: phongnguyen17@yahoo.com - 
+ERROR 2020-01-23 18:09:46,198 661332ms EmailService           Error              - Failed to send the "http://localhost/7B9A2EAE549FC3FD1926237D85B3D32C/Processed/77344445_10218539840079436_2891449142754672640_o.jpg" link to "Phong Nguyen"...
+ERROR 2020-01-23 18:09:46,200 661334ms EmailService           Error              - System.Net.Mail.SmtpException: Failure sending mail. ---> System.IO.IOException: Unable to read data from the transport connection: net_io_connectionclosed.
+   at System.Net.Mail.SmtpReplyReaderFactory.ProcessRead(Byte[] buffer, Int32 offset, Int32 read, Boolean readLine)
+   at System.Net.Mail.SmtpReplyReaderFactory.ReadLines(SmtpReplyReader caller, Boolean oneLine)
+   at System.Net.Mail.SmtpReplyReaderFactory.ReadLine(SmtpReplyReader caller)
+   at System.Net.Mail.CheckCommand.Send(SmtpConnection conn, String& response)
+   at System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   --- End of inner exception stack trace ---
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at FotoShoutPublishingService.Services.Email.EmailService.SendEmailTo(UserTDO user, EventTDO ev, GuestTDO guest, String permalink) in C:\Dev\vdR\fotoShout\Code\FotoShoutPublishingService\Services\Email\EmailService.cs:line 102
+INFO  2020-01-23 18:09:46,354 661488ms PublishingEngine       Info               - Getting broadcasts of the Facebook Test event...
+INFO  2020-01-23 18:09:52,683 667817ms PublishingEngine       Info               - There is no broadcast published recently.
+INFO  2020-01-23 18:09:52,684 667818ms PublishingEngine       Info               - There is no publish channel group being configured for the "Facebook Test" event, so no photos will be published for this event.
+INFO  2020-01-23 18:09:52,685 667819ms PublishingEngine       Info               - Published all events of the "phongnguyen17@yahoo.com" user.
+INFO  2020-01-23 18:17:18,706   150ms PublishingEngine       Info               - 1.3.0.14
+INFO  2020-01-23 18:17:18,726   171ms PublishingEngine       Info               - Initializing...
+INFO  2020-01-23 18:17:18,726   171ms PublishingEngine       Info               - Done Initalizing process.
+
+INFO  2020-01-23 18:17:24,584  6028ms PublishingEngine       Info               - Authenticating for the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-23 18:17:24,764  6208ms FsApiWebService        Debug              - Getting user info...
+INFO  2020-01-23 18:17:24,926  6371ms PublishingEngine       Info               - Succeeded logged
+INFO  2020-01-23 18:17:24,926  6371ms PublishingEngine       Info               - Getting publish configuration information...
+DEBUG 2020-01-23 18:17:24,926  6371ms FsApiWebService        Debug              - Getting details of the publish config of the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-23 18:17:24,979  6423ms FsApiWebService        Debug              - Succeeded
+INFO  2020-01-23 18:17:25,149  6593ms PublishingEngine       Info               - Successfully authenticated.
+
+DEBUG 2020-01-23 18:17:25,154  6598ms FsApiWebService        Debug              - Getting details of the email server config of the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-23 18:17:25,287  6731ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-23 18:17:25,288  6732ms FsApiWebService        Debug              - Getting the list of events for the "phongnguyen17@yahoo.com" user on http://localhost/api/...
+DEBUG 2020-01-23 18:17:27,239  8683ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-23 18:17:28,426  9871ms FsApiWebService        Debug              - Getting details of the "446" event...
+DEBUG 2020-01-23 18:17:28,507  9951ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-23 18:17:29,959 11403ms FsApiWebService        Debug              - Getting details of the "67" email template...
+DEBUG 2020-01-23 18:17:30,008 11452ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-23 18:17:30,009 11453ms FsApiWebService        Debug              - Getting the list of non-publish-authorized photos of the "446" event...
+DEBUG 2020-01-23 18:17:30,042 11486ms FsApiWebService        Debug              - Succeeded
+INFO  2020-01-23 18:17:49,664 31108ms EmailService           Info               - Sending the "http://localhost/Photo/cfc58d64-fe69-4ef0-aa50-b2bb1f9884bc" link to "Phong Nguyen"...
+INFO  2020-01-23 18:17:50,155 31599ms EmailService           Info               - Enabled SSL
+INFO  2020-01-23 18:17:50,155 31599ms EmailService           Info               - Mail Server: smtp.mail.yahoo.com, From: phongnguyen17@yahoo.com - 
+ERROR 2020-01-23 18:17:50,869 32313ms EmailService           Error              - Failed to send the "http://localhost/Photo/cfc58d64-fe69-4ef0-aa50-b2bb1f9884bc" link to "Phong Nguyen"...
+ERROR 2020-01-23 18:17:50,870 32314ms EmailService           Error              - System.Net.Mail.SmtpException: Failure sending mail. ---> System.IO.IOException: Unable to read data from the transport connection: net_io_connectionclosed.
+   at System.Net.Mail.SmtpReplyReaderFactory.ProcessRead(Byte[] buffer, Int32 offset, Int32 read, Boolean readLine)
+   at System.Net.Mail.SmtpReplyReaderFactory.ReadLines(SmtpReplyReader caller, Boolean oneLine)
+   at System.Net.Mail.SmtpReplyReaderFactory.ReadLine(SmtpReplyReader caller)
+   at System.Net.Mail.CheckCommand.Send(SmtpConnection conn, String& response)
+   at System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   --- End of inner exception stack trace ---
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at FotoShoutPublishingService.Services.Email.EmailService.SendEmailTo(UserTDO user, EventTDO ev, GuestTDO guest, String permalink) in C:\Dev\vdR\fotoShout\Code\FotoShoutPublishingService\Services\Email\EmailService.cs:line 102
+INFO  2020-01-23 18:17:50,906 32350ms PublishingEngine       Info               - Getting broadcasts of the Facebook Test event...
+INFO  2020-01-23 18:17:50,942 32386ms PublishingEngine       Info               - There is no broadcast published recently.
+INFO  2020-01-23 18:17:50,943 32387ms PublishingEngine       Info               - There is no publish channel group being configured for the "Facebook Test" event, so no photos will be published for this event.
+INFO  2020-01-23 18:17:50,943 32387ms PublishingEngine       Info               - Published all events of the "phongnguyen17@yahoo.com" user.
+INFO  2020-01-23 18:18:28,855   159ms PublishingEngine       Info               - 1.3.0.14
+INFO  2020-01-23 18:18:28,872   177ms PublishingEngine       Info               - Initializing...
+INFO  2020-01-23 18:18:28,873   178ms PublishingEngine       Info               - Done Initalizing process.
+
+INFO  2020-01-23 18:18:31,416  2721ms PublishingEngine       Info               - Authenticating for the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-23 18:18:31,603  2907ms FsApiWebService        Debug              - Getting user info...
+INFO  2020-01-23 18:18:31,760  3064ms PublishingEngine       Info               - Succeeded logged
+INFO  2020-01-23 18:18:31,761  3065ms PublishingEngine       Info               - Getting publish configuration information...
+DEBUG 2020-01-23 18:18:31,762  3066ms FsApiWebService        Debug              - Getting details of the publish config of the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-23 18:18:31,809  3113ms FsApiWebService        Debug              - Succeeded
+INFO  2020-01-23 18:18:31,911  3215ms PublishingEngine       Info               - Successfully authenticated.
+
+DEBUG 2020-01-23 18:18:31,912  3216ms FsApiWebService        Debug              - Getting details of the email server config of the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-23 18:18:31,977  3281ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-23 18:18:31,978  3282ms FsApiWebService        Debug              - Getting the list of events for the "phongnguyen17@yahoo.com" user on http://localhost/api/...
+DEBUG 2020-01-23 18:18:33,834  5138ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-23 18:18:36,432  7736ms FsApiWebService        Debug              - Getting details of the "446" event...
+DEBUG 2020-01-23 18:18:36,527  7831ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-23 18:18:37,439  8743ms FsApiWebService        Debug              - Getting details of the "67" email template...
+DEBUG 2020-01-23 18:18:37,491  8795ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-23 18:18:37,491  8795ms FsApiWebService        Debug              - Getting the list of non-publish-authorized photos of the "446" event...
+DEBUG 2020-01-23 18:18:37,526  8830ms FsApiWebService        Debug              - Succeeded
+INFO  2020-01-23 18:19:27,494 58798ms EmailService           Info               - Sending the "http://localhost/Photo/cfc58d64-fe69-4ef0-aa50-b2bb1f9884bc" link to "Phong Nguyen"...
+INFO  2020-01-23 18:20:28,677 119981ms EmailService           Info               - Enabled SSL
+INFO  2020-01-23 18:20:37,837 129142ms EmailService           Info               - Mail Server: smtp.mail.yahoo.com, From: phongnguyen17@yahoo.com - 
+ERROR 2020-01-23 18:20:54,848 146152ms EmailService           Error              - Failed to send the "http://localhost/Photo/cfc58d64-fe69-4ef0-aa50-b2bb1f9884bc" link to "Phong Nguyen"...
+ERROR 2020-01-23 18:20:54,851 146155ms EmailService           Error              - System.Net.Mail.SmtpException: Failure sending mail. ---> System.IO.IOException: Unable to read data from the transport connection: net_io_connectionclosed.
+   at System.Net.Mail.SmtpReplyReaderFactory.ProcessRead(Byte[] buffer, Int32 offset, Int32 read, Boolean readLine)
+   at System.Net.Mail.SmtpReplyReaderFactory.ReadLines(SmtpReplyReader caller, Boolean oneLine)
+   at System.Net.Mail.SmtpReplyReaderFactory.ReadLine(SmtpReplyReader caller)
+   at System.Net.Mail.CheckCommand.Send(SmtpConnection conn, String& response)
+   at System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   --- End of inner exception stack trace ---
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at FotoShoutPublishingService.Services.Email.EmailService.SendEmailTo(UserTDO user, EventTDO ev, GuestTDO guest, String permalink) in C:\Dev\vdR\fotoShout\Code\FotoShoutPublishingService\Services\Email\EmailService.cs:line 102
+INFO  2020-01-23 18:20:54,884 146188ms PublishingEngine       Info               - Getting broadcasts of the Facebook Test event...
+INFO  2020-01-23 18:20:54,923 146228ms PublishingEngine       Info               - There is no broadcast published recently.
+INFO  2020-01-23 18:20:54,925 146229ms PublishingEngine       Info               - There is no publish channel group being configured for the "Facebook Test" event, so no photos will be published for this event.
+INFO  2020-01-23 18:20:54,925 146229ms PublishingEngine       Info               - Published all events of the "phongnguyen17@yahoo.com" user.
+INFO  2020-01-24 22:33:59,413   204ms PublishingEngine       Info               - 1.3.0.14
+INFO  2020-01-24 22:33:59,463   254ms PublishingEngine       Info               - Initializing...
+INFO  2020-01-24 22:33:59,464   255ms PublishingEngine       Info               - Done Initalizing process.
+
+INFO  2020-01-24 22:34:03,889  4680ms PublishingEngine       Info               - Authenticating for the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-24 22:34:04,163  4954ms FsApiWebService        Debug              - Getting user info...
+INFO  2020-01-24 22:34:04,359  5151ms PublishingEngine       Info               - Succeeded logged
+INFO  2020-01-24 22:34:04,360  5151ms PublishingEngine       Info               - Getting publish configuration information...
+DEBUG 2020-01-24 22:34:04,360  5151ms FsApiWebService        Debug              - Getting details of the publish config of the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-24 22:34:04,405  5196ms FsApiWebService        Debug              - Succeeded
+INFO  2020-01-24 22:34:04,526  5317ms PublishingEngine       Info               - Successfully authenticated.
+
+DEBUG 2020-01-24 22:34:04,531  5322ms FsApiWebService        Debug              - Getting details of the email server config of the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-24 22:34:04,786  5577ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-24 22:34:04,787  5578ms FsApiWebService        Debug              - Getting the list of events for the "phongnguyen17@yahoo.com" user on http://localhost/api/...
+DEBUG 2020-01-24 22:34:08,385  9177ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-24 22:34:11,064 11856ms FsApiWebService        Debug              - Getting details of the "446" event...
+DEBUG 2020-01-24 22:34:11,154 11945ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-24 22:34:12,586 13377ms FsApiWebService        Debug              - Getting details of the "67" email template...
+DEBUG 2020-01-24 22:34:12,667 13458ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-24 22:34:12,667 13458ms FsApiWebService        Debug              - Getting the list of non-publish-authorized photos of the "446" event...
+DEBUG 2020-01-24 22:34:12,794 13585ms FsApiWebService        Debug              - Succeeded
+INFO  2020-01-24 22:35:04,438 65229ms EmailService           Info               - Sending the "http://localhost/PhotoWebsite/cfc58d64-fe69-4ef0-aa50-b2bb1f9884bc?website=2" link to "Phong Nguyen"...
+INFO  2020-01-24 22:35:27,947 88738ms EmailService           Info               - Enabled SSL
+INFO  2020-01-24 22:35:41,698 102489ms EmailService           Info               - Mail Server: smtp.mail.yahoo.com, From: phongnguyen17@yahoo.com - 
+ERROR 2020-01-24 22:38:06,499 247290ms EmailService           Error              - Failed to send the "http://localhost/PhotoWebsite/cfc58d64-fe69-4ef0-aa50-b2bb1f9884bc?website=2" link to "Phong Nguyen"...
+ERROR 2020-01-24 22:38:06,506 247297ms EmailService           Error              - System.Net.Mail.SmtpException: Failure sending mail. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 74.6.141.43:587
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.ServicePoint.GetConnection(PooledStream PooledStream, Object owner, Boolean async, IPAddress& address, Socket& abortSocket, Socket& abortSocket6)
+   at System.Net.PooledStream.Activate(Object owningObject, Boolean async, GeneralAsyncDelegate asyncCallback)
+   at System.Net.PooledStream.Activate(Object owningObject, GeneralAsyncDelegate asyncCallback)
+   at System.Net.ConnectionPool.GetConnection(Object owningObject, GeneralAsyncDelegate asyncCallback, Int32 creationTimeout)
+   at System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   at System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   at System.Net.Mail.SmtpClient.GetConnection()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   --- End of inner exception stack trace ---
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at FotoShoutPublishingService.Services.Email.EmailService.SendEmailTo(UserTDO user, EventTDO ev, GuestTDO guest, String permalink) in C:\Dev\vdR\fotoShout\Code\FotoShoutPublishingService\Services\Email\EmailService.cs:line 102
+INFO  2020-01-24 22:38:06,575 247366ms PublishingEngine       Info               - Getting broadcasts of the Facebook Test event...
+INFO  2020-01-24 22:38:06,691 247482ms PublishingEngine       Info               - There is no broadcast published recently.
+INFO  2020-01-24 22:38:06,694 247485ms PublishingEngine       Info               - There is no publish channel group being configured for the "Facebook Test" event, so no photos will be published for this event.
+INFO  2020-01-24 22:38:06,695 247486ms PublishingEngine       Info               - Published all events of the "phongnguyen17@yahoo.com" user.
+INFO  2020-01-24 22:43:20,720   266ms PublishingEngine       Info               - 1.3.0.14
+INFO  2020-01-24 22:43:20,744   290ms PublishingEngine       Info               - Initializing...
+INFO  2020-01-24 22:43:20,744   290ms PublishingEngine       Info               - Done Initalizing process.
+
+INFO  2020-01-24 22:43:24,070  3615ms PublishingEngine       Info               - Authenticating for the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-24 22:43:24,288  3834ms FsApiWebService        Debug              - Getting user info...
+INFO  2020-01-24 22:43:24,478  4024ms PublishingEngine       Info               - Succeeded logged
+INFO  2020-01-24 22:43:24,478  4024ms PublishingEngine       Info               - Getting publish configuration information...
+DEBUG 2020-01-24 22:43:24,478  4024ms FsApiWebService        Debug              - Getting details of the publish config of the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-24 22:43:24,516  4062ms FsApiWebService        Debug              - Succeeded
+INFO  2020-01-24 22:43:24,622  4168ms PublishingEngine       Info               - Successfully authenticated.
+
+DEBUG 2020-01-24 22:43:24,626  4172ms FsApiWebService        Debug              - Getting details of the email server config of the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-24 22:43:24,778  4324ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-24 22:43:24,782  4328ms FsApiWebService        Debug              - Getting the list of events for the "phongnguyen17@yahoo.com" user on http://localhost/api/...
+DEBUG 2020-01-24 22:43:28,576  8122ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-24 22:43:30,616 10162ms FsApiWebService        Debug              - Getting details of the "446" event...
+DEBUG 2020-01-24 22:43:30,729 10275ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-24 22:43:31,881 11426ms FsApiWebService        Debug              - Getting details of the "67" email template...
+DEBUG 2020-01-24 22:43:31,973 11518ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-24 22:43:31,973 11518ms FsApiWebService        Debug              - Getting the list of non-publish-authorized photos of the "446" event...
+DEBUG 2020-01-24 22:43:32,033 11579ms FsApiWebService        Debug              - Succeeded
+INFO  2020-01-24 22:43:34,273 13819ms EmailService           Info               - Sending the "http://localhost/PhotoWebsite/cfc58d64-fe69-4ef0-aa50-b2bb1f9884bc?website=2" link to "Phong Nguyen"...
+INFO  2020-01-24 22:43:35,108 14654ms EmailService           Info               - Enabled SSL
+INFO  2020-01-24 22:43:35,109 14655ms EmailService           Info               - Mail Server: smtp.mail.yahoo.com, From: phongnguyen17@yahoo.com - 
+ERROR 2020-01-24 22:45:10,019 109565ms EmailService           Error              - Failed to send the "http://localhost/PhotoWebsite/cfc58d64-fe69-4ef0-aa50-b2bb1f9884bc?website=2" link to "Phong Nguyen"...
+ERROR 2020-01-24 22:45:10,021 109567ms EmailService           Error              - System.Net.Mail.SmtpException: Failure sending mail. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 98.136.96.80:465
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.ServicePoint.GetConnection(PooledStream PooledStream, Object owner, Boolean async, IPAddress& address, Socket& abortSocket, Socket& abortSocket6)
+   at System.Net.PooledStream.Activate(Object owningObject, Boolean async, GeneralAsyncDelegate asyncCallback)
+   at System.Net.PooledStream.Activate(Object owningObject, GeneralAsyncDelegate asyncCallback)
+   at System.Net.ConnectionPool.GetConnection(Object owningObject, GeneralAsyncDelegate asyncCallback, Int32 creationTimeout)
+   at System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   at System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   at System.Net.Mail.SmtpClient.GetConnection()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   --- End of inner exception stack trace ---
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at FotoShoutPublishingService.Services.Email.EmailService.SendEmailTo(UserTDO user, EventTDO ev, GuestTDO guest, String permalink) in C:\Dev\vdR\fotoShout\Code\FotoShoutPublishingService\Services\Email\EmailService.cs:line 102
+INFO  2020-01-24 22:45:10,062 109608ms PublishingEngine       Info               - Getting broadcasts of the Facebook Test event...
+INFO  2020-01-24 22:45:10,108 109654ms PublishingEngine       Info               - There is no broadcast published recently.
+INFO  2020-01-24 22:45:10,109 109655ms PublishingEngine       Info               - There is no publish channel group being configured for the "Facebook Test" event, so no photos will be published for this event.
+INFO  2020-01-24 22:45:10,110 109656ms PublishingEngine       Info               - Published all events of the "phongnguyen17@yahoo.com" user.
+INFO  2020-01-24 22:49:39,877   184ms PublishingEngine       Info               - 1.3.0.14
+INFO  2020-01-24 22:49:39,900   207ms PublishingEngine       Info               - Initializing...
+INFO  2020-01-24 22:49:39,901   208ms PublishingEngine       Info               - Done Initalizing process.
+
+INFO  2020-01-24 22:49:42,187  2493ms PublishingEngine       Info               - Authenticating for the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-24 22:49:42,409  2716ms FsApiWebService        Debug              - Getting user info...
+INFO  2020-01-24 22:49:42,606  2912ms PublishingEngine       Info               - Succeeded logged
+INFO  2020-01-24 22:49:42,606  2912ms PublishingEngine       Info               - Getting publish configuration information...
+DEBUG 2020-01-24 22:49:42,607  2914ms FsApiWebService        Debug              - Getting details of the publish config of the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-24 22:49:42,645  2951ms FsApiWebService        Debug              - Succeeded
+INFO  2020-01-24 22:49:42,743  3050ms PublishingEngine       Info               - Successfully authenticated.
+
+DEBUG 2020-01-24 22:49:42,744  3051ms FsApiWebService        Debug              - Getting details of the email server config of the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-24 22:49:42,824  3131ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-24 22:49:42,826  3133ms FsApiWebService        Debug              - Getting the list of events for the "phongnguyen17@yahoo.com" user on http://localhost/api/...
+DEBUG 2020-01-24 22:49:46,730  7037ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-24 22:49:49,143  9450ms FsApiWebService        Debug              - Getting details of the "446" event...
+DEBUG 2020-01-24 22:49:49,234  9541ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-24 22:49:50,335 10642ms FsApiWebService        Debug              - Getting details of the "67" email template...
+DEBUG 2020-01-24 22:49:50,419 10726ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-24 22:49:50,419 10726ms FsApiWebService        Debug              - Getting the list of non-publish-authorized photos of the "446" event...
+DEBUG 2020-01-24 22:49:50,464 10771ms FsApiWebService        Debug              - Succeeded
+INFO  2020-01-24 22:49:52,675 12982ms EmailService           Info               - Sending the "http://localhost/PhotoWebsite/cfc58d64-fe69-4ef0-aa50-b2bb1f9884bc?website=2" link to "Phong Nguyen"...
+INFO  2020-01-24 22:49:53,414 13721ms EmailService           Info               - Enabled SSL
+INFO  2020-01-24 22:49:53,415 13722ms EmailService           Info               - Mail Server: smtp.mail.yahoo.com, From: phongnguyen17@yahoo.com - 
+ERROR 2020-01-24 22:55:12,343 332650ms EmailService           Error              - Failed to send the "http://localhost/PhotoWebsite/cfc58d64-fe69-4ef0-aa50-b2bb1f9884bc?website=2" link to "Phong Nguyen"...
+ERROR 2020-01-24 22:55:12,345 332652ms EmailService           Error              - System.Net.Mail.SmtpException: Failure sending mail. ---> System.IO.IOException: Unable to read data from the transport connection: net_io_connectionclosed.
+   at System.Net.Mail.SmtpReplyReaderFactory.ProcessRead(Byte[] buffer, Int32 offset, Int32 read, Boolean readLine)
+   at System.Net.Mail.SmtpReplyReaderFactory.ReadLines(SmtpReplyReader caller, Boolean oneLine)
+   at System.Net.Mail.SmtpReplyReaderFactory.ReadLine(SmtpReplyReader caller)
+   at System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   at System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   at System.Net.Mail.SmtpClient.GetConnection()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   --- End of inner exception stack trace ---
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at FotoShoutPublishingService.Services.Email.EmailService.SendEmailTo(UserTDO user, EventTDO ev, GuestTDO guest, String permalink) in C:\Dev\vdR\fotoShout\Code\FotoShoutPublishingService\Services\Email\EmailService.cs:line 102
+INFO  2020-01-24 22:55:12,406 332713ms PublishingEngine       Info               - Getting broadcasts of the Facebook Test event...
+INFO  2020-01-24 22:55:12,516 332823ms PublishingEngine       Info               - There is no broadcast published recently.
+INFO  2020-01-24 22:55:12,519 332826ms PublishingEngine       Info               - There is no publish channel group being configured for the "Facebook Test" event, so no photos will be published for this event.
+INFO  2020-01-24 22:55:12,520 332827ms PublishingEngine       Info               - Published all events of the "phongnguyen17@yahoo.com" user.
+INFO  2020-01-24 22:55:56,531   162ms PublishingEngine       Info               - 1.3.0.14
+INFO  2020-01-24 22:55:56,556   188ms PublishingEngine       Info               - Initializing...
+INFO  2020-01-24 22:55:56,557   189ms PublishingEngine       Info               - Done Initalizing process.
+
+INFO  2020-01-24 22:55:58,491  2123ms PublishingEngine       Info               - Authenticating for the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-24 22:55:58,979  2611ms FsApiWebService        Debug              - Getting user info...
+INFO  2020-01-24 22:55:59,239  2871ms PublishingEngine       Info               - Succeeded logged
+INFO  2020-01-24 22:55:59,240  2872ms PublishingEngine       Info               - Getting publish configuration information...
+DEBUG 2020-01-24 22:55:59,241  2873ms FsApiWebService        Debug              - Getting details of the publish config of the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-24 22:55:59,287  2919ms FsApiWebService        Debug              - Succeeded
+INFO  2020-01-24 22:55:59,466  3097ms PublishingEngine       Info               - Successfully authenticated.
+
+DEBUG 2020-01-24 22:55:59,471  3102ms FsApiWebService        Debug              - Getting details of the email server config of the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-24 22:55:59,623  3254ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-24 22:55:59,625  3256ms FsApiWebService        Debug              - Getting the list of events for the "phongnguyen17@yahoo.com" user on http://localhost/api/...
+DEBUG 2020-01-24 22:56:03,452  7084ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-24 22:56:05,737  9368ms FsApiWebService        Debug              - Getting details of the "446" event...
+DEBUG 2020-01-24 22:56:05,896  9528ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-24 22:56:06,837 10469ms FsApiWebService        Debug              - Getting details of the "67" email template...
+DEBUG 2020-01-24 22:56:06,914 10545ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-24 22:56:06,915 10546ms FsApiWebService        Debug              - Getting the list of non-publish-authorized photos of the "446" event...
+DEBUG 2020-01-24 22:56:06,984 10616ms FsApiWebService        Debug              - Succeeded
+INFO  2020-01-24 22:56:09,317 12949ms EmailService           Info               - Sending the "http://localhost/PhotoWebsite/cfc58d64-fe69-4ef0-aa50-b2bb1f9884bc?website=2" link to "Phong Nguyen"...
+INFO  2020-01-24 22:56:10,774 14406ms EmailService           Info               - Enabled SSL
+INFO  2020-01-24 22:56:10,776 14408ms EmailService           Info               - Mail Server: smtp.mail.yahoo.com, From: phongnguyen17@yahoo.com - 
+ERROR 2020-01-24 22:56:25,876 29508ms EmailService           Error              - Failed to send the "http://localhost/PhotoWebsite/cfc58d64-fe69-4ef0-aa50-b2bb1f9884bc?website=2" link to "Phong Nguyen"...
+ERROR 2020-01-24 22:56:25,878 29510ms EmailService           Error              - System.Net.Mail.SmtpException: Failure sending mail. ---> System.IO.IOException: Unable to read data from the transport connection: net_io_connectionclosed.
+   at System.Net.Mail.SmtpReplyReaderFactory.ProcessRead(Byte[] buffer, Int32 offset, Int32 read, Boolean readLine)
+   at System.Net.Mail.SmtpReplyReaderFactory.ReadLines(SmtpReplyReader caller, Boolean oneLine)
+   at System.Net.Mail.SmtpReplyReaderFactory.ReadLine(SmtpReplyReader caller)
+   at System.Net.Mail.CheckCommand.Send(SmtpConnection conn, String& response)
+   at System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   --- End of inner exception stack trace ---
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at FotoShoutPublishingService.Services.Email.EmailService.SendEmailTo(UserTDO user, EventTDO ev, GuestTDO guest, String permalink) in C:\Dev\vdR\fotoShout\Code\FotoShoutPublishingService\Services\Email\EmailService.cs:line 102
+INFO  2020-01-24 22:56:25,925 29557ms PublishingEngine       Info               - Getting broadcasts of the Facebook Test event...
+INFO  2020-01-24 22:56:26,000 29632ms PublishingEngine       Info               - There is no broadcast published recently.
+INFO  2020-01-24 22:56:26,003 29634ms PublishingEngine       Info               - There is no publish channel group being configured for the "Facebook Test" event, so no photos will be published for this event.
+INFO  2020-01-24 22:56:26,004 29635ms PublishingEngine       Info               - Published all events of the "phongnguyen17@yahoo.com" user.
+INFO  2020-01-24 22:56:45,638   157ms PublishingEngine       Info               - 1.3.0.14
+INFO  2020-01-24 22:56:45,660   178ms PublishingEngine       Info               - Initializing...
+INFO  2020-01-24 22:56:45,660   178ms PublishingEngine       Info               - Done Initalizing process.
+
+INFO  2020-01-24 22:56:47,384  1903ms PublishingEngine       Info               - Authenticating for the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-24 22:56:47,611  2130ms FsApiWebService        Debug              - Getting user info...
+INFO  2020-01-24 22:56:47,861  2380ms PublishingEngine       Info               - Succeeded logged
+INFO  2020-01-24 22:56:47,861  2380ms PublishingEngine       Info               - Getting publish configuration information...
+DEBUG 2020-01-24 22:56:47,861  2380ms FsApiWebService        Debug              - Getting details of the publish config of the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-24 22:56:47,896  2414ms FsApiWebService        Debug              - Succeeded
+INFO  2020-01-24 22:56:48,026  2544ms PublishingEngine       Info               - Successfully authenticated.
+
+DEBUG 2020-01-24 22:56:48,032  2550ms FsApiWebService        Debug              - Getting details of the email server config of the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-24 22:56:48,206  2725ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-24 22:56:48,211  2729ms FsApiWebService        Debug              - Getting the list of events for the "phongnguyen17@yahoo.com" user on http://localhost/api/...
+DEBUG 2020-01-24 22:56:51,976  6495ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-24 22:56:53,129  7647ms FsApiWebService        Debug              - Getting details of the "446" event...
+DEBUG 2020-01-24 22:56:53,220  7739ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-24 22:56:54,451  8969ms FsApiWebService        Debug              - Getting details of the "67" email template...
+DEBUG 2020-01-24 22:56:54,541  9060ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-24 22:56:54,543  9062ms FsApiWebService        Debug              - Getting the list of non-publish-authorized photos of the "446" event...
+DEBUG 2020-01-24 22:56:54,641  9160ms FsApiWebService        Debug              - Succeeded
+INFO  2020-01-24 22:56:56,462 10981ms EmailService           Info               - Sending the "http://localhost/PhotoWebsite/cfc58d64-fe69-4ef0-aa50-b2bb1f9884bc?website=2" link to "Phong Nguyen"...
+INFO  2020-01-24 22:56:57,190 11708ms EmailService           Info               - Enabled SSL
+INFO  2020-01-24 22:56:57,191 11710ms EmailService           Info               - Mail Server: smtp.mail.yahoo.com, From: phongnguyen17@yahoo.com - 
+ERROR 2020-01-24 22:57:27,792 42310ms EmailService           Error              - Failed to send the "http://localhost/PhotoWebsite/cfc58d64-fe69-4ef0-aa50-b2bb1f9884bc?website=2" link to "Phong Nguyen"...
+ERROR 2020-01-24 22:57:27,794 42312ms EmailService           Error              - System.Net.Mail.SmtpException: Failure sending mail. ---> System.IO.IOException: Unable to read data from the transport connection: net_io_connectionclosed.
+   at System.Net.Mail.SmtpReplyReaderFactory.ProcessRead(Byte[] buffer, Int32 offset, Int32 read, Boolean readLine)
+   at System.Net.Mail.SmtpReplyReaderFactory.ReadLines(SmtpReplyReader caller, Boolean oneLine)
+   at System.Net.Mail.SmtpReplyReaderFactory.ReadLine(SmtpReplyReader caller)
+   at System.Net.Mail.CheckCommand.Send(SmtpConnection conn, String& response)
+   at System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   --- End of inner exception stack trace ---
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at FotoShoutPublishingService.Services.Email.EmailService.SendEmailTo(UserTDO user, EventTDO ev, GuestTDO guest, String permalink) in C:\Dev\vdR\fotoShout\Code\FotoShoutPublishingService\Services\Email\EmailService.cs:line 102
+INFO  2020-01-24 22:57:27,847 42365ms PublishingEngine       Info               - Getting broadcasts of the Facebook Test event...
+INFO  2020-01-24 22:57:27,909 42428ms PublishingEngine       Info               - There is no broadcast published recently.
+INFO  2020-01-24 22:57:27,910 42429ms PublishingEngine       Info               - There is no publish channel group being configured for the "Facebook Test" event, so no photos will be published for this event.
+INFO  2020-01-24 22:57:27,911 42430ms PublishingEngine       Info               - Published all events of the "phongnguyen17@yahoo.com" user.
+INFO  2020-01-25 07:36:40,727   253ms PublishingEngine       Info               - 1.3.0.14
+INFO  2020-01-25 07:36:40,770   297ms PublishingEngine       Info               - Initializing...
+INFO  2020-01-25 07:36:40,770   297ms PublishingEngine       Info               - Done Initalizing process.
+
+INFO  2020-01-25 07:36:44,013  3540ms PublishingEngine       Info               - Authenticating for the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-25 07:36:49,953  9480ms FsApiWebService        Debug              - Getting user info...
+INFO  2020-01-25 07:36:50,490 10017ms PublishingEngine       Info               - Succeeded logged
+INFO  2020-01-25 07:36:50,491 10018ms PublishingEngine       Info               - Getting publish configuration information...
+DEBUG 2020-01-25 07:36:50,492 10019ms FsApiWebService        Debug              - Getting details of the publish config of the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-25 07:36:50,681 10207ms FsApiWebService        Debug              - Succeeded
+INFO  2020-01-25 07:36:50,832 10359ms PublishingEngine       Info               - Successfully authenticated.
+
+DEBUG 2020-01-25 07:36:50,837 10364ms FsApiWebService        Debug              - Getting details of the email server config of the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-25 07:36:51,053 10580ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-25 07:36:51,055 10582ms FsApiWebService        Debug              - Getting the list of events for the "phongnguyen17@yahoo.com" user on http://localhost/api/...
+DEBUG 2020-01-25 07:36:54,301 13827ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-25 07:36:56,577 16104ms FsApiWebService        Debug              - Getting details of the "446" event...
+DEBUG 2020-01-25 07:37:08,994 28521ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-25 07:37:11,319 30846ms FsApiWebService        Debug              - Getting details of the "67" email template...
+DEBUG 2020-01-25 07:37:11,432 30959ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-25 07:37:11,433 30960ms FsApiWebService        Debug              - Getting the list of non-publish-authorized photos of the "446" event...
+DEBUG 2020-01-25 07:37:11,533 31059ms FsApiWebService        Debug              - Succeeded
+INFO  2020-01-25 07:51:10,594   163ms PublishingEngine       Info               - 1.3.0.14
+INFO  2020-01-25 07:51:10,621   190ms PublishingEngine       Info               - Initializing...
+INFO  2020-01-25 07:51:10,621   190ms PublishingEngine       Info               - Done Initalizing process.
+
+INFO  2020-01-25 07:51:13,676  3245ms PublishingEngine       Info               - Authenticating for the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-25 07:51:13,884  3453ms FsApiWebService        Debug              - Getting user info...
+INFO  2020-01-25 07:51:14,093  3661ms PublishingEngine       Info               - Succeeded logged
+INFO  2020-01-25 07:51:14,094  3662ms PublishingEngine       Info               - Getting publish configuration information...
+DEBUG 2020-01-25 07:51:14,094  3662ms FsApiWebService        Debug              - Getting details of the publish config of the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-25 07:51:14,137  3705ms FsApiWebService        Debug              - Succeeded
+INFO  2020-01-25 07:51:14,261  3829ms PublishingEngine       Info               - Successfully authenticated.
+
+DEBUG 2020-01-25 07:51:14,262  3830ms FsApiWebService        Debug              - Getting details of the email server config of the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-25 07:51:14,341  3910ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-25 07:51:14,342  3911ms FsApiWebService        Debug              - Getting the list of events for the "phongnguyen17@yahoo.com" user on http://localhost/api/...
+DEBUG 2020-01-25 07:51:17,570  7139ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-25 07:51:18,963  8531ms FsApiWebService        Debug              - Getting details of the "446" event...
+DEBUG 2020-01-25 07:51:19,071  8639ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-25 07:51:20,092  9660ms FsApiWebService        Debug              - Getting details of the "67" email template...
+DEBUG 2020-01-25 07:51:20,168  9736ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-25 07:51:20,169  9737ms FsApiWebService        Debug              - Getting the list of non-publish-authorized photos of the "446" event...
+DEBUG 2020-01-25 07:51:20,236  9804ms FsApiWebService        Debug              - Succeeded
+INFO  2020-01-25 08:00:54,857   179ms PublishingEngine       Info               - 1.3.0.14
+INFO  2020-01-25 08:00:54,884   206ms PublishingEngine       Info               - Initializing...
+INFO  2020-01-25 08:00:54,884   206ms PublishingEngine       Info               - Done Initalizing process.
+
+INFO  2020-01-25 08:01:05,289 10610ms PublishingEngine       Info               - Authenticating for the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-25 08:01:05,488 10810ms FsApiWebService        Debug              - Getting user info...
+INFO  2020-01-25 08:01:05,714 11035ms PublishingEngine       Info               - Succeeded logged
+INFO  2020-01-25 08:01:05,714 11035ms PublishingEngine       Info               - Getting publish configuration information...
+DEBUG 2020-01-25 08:01:05,714 11036ms FsApiWebService        Debug              - Getting details of the publish config of the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-25 08:01:05,764 11085ms FsApiWebService        Debug              - Succeeded
+INFO  2020-01-25 08:01:06,000 11321ms PublishingEngine       Info               - Successfully authenticated.
+
+DEBUG 2020-01-25 08:01:06,005 11326ms FsApiWebService        Debug              - Getting details of the email server config of the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-25 08:01:06,210 11531ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-25 08:01:06,212 11534ms FsApiWebService        Debug              - Getting the list of events for the "phongnguyen17@yahoo.com" user on http://localhost/api/...
+DEBUG 2020-01-25 08:01:10,513 15835ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-25 08:01:14,769 20091ms FsApiWebService        Debug              - Getting details of the "446" event...
+DEBUG 2020-01-25 08:01:14,877 20199ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-25 08:01:15,813 21135ms FsApiWebService        Debug              - Getting details of the "67" email template...
+DEBUG 2020-01-25 08:01:15,888 21209ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-25 08:01:15,888 21210ms FsApiWebService        Debug              - Getting the list of non-publish-authorized photos of the "446" event...
+DEBUG 2020-01-25 08:01:15,958 21279ms FsApiWebService        Debug              - Succeeded
+INFO  2020-01-25 08:03:28,299   201ms PublishingEngine       Info               - 1.3.0.14
+INFO  2020-01-25 08:03:28,329   230ms PublishingEngine       Info               - Initializing...
+INFO  2020-01-25 08:03:28,329   231ms PublishingEngine       Info               - Done Initalizing process.
+
+INFO  2020-01-25 08:03:32,707  4609ms PublishingEngine       Info               - Authenticating for the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-25 08:03:34,939  6841ms FsApiWebService        Debug              - Getting user info...
+INFO  2020-01-25 08:03:35,136  7038ms PublishingEngine       Info               - Succeeded logged
+INFO  2020-01-25 08:03:35,136  7038ms PublishingEngine       Info               - Getting publish configuration information...
+DEBUG 2020-01-25 08:03:35,136  7038ms FsApiWebService        Debug              - Getting details of the publish config of the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-25 08:03:35,178  7080ms FsApiWebService        Debug              - Succeeded
+INFO  2020-01-25 08:03:35,285  7187ms PublishingEngine       Info               - Successfully authenticated.
+
+DEBUG 2020-01-25 08:03:35,286  7188ms FsApiWebService        Debug              - Getting details of the email server config of the "phongnguyen17@yahoo.com" user...
+DEBUG 2020-01-25 08:03:35,356  7257ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-25 08:03:35,358  7260ms FsApiWebService        Debug              - Getting the list of events for the "phongnguyen17@yahoo.com" user on http://localhost/api/...
+DEBUG 2020-01-25 08:03:38,789 10691ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-25 08:03:40,546 12448ms FsApiWebService        Debug              - Getting details of the "446" event...
+DEBUG 2020-01-25 08:03:40,641 12543ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-25 08:03:48,086 19988ms FsApiWebService        Debug              - Getting details of the "67" email template...
+DEBUG 2020-01-25 08:03:48,153 20055ms FsApiWebService        Debug              - Succeeded
+DEBUG 2020-01-25 08:03:48,154 20056ms FsApiWebService        Debug              - Getting the list of non-publish-authorized photos of the "446" event...
+DEBUG 2020-01-25 08:03:48,205 20106ms FsApiWebService        Debug              - Succeeded
+INFO  2020-01-25 08:04:19,364 51266ms EmailService           Info               - Sending the "http://localhost/PhotoWebsite?photo=http%3A%2F%2Flocalhost%2F7B9A2EAE549FC3FD1926237D85B3D32C%2FProcessed%2F77344445_10218539840079436_2891449142754672640_o.jpg&hi=%7E%2Fuploads%2FHeader.png&hu=na1.fotoshout.com&ti=%7E%2Fuploads%2FTop.png&tu=na1.fotoshout.com&bi=%7E%2Fuploads%2FBottom.png&bu=na1.fotoshout.com&fi=%7E%2Fuploads%2FFooter.png&fu=na1.fotoshout.com" link to "Phong Nguyen"...
+INFO  2020-01-25 08:05:15,108 107009ms EmailService           Info               - Enabled SSL
+INFO  2020-01-25 08:05:15,989 107891ms EmailService           Info               - Mail Server: smtp.mail.yahoo.com, From: phongnguyen17@yahoo.com - 
+ERROR 2020-01-25 08:05:47,789 139691ms EmailService           Error              - Failed to send the "http://localhost/PhotoWebsite?photo=http%3A%2F%2Flocalhost%2F7B9A2EAE549FC3FD1926237D85B3D32C%2FProcessed%2F77344445_10218539840079436_2891449142754672640_o.jpg&hi=%7E%2Fuploads%2FHeader.png&hu=na1.fotoshout.com&ti=%7E%2Fuploads%2FTop.png&tu=na1.fotoshout.com&bi=%7E%2Fuploads%2FBottom.png&bu=na1.fotoshout.com&fi=%7E%2Fuploads%2FFooter.png&fu=na1.fotoshout.com" link to "Phong Nguyen"...
+ERROR 2020-01-25 08:05:47,794 139696ms EmailService           Error              - System.Net.Mail.SmtpException: Failure sending mail. ---> System.IO.IOException: Unable to read data from the transport connection: net_io_connectionclosed.
+   at System.Net.Mail.SmtpReplyReaderFactory.ProcessRead(Byte[] buffer, Int32 offset, Int32 read, Boolean readLine)
+   at System.Net.Mail.SmtpReplyReaderFactory.ReadLines(SmtpReplyReader caller, Boolean oneLine)
+   at System.Net.Mail.SmtpReplyReaderFactory.ReadLine(SmtpReplyReader caller)
+   at System.Net.Mail.CheckCommand.Send(SmtpConnection conn, String& response)
+   at System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   --- End of inner exception stack trace ---
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at FotoShoutPublishingService.Services.Email.EmailService.SendEmailTo(UserTDO user, EventTDO ev, GuestTDO guest, String permalink) in C:\Dev\vdR\fotoShout\Code\FotoShoutPublishingService\Services\Email\EmailService.cs:line 102
+INFO  2020-01-25 08:05:48,093 139995ms PublishingEngine       Info               - Getting broadcasts of the Facebook Test event...
+INFO  2020-01-25 08:05:48,190 140092ms PublishingEngine       Info               - There is no broadcast published recently.
+INFO  2020-01-25 08:05:48,192 140094ms PublishingEngine       Info               - There is no publish channel group being configured for the "Facebook Test" event, so no photos will be published for this event.
+INFO  2020-01-25 08:05:48,192 140094ms PublishingEngine       Info               - Published all events of the "phongnguyen17@yahoo.com" user.

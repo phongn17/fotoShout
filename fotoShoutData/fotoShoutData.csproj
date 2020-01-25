@@ -104,10 +104,12 @@
     <Compile Include="Models\PhotoEmail.cs" />
     <Compile Include="Models\PhotoGroupTDO.cs" />
     <Compile Include="Models\PhotoAuthorizationTDO.cs" />
+    <Compile Include="Models\PhotoGuest.cs" />
     <Compile Include="Models\PhotoInfo.cs" />
     <Compile Include="Models\PhotoStatus.cs" />
     <Compile Include="Models\PhotoTDO.cs" />
     <Compile Include="Models\PhotoDetailsTDO.cs" />
+    <Compile Include="Models\PhotoWebsiteTDO.cs" />
     <Compile Include="Models\PublishAccount.cs" />
     <Compile Include="Models\Publish\BroadcastDetail.cs" />
     <Compile Include="Models\Publish\BroadcastField.cs" />
@@ -118,6 +120,9 @@
     <Compile Include="Models\Publish\PostBroadcast.cs" />
     <Compile Include="Models\Publish\ChannelGroup.cs" />
     <Compile Include="Models\Publish\ChannelGroupAction.cs" />
+    <Compile Include="Models\WebsiteInfo.cs" />
+    <Compile Include="Models\WebsiteTDO.cs" />
+    <Compile Include="Models\Website.cs" />
     <Compile Include="Models\Sponsor.cs" />
     <Compile Include="Models\SponsorTDO.cs" />
     <Compile Include="Models\User.cs" />

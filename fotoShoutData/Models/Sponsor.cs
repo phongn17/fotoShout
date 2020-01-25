@@ -16,23 +16,6 @@ namespace FotoShoutData.Models {
         public string SponsorName { get; set; }
 
         public string SponsorLogo { get; set; }
-
-        public string SponsorHeaderImage { get; set; }
-
-        public string SponsorHeaderUrl { get; set; }
-
-        public string SponsorFooterImage { get; set; }
-
-        public string SponsorFooterUrl { get; set; }
-
-        public string SponsorTopInfoBlockImage { get; set; }
-
-        public string SponsorTopInfoBlockUrl { get; set; }
-
-        public string SponsorBottomInfoBlockImage { get; set; }
-
-        public string SponsorBottomInfoBlockUrl { get; set; }
-
         public virtual ICollection<Event> Events { get; set; }
         public virtual User User { get; set; }
     }

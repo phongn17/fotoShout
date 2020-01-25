@@ -49,13 +49,13 @@ namespace FotoShoutApi.Controllers
             Event ev = null;
             try {
                 if (isIncludingPhotos && isIncludingGuests) {
-                    ev = db.Events.Where(e => e.EventId == id && e.User.Id == userId).Include(e => e.Photos).Include(e => e.Guests).Include(e => e.EventOption).SingleOrDefault();
+                    ev = db.Events.Where(e => e.EventId == id && e.User.Id == userId).Include(e => e.Photos).Include(e => e.Guests).Include(e => e.EventOption).Include(e => e.EmailTemplate).SingleOrDefault();
                 }
                 else if (isIncludingPhotos) {
-                    ev = db.Events.Where(e => e.EventId == id && e.User.Id == userId).Include(e => e.Photos).Include(e => e.EventOption).SingleOrDefault();
+                    ev = db.Events.Where(e => e.EventId == id && e.User.Id == userId).Include(e => e.Photos).Include(e => e.EventOption).Include(e => e.EmailTemplate).SingleOrDefault();
                 }
                 else {
-                    ev = db.Events.Where(e => e.EventId == id && e.User.Id == userId).Include(e => e.EventOption).SingleOrDefault();
+                    ev = db.Events.Where(e => e.EventId == id && e.User.Id == userId).Include(e => e.EventOption).Include(e => e.EmailTemplate).SingleOrDefault();
                 }
             }
             catch (Exception ex) {
@@ -217,6 +217,7 @@ namespace FotoShoutApi.Controllers
                         ev.Sponsors.Clear();
 
                     ev.ChannelGroupId = tdo.ChannelGroupId;
+                    ev.WebsiteId = tdo.WebsiteId;
                     
                     db.Entry(ev).State = EntityState.Modified;
 
@@ -289,6 +290,7 @@ namespace FotoShoutApi.Controllers
                     }
 
                     ev.ChannelGroupId = tdo.ChannelGroupId;
+                    ev.WebsiteId = tdo.WebsiteId;
 
                     db.Events.Add(ev);
                 }
@@ -402,6 +404,7 @@ namespace FotoShoutApi.Controllers
                     SponsorIds = ev.Sponsors.OrderBy(s => s.SponsorName).Select(s => s.SponsorId),
                     EmailTemplateId = (ev.EmailTemplate != null) ? ev.EmailTemplate.EmailTemplateId : 0,
                     ChannelGroupId = ev.ChannelGroupId,
+                    WebsiteId = ev.WebsiteId,
                     EventOptions = eventOptions,
                     Sponsors = sponsors,
                     EmailTemplates = emailTemplates

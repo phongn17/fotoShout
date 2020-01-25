@@ -14,6 +14,7 @@ namespace FotoShoutApi.Models {
         }
         public DbSet<Event> Events { get; set; }
         public DbSet<Sponsor> Sponsors { get; set; }
+        public DbSet<Website> Websites { get; set; }
         public DbSet<Guest> Guests { get; set; }
         public DbSet<Photo> Photos { get; set; }
         public DbSet<GuestPhoto> GuestPhotos { get; set; }
@@ -23,6 +24,7 @@ namespace FotoShoutApi.Models {
         public DbSet<User> Users { get; set; }
         public DbSet<UserRole> UserRoles { get; set; }
         public DbSet<EventBroadcast> EventBroadcasts { get; set; }
+        public DbSet<PhotoEmail> PhotoEmails { get; set; }
         public DbSet<PublishAccount> PublishAccounts { get; set; }
         public DbSet<EmailServerAccount> EmailServerAccounts { get; set; }
         public DbSet<EmailTemplate> EmailTemplates { get; set; }

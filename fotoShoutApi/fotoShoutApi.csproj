@@ -179,7 +179,9 @@
     <Compile Include="Controllers\ImageResult.cs" />
     <Compile Include="Controllers\MediaController.cs" />
     <Compile Include="Controllers\PhotoAnnotationController.cs" />
+    <Compile Include="Controllers\PhotoEmailsController.cs" />
     <Compile Include="Controllers\PublishConfigController.cs" />
+    <Compile Include="Controllers\WebsitesController.cs" />
     <Compile Include="Errors.cs" />
     <Compile Include="Log\WebLogger.cs" />
     <Compile Include="Controllers\SponsorsController.cs" />
@@ -215,6 +217,14 @@
     <Compile Include="Migrations\202001092020306_AddedSponsorWebsiteImages.Designer.cs">
       <DependentUpon>202001092020306_AddedSponsorWebsiteImages.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202001240143332_PhotoEmail.cs" />
+    <Compile Include="Migrations\202001240143332_PhotoEmail.Designer.cs">
+      <DependentUpon>202001240143332_PhotoEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001240519012_Website.cs" />
+    <Compile Include="Migrations\202001240519012_Website.Designer.cs">
+      <DependentUpon>202001240519012_Website.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\FotoShoutDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -227,6 +237,7 @@
     <Compile Include="Services\PhotoAnnotationService.cs" />
     <Compile Include="Services\IO\DirectoryService.cs" />
     <Compile Include="Services\PhotoComparer.cs" />
+    <Compile Include="Services\PhotoEmailsService.cs" />
     <Compile Include="Utils\IO\PagingFileUtils.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -378,6 +389,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202001092020306_AddedSponsorWebsiteImages.resx">
       <DependentUpon>202001092020306_AddedSponsorWebsiteImages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001240143332_PhotoEmail.resx">
+      <DependentUpon>202001240143332_PhotoEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001240519012_Website.resx">
+      <DependentUpon>202001240519012_Website.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

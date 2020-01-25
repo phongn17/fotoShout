@@ -182,6 +182,31 @@ namespace FotoShoutUtils.Service {
             return Delete<EmailTemplate>("EmailTemplates", id, Constants.INFO_EMAILTEMPLATE_DELETE);
         }
 
+        public IEnumerable<Website> GetEventWebsites()
+        {
+            return GetList<Website>("Websites", string.Format(Constants.INFO_EVENTWEBSITE_LIST, (_user != null) ? _user.Email : ""));
+        }
+
+        public Website GetEventWebsite(int id)
+        {
+            return Get<Website>("Websites/", id, Constants.INFO_EVENTWEBSITE_DETAIL);
+        }
+
+        public object CreateEventWebsite(Website sponsor)
+        {
+            return Modify<Website>("Websites", sponsor, string.Format(Constants.INFO_EVENTWEBSITE_CREATE, sponsor.WebsiteName));
+        }
+
+        public object UpdateEventWebsite(Website sponsor)
+        {
+            return Modify<Website>("Websites/" + sponsor.WebsiteId, sponsor, string.Format(Constants.INFO_EVENTWEBSITE_UPDATE, sponsor.WebsiteName), "PUT");
+        }
+
+        public Website DeleteEventWebsite(int id)
+        {
+            return Delete<Website>("Websites", id, Constants.INFO_EVENTWEBSITE_DELETE);
+        }
+
         protected override Object GenerateCredentials(string apiKey, LoginModel model) {
             return new FotoShoutData.Models.Credentials { APIKey = apiKey, Email = model.UserName, Password = model.Password };
         }

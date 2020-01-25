@@ -30,7 +30,7 @@ namespace FotoShoutApi.Controllers
         // id to Guid
         // GET api/PhotoAnnotation/1
         public PhotoAnnotation GetPhotoAnnotation(Guid id) {
-            Photo photo = db.Photos.Find(id);
+            Photo photo = db.Photos.Where(p => p.PhotoId == id).Include(p => p.Event.EventOption).SingleOrDefault();
             if (photo == null)
                 throw new HttpResponseException(Request.CreateResponse(HttpStatusCode.NotFound, string.Format("Could not found any photo with the {0} id.", id)));
 
@@ -52,7 +52,7 @@ namespace FotoShoutApi.Controllers
                 // Check that all constrains are met
                 PhotoAnnotationService.CheckConstrains(photoAnnotation, true);
 
-                Photo photo = db.Photos.Where(p => p.PhotoId == id).SingleOrDefault();
+                Photo photo = db.Photos.Where(p => p.PhotoId == id).Include(p => p.Event.EventOption).SingleOrDefault();
                 bool successed = false;
                 if (photo != null) {
                     if (photo.Status == (byte)PhotoStatus.Submitted)

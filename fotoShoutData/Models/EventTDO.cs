@@ -17,10 +17,13 @@ namespace FotoShoutData.Models {
         public IEnumerable<int> SponsorIds { get; set; }
         [Display(Name = "Channel Group")]
         public int? ChannelGroupId { get; set; }
+        [Display(Name = "Website")]
+        public int? WebsiteId { get; set; }
 
         public IEnumerable<EventOptionTDO> EventOptions { get; set; }
         public IEnumerable<SponsorTDO> Sponsors { get; set; }
         public IEnumerable<EmailTemplateTDO> EmailTemplates { get; set; }
         public IEnumerable<ChannelGroupTDO> ChannelGroups { get; set; }
+        public IEnumerable<Website> Websites { get; set; }
     }
 }

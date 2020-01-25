@@ -125,6 +125,7 @@
     <Compile Include="Log\LogManager.cs" />
     <Compile Include="Networking\RemoteConnect.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\UnAuthenticationWebService.cs" />
     <Compile Include="Service\AuthenticationWebService.cs" />
     <Compile Include="Service\Executor.cs" />
     <Compile Include="Service\FsApiWebService.cs" />
