@@ -513,9 +513,6 @@
     <Content Include="Views\Shared\_EmailDefaultTemplate.cshtml" />
     <Content Include="Views\Shared\_Error.cshtml" />
     <Content Include="Views\EventPhoto\_EventProcessedPhotosExport.cshtml" />
-    <Content Include="P:\PhongN\fotoShout\Installation\1.3.0.12\_Help.cshtml">
-      <Link>Views\Shared\_Help.cshtml</Link>
-    </Content>
     <Content Include="Views\Event\_CompleteConfirmation.cshtml" />
     <Content Include="Views\Confirm\_ServiceTerm.cshtml" />
     <Content Include="Views\EventWebsite\_DeleteConfirmation.cshtml" />
@@ -523,10 +520,24 @@
     <Content Include="Views\EventWebsite\Modify.cshtml" />
     <Content Include="Views\PhotoWebsite\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutWebsite.cshtml" />
+    <Content Include="Views\Content\_Help.cshtml" />
+    <Content Include="Views\Shared\_Help.cshtml" />
+    <Content Include="Views\Content\Help\Guide 01 - What do I do first %2807-14%29.pdf" />
+    <Content Include="Views\Content\Help\Guide 02 - How to Install fotoShout software 12-13.pdf" />
+    <Content Include="Views\Content\Help\Guide 02- W8 - How to Install fotoShout software Win 8.x   %287-14%29.pdf" />
+    <Content Include="Views\Content\Help\Guide 02-W7 - How to Install fotoShout software Windows  7   %2807-14%29.pdf" />
+    <Content Include="Views\Content\Help\Guide 02-W7 - How to Install fotoShout software Windows 7 %2803-14%29.pdf" />
+    <Content Include="Views\Content\Help\Guide 03 - Step By Step Detailed Guide To Setting Up fotoShout %2807_14%29.pdf" />
+    <Content Include="Views\Content\Help\Guide 04 - How To Setup Social Media Channels 07-14.pdf" />
+    <Content Include="Views\Content\Help\Guide 05 E-Mail Template - Users Quick Guide %2807-14%29.pdf" />
+    <Content Include="Views\Content\Help\Guide 06 fotoShout Metrics Tracking Reports &amp;amp%3b E-mail Quick Guide 12-13.pdf" />
+    <Content Include="Views\Content\Help\Guide 07 fotoShout Web Portal Event Setup Quick Guide.pdf" />
+    <Content Include="Views\Content\Help\Guide 08 How to Reserve your Routers IP Address Apple Airport 07-14.pdf" />
+    <Content Include="Views\Content\Help\Guide 09 How to Give Your Wirless LAN Priority %2807-14%29.pdf" />
+    <Content Include="Views\Content\Help\Guide 10 How to import images into fotoShout 02-14.pdf" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Content\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

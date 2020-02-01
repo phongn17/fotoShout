@@ -1,7 +1,0 @@
-C:\Dev\vdR\fotoShout\Code\FotoShoutData\bin\Release\fotoShoutData.dll
-C:\Dev\vdR\fotoShout\Code\FotoShoutData\bin\Release\fotoShoutData.pdb
-C:\Dev\vdR\fotoShout\Code\FotoShoutData\bin\Release\Microsoft.CSharp.dll
-C:\Dev\vdR\fotoShout\Code\FotoShoutData\obj\Release\fotoShoutData.csprojAssemblyReference.cache
-C:\Dev\vdR\fotoShout\Code\FotoShoutData\obj\Release\fotoShoutData.csproj.CopyComplete
-C:\Dev\vdR\fotoShout\Code\FotoShoutData\obj\Release\fotoShoutData.dll
-C:\Dev\vdR\fotoShout\Code\FotoShoutData\obj\Release\fotoShoutData.pdb

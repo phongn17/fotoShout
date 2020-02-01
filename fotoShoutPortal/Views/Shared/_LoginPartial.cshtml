@@ -1,9 +1,11 @@
-﻿@if (Request.IsAuthenticated) {
+﻿@if (Request.IsAuthenticated)
+{
     <text>
         <span>@User.Identity.Name</span>
         @Html.ActionLink("Log off", "Logoff", new { controller = "Account", userName = User.Identity.Name }, new { @class = "linkLogoff" })
-        @Html.ActionLink("Download", "ServiceTerm", new { controller = "Confirm", filename = "fotoShoutClient_1.3_WIN64.zip" }, new { @class = "linkTerm" })
+        @Html.ActionLink("Download", "ServiceTerm", new { controller = "Confirm", filename = "fotoShoutClient_2.0_WIN64.zip" }, new { @class = "linkTerm" })
         @Html.ActionLink(" ", "Help", new { controller = "Content" }, new { @class = "linkHelp" })
     </text>
     <div id="help-pane"></div>
 }
+

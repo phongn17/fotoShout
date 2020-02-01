@@ -61,12 +61,12 @@ namespace FotoShoutPublishingService {
                 IEnumerable<FotoShoutData.Models.Credentials> credentials = UsersRepo.Credentials;
                 if (credentials != null) {
                     foreach (FotoShoutData.Models.Credentials credential in credentials) {
-                        if (credential.Email.Equals("phongnguyen17@yahoo.com")) {
+                        //if (credential.Email.Equals("phongnguyen17@yahoo.com")) {
                             if (Authenticate(credential)) {
                                 PublishEvents();
                                 FotoShoutUtils.Log.LogManager.Info(_logger, string.Format("Published all events of the \"{0}\" user.", credential.Email));
                             }
-                        }
+                        //}
                     }
                 }
             }
@@ -471,25 +471,25 @@ namespace FotoShoutPublishingService {
             StringBuilder sb = new StringBuilder();
             sb.Append(string.Format("photo={0}", WebUtility.UrlEncode(photoUrl)));
             if (website.HeaderImage != null) {
-                sb.Append(string.Format("&hi={0}", WebUtility.UrlEncode(website.HeaderImage)));
+                sb.Append(string.Format("&hi={0}", WebUtility.UrlEncode(website.HeaderImage.Replace("~", ""))));
             }
             if (website.HeaderUrl != null) {
                 sb.Append(string.Format("&hu={0}", WebUtility.UrlEncode(website.HeaderUrl)));
             }
             if (website.TopInfoBlockImage != null) {
-                sb.Append(string.Format("&ti={0}", WebUtility.UrlEncode(website.TopInfoBlockImage)));
+                sb.Append(string.Format("&ti={0}", WebUtility.UrlEncode(website.TopInfoBlockImage.Replace("~", ""))));
             }
             if (website.TopInfoBlockUrl != null) {
                 sb.Append(string.Format("&tu={0}", WebUtility.UrlEncode(website.TopInfoBlockUrl)));
             }
             if (website.BottomInfoBlockImage != null) {
-                sb.Append(string.Format("&bi={0}", WebUtility.UrlEncode(website.BottomInfoBlockImage)));
+                sb.Append(string.Format("&bi={0}", WebUtility.UrlEncode(website.BottomInfoBlockImage.Replace("~", ""))));
             }
             if (website.BottomInfoBlockUrl != null) {
                 sb.Append(string.Format("&bu={0}", WebUtility.UrlEncode(website.BottomInfoBlockUrl)));
             }
             if (website.FooterImage != null) {
-                sb.Append(string.Format("&fi={0}", WebUtility.UrlEncode(website.FooterImage)));
+                sb.Append(string.Format("&fi={0}", WebUtility.UrlEncode(website.FooterImage.Replace("~", ""))));
             }
             if (website.FooterUrl != null) {
                 sb.Append(string.Format("&fu={0}", WebUtility.UrlEncode(website.FooterUrl)));

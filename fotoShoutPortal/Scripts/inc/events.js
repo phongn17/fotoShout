@@ -16,14 +16,14 @@ Events.prototype.init = function (url) {
         e.preventDefault();
         var evType = $(this).val();
         $("#main-panel")
-        .html("")
-        .load(url + "?eventType=" + evType, function (response, status, jqXHR) {
-            if (jqXHR.status == 200) {
-                updateCss();
-            }
-        });
+            .html("")
+            .load(url + "?eventType=" + evType, function (response, status, jqXHR) {
+                if (jqXHR.status === 200) {
+                    updateCss();
+                }
+            });
     });
-}
+};
 
 function updateCss() {
     var thumbActionsDivs = $('.thumb-date > .links');
@@ -31,7 +31,7 @@ function updateCss() {
         for (var idx = 0; idx < thumbActionsDivs.length; idx++) {
             var thumbActionsDiv = thumbActionsDivs[idx];
             var linkEdit = $('.linkEdit', thumbActionsDiv);
-            if (linkEdit.length == 0) {
+            if (linkEdit.length === 0) {
                 $(thumbActionsDiv).css('padding-left', '100px');
             }
             else {

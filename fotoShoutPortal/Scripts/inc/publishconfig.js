@@ -7,5 +7,5 @@ PublishConfig.prototype = new BaseObject();
 PublishConfig.prototype.constructor = PublishConfig;
 
 PublishConfig.prototype.init = function () {
-}
+};
 

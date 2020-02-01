@@ -12,7 +12,7 @@ namespace FotoShoutPublishingService {
         /// The main entry point for the application.
         /// </summary>
         static void Main() {
-            Test();
+            RunService();
         }
 
         static void Test() {

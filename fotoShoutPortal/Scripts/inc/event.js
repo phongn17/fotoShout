@@ -8,5 +8,5 @@ Event.prototype.constructor = Event;
 
 Event.prototype.init = function () {
     $("#EventDate").datepicker();
-}
+};
 
